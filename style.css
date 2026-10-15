@@ -1,0 +1,17 @@
+:root{--bg:#0A0A0C;--card:#151518;--ink:#fff;--muted:#9a9aa2;--line:#26262b;--lime:#E8FF3C}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Heebo",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:680px;margin:0 auto;padding:48px 20px 64px}
+a{color:var(--lime);text-decoration:none}
+a:hover{text-decoration:underline}
+.brand{font-weight:900;font-style:italic;letter-spacing:.02em;font-size:20px;color:var(--ink)}
+.brand b{color:var(--lime);font-weight:900}
+h1{font-weight:900;font-style:italic;font-size:40px;line-height:1.1;margin:40px 0 6px}
+.updated{color:var(--muted);font-size:13px;margin:0 0 32px}
+h2{font-size:17px;font-weight:800;margin:28px 0 6px}
+p{margin:0;color:#dcdce0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:16px}
+.mail{font-size:22px;font-weight:800;direction:ltr;unicode-bidi:isolate}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;gap:16px;flex-wrap:wrap}
+footer a{color:var(--muted)}

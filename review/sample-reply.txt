@@ -1,0 +1,267 @@
+```json
+{
+  "version": "ibra_plan_v1",
+  "meta": {
+    "athlete": "דני",
+    "nickname": "אלוף",
+    "mission": "CUT",
+    "week_count": 12,
+    "current_week": 1,
+    "deload_weeks": [4, 8],
+    "hiit": { "style": "sprints" },
+    "time_promise": "בתקציב הזה תגיע ל-1.45 בשבוע 12 — בלי להוסיף אימון.",
+    "method": {
+      "name": "70/30 כבד-קלאסי",
+      "core_mix": [
+        { "part": "משקולות", "pct": 70 },
+        { "part": "מוביליטי/קליסטניקס", "pct": 30 }
+      ],
+      "cardio": "הליכות Zone 2 ×3 בשבוע + HIIT אחד",
+      "style": ["כבד ומעט חזרות בתרגילי-הבסיס", "סופר-סטים לחיסכון בזמן", "ליבה בכל אימון"]
+    },
+    "weekly_targets": [
+      { "kind": "workouts_closed", "target": 4, "enough": 3 },
+      { "kind": "meals_in_window", "target": 18 },
+      { "kind": "top_set", "exercise": "סקווט אחורי — מוט (פירמידה)", "target_kg": 62.5 },
+      { "kind": "walks", "target": 3 }
+    ]
+  },
+  "goals": {
+    "weight_kg": 78,
+    "waist_cm": 84,
+    "adonis": 1.45,
+    "custom": ["VO2 Max 44+"]
+  },
+  "schedule": [
+    { "day": "sun", "workout_id": "push_a", "cardio": { "type": "HIIT", "duration_min": 20, "hr_zone": "148-165", "timing": "ערב", "detail": null }, "blocks": [] },
+    { "day": "mon", "workout_id": "pull_a", "cardio": { "type": "LISS", "duration_min": 45, "hr_zone": "105-115", "timing": "ערב", "detail": "30-45 דק׳" }, "blocks": [] },
+    { "day": "tue", "workout_id": "legs_a", "cardio": { "type": "הליכה קלה", "duration_min": 30, "hr_zone": "100-115", "timing": null, "detail": null }, "blocks": [] },
+    { "day": "wed", "workout_id": "push_b", "cardio": { "type": "HIIT", "duration_min": 20, "hr_zone": "148-165", "timing": "ערב", "detail": null }, "blocks": [] },
+    { "day": "thu", "workout_id": "pull_b", "cardio": { "type": "Zone 2", "duration_min": 40, "hr_zone": "130-140", "timing": null, "detail": "30-40 דק׳" }, "blocks": [] },
+    { "day": "fri", "workout_id": "legs_b", "cardio": { "type": "הליכה קלה", "duration_min": 30, "hr_zone": "100-115", "timing": null, "detail": null }, "blocks": [] },
+    { "day": "sat", "workout_id": null, "cardio": { "type": "LISS ארוך", "duration_min": 60, "hr_zone": "105-120", "timing": null, "detail": "50-60 דק׳" }, "blocks": [] }
+  ],
+  "workouts": [
+    {
+      "id": "push_a",
+      "name": "PUSH A",
+      "color": "#C0392B",
+      "focus": "חזה · כתפיים · יד אחורית",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "לחיצת חזה שיפוע 30° — מוט", "sets": 4, "reps": "6-8", "rest_sec": 90, "ramp_up": 2, "rpe": 8, "tempo": "3:1:2", "cue": "ירידה איטית 3 שנ׳. סחיטת שכמות.", "adonis_level": 1, "superset_group": null, "youtube_query": "incline barbell bench press form" },
+        { "name": "חזה שטוח — דאמבלים", "sets": 3, "reps": "10-12", "rest_sec": 0, "rpe": 8, "tempo": "2:1:2", "cue": "סופרסט. מרפקים 45°.", "adonis_level": 0, "superset_group": "2A", "youtube_query": "flat dumbbell bench press form" },
+        { "name": "פלייז שיפוע 30°", "sets": 3, "reps": "12-15", "rest_sec": 75, "rpe": 9, "tempo": "3:1:2", "cue": "סופרסט. מתיחה מקסימלית.", "adonis_level": 0, "superset_group": "2B", "youtube_query": "incline dumbbell fly form" },
+        { "name": "לחיצת כתפיים בישיבה", "sets": 3, "reps": "12/10/8", "rest_sec": 90, "rpe": 8, "tempo": "2:0:2", "cue": "ידיים לגובה אוזניים.", "adonis_level": 1, "superset_group": null, "setup": { "position": "seated", "arms": "both" }, "youtube_query": "seated dumbbell shoulder press form" },
+        { "name": "הרחקות כתפיים — דאמבלים", "sets": 4, "reps": "15", "rest_sec": 0, "rpe": 9, "tempo": "2:2:1", "cue": "ADONIS KEY! החזק 2 שנ׳ בשיא.", "adonis_level": 3, "superset_group": "4A", "setup": { "position": "standing", "arms": "both" }, "youtube_query": "dumbbell lateral raise form" },
+        { "name": "יד אחורית מאחורי הראש", "sets": 3, "reps": "10-12", "rest_sec": 75, "rpe": 8, "tempo": "2:1:2", "cue": "סופרסט. מרפקים צמודים.", "adonis_level": 0, "superset_group": "4B", "setup": { "position": "seated", "arms": "both" }, "youtube_query": "overhead triceps extension form" }
+      ],
+      "finisher": "LATERAL RAISE PUMP: 3×20 משקל קל, מנוחה 30 שנ׳",
+      "mobility": [
+        { "name": "Doorway Chest Stretch", "seconds": 60, "how_to": "עמידה במשקוף, אמה ומרפק על המשקוף בגובה-הכתף. צעד קטן קדימה עם הרגל הקדמית עד שהמתיחה מורגשת בחזה ובכתף הקדמית. הצלעות למטה, לא לקמר גב תחתון. החלף צד.", "youtube_query": "doorway chest stretch" },
+        { "name": "Cross-Body Shoulder Stretch (כל צד)", "seconds": 30, "how_to": "הבא זרוע אחת ישרה לרוחב-החזה, ואחוז אותה מעל המרפק עם היד השנייה. משוך בעדינות אל החזה, הכתף נשארת למטה ורחוקה מהאוזן. החלף צד.", "youtube_query": "cross body shoulder stretch" },
+        { "name": "Thoracic Rotation (כל צד)", "seconds": 30, "how_to": "על ארבע, יד אחת מאחורי הראש. הבא את המרפק לכיוון היד התומכת ואז פתח אותו לתקרה בסיבוב מהגב האמצעי, המבט עוקב. האגן לא זז — הסיבוב מהחזה בלבד. החלף צד.", "youtube_query": "quadruped thoracic rotation" },
+        { "name": "Sleeper Stretch (כל צד)", "seconds": 30, "how_to": "שכיבה על הצד, הכתף התחתונה מתחתיך והמרפק מכופף ב-90 מעלות. עם היד העליונה, לחץ בעדינות את כף-היד התחתונה לכיוון הרצפה. עצור כשמרגיש מתיחה בגב-הכתף — בלי כאב. החלף צד.", "youtube_query": "sleeper stretch shoulder" }
+      ]
+    },
+    {
+      "id": "pull_a",
+      "name": "PULL A",
+      "color": "#2E5A9C",
+      "focus": "גב רחב · V-Taper · ביצפס",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "מתח רחב מאוד", "sets": 4, "reps": "6-8", "rest_sec": 120, "rpe": 8, "tempo": "2:1:3", "cue": "ADONIS! ירידה 3 שנ׳. גב רחב = מותניים צרות.", "adonis_level": 2, "superset_group": null, "youtube_query": "wide grip pull up form" },
+        { "name": "חתירה עם מוט", "sets": 3, "reps": "8-10", "rest_sec": 0, "ramp_up": 2, "rpe": 8, "tempo": "2:1:2", "cue": "סופרסט. גב ישר 45°.", "adonis_level": 0, "superset_group": "2A", "youtube_query": "barbell bent over row form" },
+        { "name": "Reverse Flys 60°", "sets": 3, "reps": "15", "rest_sec": 75, "rpe": 9, "tempo": "2:1:2", "cue": "סופרסט. כתף אחורית.", "adonis_level": 1, "superset_group": "2B", "youtube_query": "incline reverse fly form" },
+        { "name": "חתירת דאמבל יד אחת", "sets": 3, "reps": "10-12", "rest_sec": 90, "rpe": 8, "tempo": "2:1:2", "cue": "כבד! סחיטה בשיא.", "adonis_level": 0, "superset_group": null, "youtube_query": "single arm dumbbell row form" },
+        { "name": "Pullover — דאמבל", "sets": 3, "reps": "12", "rest_sec": 75, "rpe": 8, "tempo": "3:1:2", "cue": "ADONIS! מתיחה מלאה = V-Taper.", "adonis_level": 1, "superset_group": null, "youtube_query": "dumbbell pullover form" },
+        { "name": "ביצפס דאמבלים בישיבה", "sets": 3, "reps": "10-12", "rest_sec": 60, "rpe": 8, "tempo": "2:1:2", "cue": "סופיניציה בשיא.", "adonis_level": 0, "superset_group": null, "setup": { "position": "seated", "arms": "alternating" }, "youtube_query": "seated dumbbell bicep curl form" }
+      ],
+      "finisher": "ARM SUPERSET: Barbell Curl 12 → Hammer Curl 12, ×2 · Face Pulls 3×20",
+      "mobility": [
+        { "name": "Lat Stretch (כל צד)", "seconds": 45, "how_to": "אחוז במוט או במשקוף בגובה-הראש, צעד לאחור והתקפל מהירכיים עד שהזרוע ישרה. שקע עם החזה לרצפה ותן לאגן לזוז הצידה מהיד — המתיחה בצד הגב מתחת לבית-השחי. החלף צד.", "youtube_query": "lat stretch" },
+        { "name": "Child's Pose", "seconds": 60, "how_to": "כריעה, הברכיים מעט פתוחות, שב על העקבים והנח את החזה בין הירכיים. הידיים ישרות קדימה על הרצפה, המצח נוגע. נשום לתוך הגב — כל נשיפה מרחיקה את הישבן לעקבים.", "youtube_query": "child's pose stretch" },
+        { "name": "Doorway Chest Stretch", "seconds": 45, "how_to": "עמידה במשקוף, אמה ומרפק על המשקוף בגובה-הכתף. צעד קטן קדימה עם הרגל הקדמית עד שהמתיחה מורגשת בחזה ובכתף הקדמית. הצלעות למטה, לא לקמר גב תחתון. החלף צד.", "youtube_query": "doorway chest stretch" },
+        { "name": "Hip Flexor (כל צד)", "seconds": 30, "how_to": "כריעה על ברך אחת, הרגל השנייה קדימה ב-90 מעלות. כווץ את הישבן של הרגל האחורית ודחוף את האגן קדימה — לא לקמר גב תחתון. המתיחה בקדמת-הירך של הרגל הכורעת. החלף צד.", "youtube_query": "kneeling hip flexor stretch" }
+      ]
+    },
+    {
+      "id": "legs_a",
+      "name": "LEGS A",
+      "color": "#3D7A3D",
+      "focus": "סקווט · לאנג׳ים · ליבה",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "סקווט אחורי — מוט (פירמידה)", "sets": 4, "reps": "6-8", "rest_sec": 120, "ramp_up": 2, "rpe": 8, "tempo": "2:1:3", "cue": "פירמידה: 15→10→7→6.", "adonis_level": 0, "superset_group": null, "youtube_query": "barbell back squat form" },
+        { "name": "Bulgarian Split Squat", "sets": 4, "reps": "8-10/רגל", "rest_sec": 90, "rpe": 9, "tempo": "2:1:2", "cue": "מלך הרגל. עומק מלא.", "adonis_level": 0, "superset_group": null, "youtube_query": "bulgarian split squat form" },
+        { "name": "לאנג׳ים הליכה", "sets": 3, "reps": "12/רגל", "rest_sec": 75, "rpe": 8, "tempo": "2:1:2", "cue": "גב זקוף.", "adonis_level": 0, "superset_group": null, "youtube_query": "walking lunge form" },
+        { "name": "הרמת עקבים", "sets": 4, "reps": "20-25", "rest_sec": 60, "rpe": 9, "tempo": "1:2:1", "cue": "HOLD 2 שנ׳ בשיא.", "adonis_level": 0, "superset_group": null, "youtube_query": "standing calf raise form" }
+      ],
+      "finisher": "Core: Weighted Crunch 3×15 → Hanging Leg Raises 3×12 → Russian Twists ×20/צד",
+      "mobility": [
+        { "name": "Hip Flexor Lunge (כל צד)", "seconds": 60, "how_to": "לאנג׳ ארוך, הברך האחורית על הרצפה. אגן נדחף קדימה, ישבן מכווץ, החזה זקוף. להעמקה — הרם את היד באותו צד של הרגל האחורית לתקרה. החלף צד.", "youtube_query": "hip flexor lunge stretch" },
+        { "name": "Hamstring Stretch (כל צד)", "seconds": 45, "how_to": "עמידה, עקב אחד על משטח נמוך (מדרגה/ספסל), רגל ישרה. גב ארוך, התקפל מהירכיים לכיוון הרגל ונשוף. הבהונות אליך מגבירות את המתיחה. החלף צד.", "youtube_query": "standing hamstring stretch" },
+        { "name": "Pigeon Pose (כל צד)", "seconds": 45, "how_to": "מארבע, הבא ברך אחת קדימה לכיוון היד באותו צד, השוק אלכסונית קדימה. הרגל האחורית ישרה לאחור, האגן ישר לרצפה. התקפל קדימה על הרגל הקדמית ונשום. אם הברך מוחה — הרם את הישבן על מגבת. החלף צד.", "youtube_query": "pigeon pose hip stretch" },
+        { "name": "Deep Squat Hold", "seconds": 45, "how_to": "רגליים ברוחב מעט גדול מהכתפיים, שקע לסקוואט עמוק עם העקבים על הרצפה. המרפקים דוחפים את הברכיים החוצה, החזה זקוף. אם העקבים עולים — הנח אותם על משטח דק. נשום ותן לאגן לשקוע.", "youtube_query": "deep squat hold mobility" }
+      ]
+    },
+    {
+      "id": "push_b",
+      "name": "PUSH B",
+      "color": "#C0392B",
+      "focus": "כתפיים ספציאליזציה",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "לחיצת כתף עומדת — מוט (OHP)", "sets": 4, "reps": "5-6", "rest_sec": 120, "ramp_up": 2, "rpe": 8, "tempo": "2:1:2", "cue": "כבד! ליבה הדוקה.", "adonis_level": 1, "superset_group": null, "youtube_query": "standing barbell overhead press form" },
+        { "name": "Arnold Press — דאמבלים", "sets": 3, "reps": "10-12", "rest_sec": 0, "rpe": 8, "tempo": "2:0:2", "cue": "סופרסט. כל ראשי הדלתא.", "adonis_level": 2, "superset_group": "2A", "setup": { "position": "seated" }, "youtube_query": "arnold press form" },
+        { "name": "הרחקות כתפיים", "sets": 3, "reps": "15-20", "rest_sec": 75, "rpe": 9, "tempo": "2:2:1", "cue": "ADONIS CRITICAL! החזק 2 שנ׳.", "adonis_level": 3, "superset_group": "2B", "setup": { "position": "standing", "arms": "both" }, "youtube_query": "dumbbell lateral raise form" },
+        { "name": "כתף אחורית שיפוע", "sets": 4, "reps": "15", "rest_sec": 75, "rpe": 9, "tempo": "2:1:2", "cue": "4 סטים! פרפר הפוך.", "adonis_level": 2, "superset_group": null, "youtube_query": "incline rear delt fly form" },
+        { "name": "כתף קדמית — מוט ישר", "sets": 3, "reps": "10-12", "rest_sec": 0, "ramp_up": 1, "rpe": 8, "tempo": "2:1:2", "cue": "סופרסט. עד גובה עיניים.", "adonis_level": 1, "superset_group": "4A", "youtube_query": "barbell front raise form" },
+        { "name": "Triceps Kickback", "sets": 3, "reps": "12/יד", "rest_sec": 60, "rpe": 9, "tempo": "2:1:1", "cue": "סופרסט. מרפק יציב.", "adonis_level": 0, "superset_group": "4B", "setup": { "arms": "single" }, "youtube_query": "dumbbell triceps kickback form" }
+      ],
+      "finisher": "DROP SET הרחקות: 15 כבד → 20 בינוני → 25 קל, בלי מנוחה!",
+      "mobility": [
+        { "name": "Rear Delt Stretch (כל צד)", "seconds": 45, "how_to": "הבא זרוע אחת ישרה לרוחב-החזה ואחוז אותה מעל המרפק. משוך בעדינות אל החזה, כתף למטה ורחוקה מהאוזן — המתיחה בגב-הכתף. החלף צד.", "youtube_query": "posterior shoulder stretch" },
+        { "name": "Triceps Stretch (כל צד)", "seconds": 45, "how_to": "הרם זרוע אחת למעלה וכופף את המרפק כך שהיד יורדת מאחורי הראש. עם היד השנייה, לחץ בעדינות את המרפק למטה ולאחור. הצלעות למטה, לא לקמר גב. החלף צד.", "youtube_query": "overhead triceps stretch" },
+        { "name": "Face Pull בגומיה ×15", "seconds": 40, "how_to": "גומיה מעוגנת בגובה-הפנים, אחיזה בשתי הידיים. משוך לכיוון הפנים תוך פתיחת המרפקים החוצה ולמעלה, וכווץ את השכמות יחד. עצור שנייה, וחזור בשליטה. 15 חזרות איטיות.", "youtube_query": "band face pull" },
+        { "name": "Wall Angels ×10", "seconds": 30, "how_to": "גב, ישבן ועורף צמודים לקיר, רגליים צעד קדימה. זרועות בצורת W על הקיר — מרפקים ואמות נוגעים. החלק את הידיים למעלה ל-Y בלי לנתק את המרפקים והידיים מהקיר, וחזור. 10 חזרות איטיות.", "youtube_query": "wall angels exercise" }
+      ]
+    },
+    {
+      "id": "pull_b",
+      "name": "PULL B",
+      "color": "#2E5A9C",
+      "focus": "עובי גב · ידיים · אמות",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "מתח אחיזת פטישים", "sets": 4, "reps": "6-8", "rest_sec": 120, "bodyweight": true, "rpe": 8, "tempo": "2:1:3", "cue": "ירידה 3 שנ׳ = V-Taper.", "adonis_level": 1, "superset_group": null, "youtube_query": "hammer grip pull up form" },
+        { "name": "Incline Row — דאמבלים", "sets": 3, "reps": "12", "rest_sec": 0, "ramp_up": 2, "rpe": 8, "tempo": "2:1:2", "cue": "סופרסט. חזה על ספה.", "adonis_level": 0, "superset_group": "2A", "youtube_query": "chest supported incline dumbbell row form" },
+        { "name": "Pullover — דאמבל", "sets": 3, "reps": "12", "rest_sec": 75, "rpe": 8, "tempo": "3:1:2", "cue": "סופרסט. Lat פעמיים בשבוע.", "adonis_level": 1, "superset_group": "2B", "youtube_query": "dumbbell pullover form" },
+        { "name": "יד קידמית מוט W", "sets": 3, "reps": "10-12", "rest_sec": 0, "ramp_up": 1, "rpe": 8, "tempo": "2:1:2", "cue": "סופרסט. הכי כבד לביצפס.", "adonis_level": 0, "superset_group": "3A", "youtube_query": "ez bar curl form" },
+        { "name": "Hammer Curls", "sets": 3, "reps": "10-12", "rest_sec": 75, "rpe": 8, "tempo": "2:1:2", "cue": "סופרסט. Brachialis.", "adonis_level": 0, "superset_group": "3B", "setup": { "position": "standing", "arms": "alternating" }, "youtube_query": "dumbbell hammer curl form" },
+        { "name": "Wrist Curls (אמות)", "sets": 3, "reps": "15-20", "rest_sec": 60, "rpe": 8, "tempo": "1:1:1", "cue": "מסלול מלא.", "adonis_level": 0, "superset_group": null, "youtube_query": "barbell wrist curl form" }
+      ],
+      "finisher": "Arnold Curl 2×12 · Barbell Shrugs 2×15",
+      "mobility": [
+        { "name": "Biceps Stretch (כל צד)", "seconds": 30, "how_to": "עמידה עם הגב לקיר או למשקוף, כף-היד על הקיר מאחוריך בגובה-הכתף, אצבעות לאחור. סובב את הגוף בעדינות הרחק מהיד עד למתיחה בקדמת-הכתף ובביצפס. החלף צד.", "youtube_query": "wall biceps stretch" },
+        { "name": "Forearm Stretch (כל צד)", "seconds": 30, "how_to": "זרוע ישרה קדימה, כף-היד כלפי מעלה. עם היד השנייה משוך את האצבעות בעדינות למטה ולאחור — מתיחה בפנים-האמה. אחר-כך כף-היד למטה ומשוך את גב-היד — מתיחה בחוץ-האמה. החלף צד.", "youtube_query": "forearm flexor stretch" },
+        { "name": "Side Lat Stretch (כל צד)", "seconds": 30, "how_to": "עמידה, אחוז במוט או במשקוף ביד אחת מעל הראש, ורגליים מוצלבות. הטה את האגן והגוף הרחק מהיד עד למתיחה בצד-הגב מתחת לבית-השחי. החלף צד.", "youtube_query": "standing side lat stretch" },
+        { "name": "Deep Breathing ×5", "seconds": 40, "how_to": "שכיבה על הגב, יד אחת על החזה ויד אחת על הבטן. שאיפה איטית דרך האף — הבטן עולה ראשונה, ואז החזה. נשיפה ארוכה דרך הפה, כפולה מהשאיפה. 5 מחזורים, לסיום.", "youtube_query": "diaphragmatic breathing exercise" }
+      ]
+    },
+    {
+      "id": "legs_b",
+      "name": "LEGS B",
+      "color": "#3D7A3D",
+      "focus": "RDL · גלוטס · Core",
+      "duration_min": 42,
+      "exercises": [
+        { "name": "RDL — דאמבלים", "sets": 4, "reps": "8-10", "rest_sec": 120, "ramp_up": 2, "rpe": 8, "tempo": "3:0:2", "cue": "ירידה 3 שנ׳! מתיחה במסטרינג.", "adonis_level": 0, "superset_group": null, "youtube_query": "dumbbell romanian deadlift form" },
+        { "name": "Hip Thrust", "sets": 4, "reps": "10-12", "rest_sec": 90, "rpe": 8, "tempo": "1:2:1", "cue": "HOLD 2 שנ׳. סחיטת ישבן.", "adonis_level": 0, "superset_group": null, "youtube_query": "barbell hip thrust form" },
+        { "name": "Goblet Squat — קטלבל", "sets": 3, "reps": "15", "rest_sec": 75, "rpe": 8, "tempo": "2:1:2", "cue": "עומק מלא.", "adonis_level": 0, "superset_group": null, "youtube_query": "kettlebell goblet squat form" },
+        { "name": "Jump Squats", "sets": 4, "reps": "6", "rest_sec": 90, "rpe": 9, "tempo": "מהיר", "cue": "נחיתה רכה. POWER.", "adonis_level": 0, "superset_group": null, "youtube_query": "jump squat form" }
+      ],
+      "finisher": "Core Power: Plank 3×60 → Side Plank 3×45/צד → Hollow Hold 3×30",
+      "mobility": [
+        { "name": "Hamstring שכיבה (כל צד)", "seconds": 45, "how_to": "שכיבה על הגב, רגל אחת ישרה על הרצפה. הרם את הרגל השנייה ישרה ואחוז מאחורי הירך או השוק (או עם רצועה). משוך בעדינות לכיוון החזה, הברך ישרה ככל שנוח. החלף צד.", "youtube_query": "supine hamstring stretch" },
+        { "name": "Glute Figure-4 (כל צד)", "seconds": 45, "how_to": "שכיבה על הגב, ברכיים מכופפות. הנח קרסול אחד על הברך של הרגל השנייה (צורת 4). אחוז מאחורי הירך של הרגל התומכת ומשוך לכיוון החזה — המתיחה בישבן של הרגל המוצלבת. החלף צד.", "youtube_query": "figure 4 glute stretch" },
+        { "name": "Hip Flexor Couch (כל צד)", "seconds": 45, "how_to": "כריעה על ברך אחת מול ספה או קיר, השוק האחורית עולה על הספה עם הברך ברצפה. הרגל השנייה קדימה. זקוף את הגוף וכווץ ישבן — מתיחה בקדמת-הירך ובארבע-ראשי. החלף צד.", "youtube_query": "couch stretch hip flexor" },
+        { "name": "Ankle Circles ×10", "seconds": 30, "how_to": "ישיבה או עמידה על רגל אחת, הרגל השנייה מורמת מעט. סובב את כף-הרגל במעגלים גדולים ואיטיים מהקרסול — 10 לכל כיוון. השוק לא זזה, רק הקרסול. החלף צד.", "youtube_query": "ankle circles mobility" }
+      ]
+    }
+  ],
+  "nutrition": {
+    "targets": { "kcal": 2300, "protein_g": 180, "fat_g": 70, "carbs_g": 250, "water_l": 3 },
+    "eating_window": "09:00-18:00",
+    "carry": { "protein_pct": 15, "carbs_pct": 25 },
+    "meals": [
+      { "name": "ארוחת בוקר", "time": "09:00", "items": "5 ביצים + 2 חלבונים · ½ אבוקדו · 90ג אורז מלא · פלפל+שרי · שמן זית", "supplements": [{ "name": "ויטמין B קומפלקס", "form": "capsule" }, { "name": "D3+K2 (2 כמוסות)", "form": "capsule" }, { "name": "קריאטין 5ג", "form": "powder" }],
+        "components": [
+          { "name": "ביצים שלמות", "count": 5, "unit": "ביצים", "role": "protein", "protein_g": 31 },
+          { "name": "חלבוני ביצה", "count": 2, "unit": "חלבונים", "role": "protein", "protein_g": 7 },
+          { "name": "אורז מלא", "grams": 90, "role": "carbs", "carbs_g": 23 },
+          { "name": "אבוקדו", "grams": 100, "role": "fat" }
+        ] },
+      { "name": "ארוחת צהריים", "time": "13:00", "items": "250ג חזה עוף · 130ג אורז מלא · ירקות · אגוז ברזיל", "supplements": null,
+        "components": [
+          { "name": "חזה עוף", "grams": 250, "role": "protein", "protein_g": 78 },
+          { "name": "אורז מלא", "grams": 130, "role": "carbs", "carbs_g": 33 },
+          { "name": "ירקות", "role": "veg" }
+        ] },
+      { "name": "ארוחת ערב", "time": "17:30", "items": "200ג עוף (סלמון יום ב') · 150ג בטטה · 120ג תרד · פרי", "supplements": null,
+        "components": [
+          { "name": "עוף (סלמון יום ב')", "grams": 200, "role": "protein", "protein_g": 50 },
+          { "name": "בטטה", "grams": 150, "role": "carbs", "carbs_g": 30 },
+          { "name": "תרד", "grams": 120, "role": "veg" }
+        ] }
+    ],
+    "out_rules": [
+      "חלבון ראשון — עוף/דג/בשר רזה, בגודל כף יד",
+      "ירקות בלי הגבלה, רוטב בצד",
+      "בלי מטוגן ובלי שתייה מתוקה"
+    ],
+    "cheat_policy": "ארוחה חופשית אחת בשבוע — תיהנה ממנה במלואה וחזור לתוכנית בארוחה הבאה.",
+    "rules": [
+      "ויטמין C עם כל ארוחת ברזל",
+      "בלי קפה/תה 09:00-11:00 (חוסם ספיגת ברזל)",
+      "תרד תמיד מבושל + לימון",
+      "בלי מוצרי חלב עם ארוחת ברזל"
+    ]
+  },
+  "habits": [
+    "מים 3+ ליטר",
+    "ארוחת בוקר לפי התוכנית",
+    "ארוחת צהריים לפי התוכנית",
+    "ארוחת ערב לפי התוכנית",
+    "תוספים D3+K2"
+  ],
+  "weekly_win": {
+    "metrics": [
+      { "name": "מותניים (ס\"מ)", "direction": "down_or_flat" },
+      { "name": "הרחקות כתפיים Top Set", "direction": "up" },
+      { "name": "Sit & Reach", "direction": "up_or_flat" }
+    ],
+    "rule": "2 מתוך 3 = שבוע מנצח"
+  },
+  "progression": {
+    "double_progression": "התחל בקצה התחתון של טווח-החזרות. כל שבוע +1 חזרה באותו משקל. הגעת לקצה העליון בכל הסטים — העלה 2.5 ק\"ג וחזור לתחתון.",
+    "hiit_phases": [
+      { "weeks": "3-4", "sprint_sec": 30, "rest_sec": 90, "rounds": 6 },
+      { "weeks": "5-7", "sprint_sec": 30, "rest_sec": 75, "rounds": 7 },
+      { "weeks": "9-11", "sprint_sec": 40, "rest_sec": 80, "rounds": 8 }
+    ]
+  },
+  "flexibility": {
+    "evening": [
+      { "name": "Standing Forward Fold", "seconds": 90, "cue": "ברכיים רכות, תלייה. תן לגרביטציה לעבוד", "how_to": "עמידה ברוחב-אגן, התקפל קדימה מהירכיים עם ברכיים רכות. הידיים אוחזות במרפקים או נוגעות ברצפה, הראש כבד. בכל נשיפה תן לגב התחתון להתארך — לא למשוך, לשחרר.", "youtube_query": "standing forward fold stretch" },
+      { "name": "Seated Hamstring — ימין", "seconds": 60, "cue": "גב ישר! התכופף מהירך", "how_to": "ישיבה, רגל ימין ישרה קדימה ורגל שמאל מכופפת עם כף-הרגל לירך. גב ארוך, התקדם מהירכיים לכיוון כף-הרגל הימנית ונשוף. החזק במקום שבו המתיחה מורגשת מאחורי הירך ולא כואבת.", "youtube_query": "seated hamstring stretch" },
+      { "name": "PNF ימין: כווץ נגד היד", "seconds": 6, "cue": "דחוף את העקב לרצפה חזק!", "how_to": "באותה תנוחה, הנח את היד על כף-הרגל או השוק ודחוף את העקב לרצפה כאילו אתה מנסה לכופף את הברך — היד מתנגדת. כיווץ של כ-70% למשך 6 שניות, בלי לזוז. אחר-כך שחרר לגמרי.", "youtube_query": "PNF hamstring stretch contract relax" },
+      { "name": "PNF ימין: העמק מתיחה", "seconds": 20, "cue": "שחרר... עכשיו רד עמוק יותר", "how_to": "מיד אחרי השחרור — נשוף והתקדם קדימה לעומק חדש, בלי לקפוץ. הטווח שנפתח אחרי הכיווץ הוא המתיחה האמיתית. החזק ונשום עמוק.", "youtube_query": "PNF hamstring stretch contract relax" },
+      { "name": "Seated Hamstring — שמאל", "seconds": 60, "cue": "גב ישר! התכופף מהירך", "how_to": "ישיבה, רגל שמאל ישרה קדימה ורגל ימין מכופפת עם כף-הרגל לירך. גב ארוך, התקדם מהירכיים לכיוון כף-הרגל השמאלית ונשוף. החזק במקום שבו המתיחה מורגשת מאחורי הירך ולא כואבת.", "youtube_query": "seated hamstring stretch" },
+      { "name": "PNF שמאל: כווץ נגד היד", "seconds": 6, "cue": "דחוף את העקב לרצפה חזק!", "how_to": "באותה תנוחה, הנח את היד על כף-הרגל או השוק ודחוף את העקב לרצפה כאילו אתה מנסה לכופף את הברך — היד מתנגדת. כיווץ של כ-70% למשך 6 שניות, בלי לזוז. אחר-כך שחרר לגמרי.", "youtube_query": "PNF hamstring stretch contract relax" },
+      { "name": "PNF שמאל: העמק מתיחה", "seconds": 20, "cue": "שחרר... עכשיו רד עמוק יותר", "how_to": "מיד אחרי השחרור — נשוף והתקדם קדימה לעומק חדש, בלי לקפוץ. הטווח שנפתח אחרי הכיווץ הוא המתיחה האמיתית. החזק ונשום עמוק.", "youtube_query": "PNF hamstring stretch contract relax" },
+      { "name": "Cat-Cow", "seconds": 60, "cue": "איטי, עם הנשימה. כל חוליה", "how_to": "על ארבע, ידיים מתחת לכתפיים וברכיים מתחת לאגן. בשאיפה — הבטן שוקעת והמבט עולה; בנשיפה — הגב מתעגל למעלה והסנטר לחזה. תנועה איטית לכל אורך עמוד-השדרה, בקצב הנשימה.", "youtube_query": "cat cow stretch" },
+      { "name": "Child's Pose", "seconds": 90, "cue": "נשימה עמוקה לגב התחתון", "how_to": "כריעה, הברכיים מעט פתוחות, שב על העקבים והנח את החזה בין הירכיים. הידיים ישרות קדימה על הרצפה, המצח נוגע. נשום לתוך הגב — כל נשיפה מרחיקה את הישבן לעקבים.", "youtube_query": "child's pose stretch" },
+      { "name": "Supine Twist — ימין", "seconds": 60, "cue": "כתפיים על הרצפה", "how_to": "שכיבה על הגב, ברך ימין אל החזה ואז מעבר לצד שמאל של הגוף. יד ימין פרושה הצידה, המבט לכיוון יד ימין. שתי הכתפיים נשארות על הרצפה — הסיבוב מגיע מהגב האמצעי, לא מהכתף.", "youtube_query": "supine spinal twist stretch" },
+      { "name": "Supine Twist — שמאל", "seconds": 60, "cue": "כתפיים על הרצפה", "how_to": "שכיבה על הגב, ברך שמאל אל החזה ואז מעבר לצד ימין של הגוף. יד שמאל פרושה הצידה, המבט לכיוון יד שמאל. שתי הכתפיים נשארות על הרצפה — הסיבוב מגיע מהגב האמצעי, לא מהכתף.", "youtube_query": "supine spinal twist stretch" },
+      { "name": "90/90 Hip — ימין", "seconds": 45, "cue": "גוף קדימה מעל הרגל", "how_to": "ישיבה על הרצפה, רגל ימין קדימה מכופפת ב-90 מעלות ורגל שמאל מאחור מכופפת ב-90 מעלות. גב זקוף, התקדם עם החזה מעל השוק הקדמית. אם הישבן הימני מתרומם — עצור שם, זה הטווח שלך היום.", "youtube_query": "90/90 hip stretch" },
+      { "name": "90/90 Hip — שמאל", "seconds": 45, "cue": "גוף קדימה מעל הרגל", "how_to": "ישיבה על הרצפה, רגל שמאל קדימה מכופפת ב-90 מעלות ורגל ימין מאחור מכופפת ב-90 מעלות. גב זקוף, התקדם עם החזה מעל השוק הקדמית. אם הישבן השמאלי מתרומם — עצור שם, זה הטווח שלך היום.", "youtube_query": "90/90 hip stretch" },
+      { "name": "Jefferson Curl (בלי/משקל קל)", "seconds": 45, "cue": "גלגל חוליה-חוליה למטה ולמעלה, איטי מאוד", "how_to": "עמידה על מדרגה או קופסה, רגליים צמודות. גלגל את עמוד-השדרה למטה חוליה-חוליה — סנטר, צוואר, גב עליון, גב תחתון — עד שהידיים תלויות מתחת לכפות-הרגליים. עלה בסדר ההפוך. בלי משקל או עם 2-5 ק״ג בלבד, לאט מאוד.", "youtube_query": "jefferson curl mobility" }
+    ],
+    "morning": [
+      { "name": "Cat-Cow בוקר", "seconds": 60, "cue": "להעיר את עמוד השדרה", "how_to": "על ארבע, ידיים מתחת לכתפיים וברכיים מתחת לאגן. בשאיפה — הבטן שוקעת והמבט עולה (פרה); בנשיפה — הגב מתעגל למעלה והסנטר לחזה (חתול). תנועה איטית, חוליה אחרי חוליה, בקצב הנשימה.", "youtube_query": "cat cow stretch" },
+      { "name": "Forward Fold קל", "seconds": 45, "cue": "ברכיים כפופות, רק שחרור", "how_to": "עמידה ברוחב-אגן, ברכיים רכות. התקפל קדימה מהירכיים ותן לראש ולידיים ליפול בכבדות. בבוקר לא דוחפים לעומק — נשיפות ארוכות והגב משתחרר לבד.", "youtube_query": "standing forward fold morning stretch" },
+      { "name": "Hip Circles", "seconds": 30, "cue": "סיבובי אגן גדולים, 2 כיוונים", "how_to": "עמידה, ידיים על המותניים. סובב את האגן במעגלים גדולים ואיטיים — קדימה, הצידה, אחורה, הצידה. החלף כיוון באמצע. הברכיים רכות והפלג העליון כמעט לא זז.", "youtube_query": "standing hip circles mobility" },
+      { "name": "World's Greatest Stretch", "seconds": 45, "cue": "לאנג' עמוק + סיבוב, החלף צדדים", "how_to": "צעד ארוך קדימה ללאנג׳, שתי הידיים על הרצפה מבפנים לרגל הקדמית. הרם את היד הפנימית לתקרה בסיבוב-חזה ועקוב אחריה במבט, ואז החזר. הברך האחורית ישרה והעקב האחורי דוחף לאחור.", "youtube_query": "world's greatest stretch mobility" }
+    ],
+    "vacuum": [
+      { "name": "Vacuum · סבב 1", "seconds": 20, "cue": "נשוף הכל, משוך טבור פנימה", "how_to": "עמידה או על ארבע, על בטן ריקה. נשוף את כל האוויר החוצה, ואז משוך את הטבור פנימה ולמעלה לכיוון עמוד-השדרה — כאילו מנסה להצמיד אותו לגב. החזק בלי לנשום פנימה, הצלעות פתוחות. שחרר בעדינות.", "youtube_query": "stomach vacuum exercise" },
+      { "name": "מנוחה", "seconds": 15, "cue": "נשום רגיל", "how_to": "נשימה רגילה, ידיים רפויות. תן לבטן לחזור למקומה לפני הסבב הבא — לא ממהרים.", "youtube_query": null },
+      { "name": "Vacuum · סבב 2", "seconds": 20, "cue": "אל תנשום פנימה!", "how_to": "אותו ביצוע: נשיפה מלאה, טבור פנימה ולמעלה, החזקה בלי לנשום. הפעם נסה למשוך עמוק יותר בשניות האחרונות.", "youtube_query": "stomach vacuum exercise" },
+      { "name": "מנוחה", "seconds": 15, "cue": "נשום רגיל", "how_to": "נשימה רגילה, ידיים רפויות. תן לבטן לחזור למקומה לפני הסבב הבא — לא ממהרים.", "youtube_query": null },
+      { "name": "Vacuum · סבב 3", "seconds": 20, "cue": "נשוף הכל, משוך טבור פנימה", "how_to": "סבב אחרון: נשיפה מלאה, טבור פנימה ולמעלה, והחזקה. אם נגמר האוויר — שחרר, נשום, ותפוס שוב. איכות המשיכה חשובה מהזמן.", "youtube_query": "stomach vacuum exercise" }
+    ]
+  }
+}
+```
