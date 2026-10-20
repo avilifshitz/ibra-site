@@ -68,3 +68,7 @@ document.documentElement.classList.add('js');
   }
   setTimeout(next, 2400);
 })();
+
+(function(){var g=document.querySelector('.steps');if(!g)return;var st=g.querySelectorAll('.step');
+function upd(){var mid=innerHeight*0.5,best=1,bd=1e9;st.forEach(function(el,i){var r=el.getBoundingClientRect();var d=Math.abs((r.top+r.bottom)/2-mid);if(d<bd){bd=d;best=i+1}});g.setAttribute('data-active',best);st.forEach(function(el,i){el.classList.toggle('on',i+1===best)})}
+addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();})();

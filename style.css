@@ -381,3 +381,31 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
 @media (min-width:761px){
   .site .wrap>nav,.site .text>nav{position:sticky;top:0;z-index:5;background:rgba(10,10,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 }
+/* desktop scene: pinned phone · scale · brand moment */
+.pin{display:none}
+@media (min-width:900px){
+  .site h2{font-size:52px}
+  .poster{font-size:84px}
+  #how{padding-top:40px}
+  .steps{display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:start;margin-top:24px}
+  .step{min-height:72vh;display:flex;flex-direction:column;justify-content:center;padding:0;opacity:.3;transition:opacity .4s}
+  .step:last-of-type{min-height:100vh}
+  .step.on{opacity:1}
+  .step .shot{display:none}
+  .step .n{font-size:112px;margin-bottom:16px}
+  .step h3{font-size:30px;line-height:1.2}
+  .step p{font-size:19px;max-width:38ch;flex:0}
+  .pin{display:block;position:sticky;top:88px;grid-column:2;grid-row:1/span 3;align-self:start;justify-self:start;height:min(820px,calc(100vh - 120px));width:auto;aspect-ratio:600/1304;border-radius:40px;border:1px solid var(--line);box-shadow:0 40px 90px rgba(0,0,0,.6);overflow:hidden;background:var(--bg)}
+  .pin img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s cubic-bezier(.4,0,.2,1)}
+  .steps[data-active="1"] .pin img:nth-child(1),.steps[data-active="2"] .pin img:nth-child(2),.steps[data-active="3"] .pin img:nth-child(3){opacity:1}
+  html:not(.js) .step{opacity:1}
+  html:not(.js) .pin img:first-child{opacity:1}
+  .site .close{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:48px 0}
+  .splash{width:300px;height:300px}
+  .wordmark{font-size:88px;margin-top:20px}
+  .site .close h2{font-size:64px;margin-top:28px}
+  .site .close .badge{margin-top:40px}
+}
+@media (min-width:900px) and (prefers-reduced-motion:reduce){
+  .step,.pin img{transition:none}
+}
