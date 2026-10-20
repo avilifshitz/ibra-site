@@ -429,3 +429,33 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
   #connect .cond{margin-top:0}
 }
 @media (min-width:900px) and (prefers-reduced-motion:reduce){.watches figure{transition:none}}
+/* phone scenes: swipe cards · one watch with chips */
+.dots,.wchips{display:none}
+@media (max-width:720px){
+  .steps{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:24px -16px 0;padding:0 16px 8px;scrollbar-width:none}
+  .steps::-webkit-scrollbar{display:none}
+  .step{flex:0 0 82%;scroll-snap-align:center;border:1px solid var(--line);border-radius:20px;padding:20px 18px 0;background:var(--card);margin:0}
+  .step:first-child{border-top:1px solid var(--line);padding-top:20px}
+  .step .n{font-size:48px;margin-bottom:6px}
+  .step h3{font-size:20px}
+  .step p{font-size:15px;min-height:3em}
+  .step .shot{max-width:none;width:100%;margin:16px auto 0;aspect-ratio:600/700;border-radius:20px 20px 0 0;border-bottom:0;-webkit-mask-image:linear-gradient(#000 82%,transparent);mask-image:linear-gradient(#000 82%,transparent)}
+  .dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
+  .dots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:background .25s,transform .25s}
+  .dots i.on{background:var(--ink);transform:scale(1.25)}
+  .wchips{display:flex;gap:8px;margin-top:24px}
+  .wchips button{flex:1;min-height:44px;padding:0 8px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--muted);font:inherit;font-size:15px;font-weight:800;cursor:pointer}
+  .wchips button.on{color:var(--ink);border-color:var(--ink)}
+  .watches{display:block;margin-top:16px;text-align:center}
+  .watches figure{display:none}
+  .watches figure.on{display:block}
+  .watches figure>img{display:none}
+  .watches figcaption{margin-top:16px;font-size:16px;color:var(--ink2)}
+  .watches figcaption b{font-size:22px;margin-bottom:4px}
+  .pinw{display:block;position:relative;width:min(260px,70%);margin:0 auto;aspect-ratio:422/514;border-radius:40px;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.5);overflow:hidden;background:var(--bg)}
+  .pinw img{position:absolute;inset:0;width:100%;max-width:none;height:100%;object-fit:cover;border:0;border-radius:0;box-shadow:none;opacity:0;transition:opacity .35s}
+  .watches[data-active="1"] .pinw img:nth-child(1),.watches[data-active="2"] .pinw img:nth-child(2),.watches[data-active="3"] .pinw img:nth-child(3){opacity:1}
+  html:not(.js) .watches figure{display:block}
+  html:not(.js) .pinw img:first-child{opacity:1}
+}
+@media (max-width:720px) and (prefers-reduced-motion:reduce){.dots i,.pinw img{transition:none}}

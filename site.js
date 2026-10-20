@@ -72,3 +72,8 @@ document.documentElement.classList.add('js');
 (function(){var scenes=document.querySelectorAll('[data-scene]');if(!scenes.length)return;
 function upd(){var mid=innerHeight*0.5;scenes.forEach(function(g){var st=g.querySelectorAll(':scope > :not(.pin)'),best=1,bd=1e9;st.forEach(function(el,i){var r=el.getBoundingClientRect();var d=Math.abs((r.top+r.bottom)/2-mid);if(d<bd){bd=d;best=i+1}});g.setAttribute('data-active',best);st.forEach(function(el,i){el.classList.toggle('on',i+1===best)})})}
 addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();})();
+
+(function(){var g=document.querySelector('.steps'),dots=document.querySelectorAll('.dots i');if(!g||!dots.length)return;var cards=g.querySelectorAll('.step');
+g.addEventListener('scroll',function(){var c=g.getBoundingClientRect(),mid=c.left+c.width/2,best=0,bd=1e9;cards.forEach(function(el,i){var r=el.getBoundingClientRect();var d=Math.abs((r.left+r.right)/2-mid);if(d<bd){bd=d;best=i}});dots.forEach(function(d,i){d.classList.toggle('on',i===best)})},{passive:true});})();
+(function(){var w=document.querySelector('.watches'),ch=document.querySelectorAll('.wchips button');if(!w||!ch.length)return;var figs=w.querySelectorAll('figure');
+ch.forEach(function(b,i){b.addEventListener('click',function(){w.setAttribute('data-active',i+1);ch.forEach(function(x,j){x.classList.toggle('on',j===i);x.setAttribute('aria-selected',j===i)});figs.forEach(function(f,j){f.classList.toggle('on',j===i)})})});})();
