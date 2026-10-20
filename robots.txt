@@ -1,0 +1,4 @@
+# ibra.fit — פתוח לכל הזחלנים, כולל זחלני-החיפוש של ChatGPT, Claude, Perplexity, Google ו-Bing.
+User-agent: *
+Allow: /
+Sitemap: https://ibra.fit/sitemap.xml

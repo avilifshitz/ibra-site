@@ -1,12 +1,19 @@
-:root{--bg:#0A0A0C;--card:#151518;--ink:#fff;--muted:#9a9aa2;--line:#26262b;--lime:#E8FF3C}
-*{box-sizing:border-box}
-html{background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Heebo",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
-main{max-width:680px;margin:0 auto;padding:48px 20px 64px}
+/* ibra.fit — גיליון אחד לכל הדפים. הטוקנים = Theme של האפליקציה. */
+@font-face{font-family:"Heebo";src:url("/assets/heebo.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{--bg:#0A0A0C;--card:#151518;--card2:#1C1C20;--ink:#fff;--ink2:#DCDCE0;--muted:#9A9AA2;--line:#26262B;--lime:#E8FF3C;--steel:#B4BEC6}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Heebo",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:var(--lime);text-decoration:none}
 a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:4px}
+::selection{background:var(--lime);color:#0A0A0C !important}
+
+/* ---- דפי-המשפט (privacy · terms · support): כפי שהיו ---- */
+main{max-width:680px;margin:0 auto;padding:48px 20px 64px}
 .brand{font-weight:900;font-style:italic;letter-spacing:.02em;font-size:20px;color:var(--ink)}
 .brand b{color:var(--lime);font-weight:900}
+.brand:hover{text-decoration:none}
 h1{font-weight:900;font-style:italic;font-size:40px;line-height:1.1;margin:40px 0 6px}
 .updated{color:var(--muted);font-size:13px;margin:0 0 32px}
 h2{font-size:17px;font-weight:800;margin:28px 0 6px}
@@ -15,3 +22,294 @@ p{margin:0;color:#dcdce0}
 .mail{font-size:22px;font-weight:800;direction:ltr;unicode-bidi:isolate}
 footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
+
+/* ---- דפי-השיווק (body.site) ---- */
+.site a{color:inherit}
+.site a:hover{text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.site nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.site .brand{font-size:22px;padding:8px 0}
+.site nav ul{display:flex;gap:24px;list-style:none;padding:0;font-size:14px;color:var(--muted)}
+.site nav ul a{padding:12px 0;display:inline-block}
+.site nav ul a:hover{color:var(--ink)}
+.store,.store:hover,.store:visited,.store:focus{color:#0A0A0C !important;text-decoration:none}
+.store{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:#0A0A0C;font-weight:800;font-size:16px;padding:14px 22px;border-radius:14px;transition:transform .15s cubic-bezier(.4,0,.2,1),box-shadow .2s;box-shadow:0 0 0 rgba(232,255,60,0)}
+.store:hover{box-shadow:0 0 28px rgba(232,255,60,.35)}
+.store:active{transform:scale(.97)}
+.store.sm{padding:11px 16px;font-size:14px;border-radius:10px;min-height:44px}
+/* הבאדג' הרשמי של אפל (toolbox.marketingtools.apple.com), בלי לגעת בו: גובה ≥40, מרווח-נקי סביב */
+.badge{display:inline-block;line-height:0;border-radius:8px;transition:transform .15s cubic-bezier(.4,0,.2,1),opacity .2s}
+.badge img{display:block;height:56px;width:auto}
+.badge.sm img{height:40px}
+.badge:hover{opacity:.9}
+.badge:active{transform:scale(.97)}
+
+.hero{padding:40px 0 64px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.site h1{font-size:56px;line-height:1.08;letter-spacing:-.01em;text-wrap:balance;margin:0}
+.site h1 em{font-style:inherit;color:var(--lime);text-shadow:0 0 28px rgba(232,255,60,.35)}
+.lede{font-size:20px;line-height:1.5;color:var(--ink2);margin-top:24px;max-width:34ch}
+.cta{display:flex;align-items:center;gap:24px;margin-top:32px;flex-wrap:wrap}
+.quiet{color:var(--muted);font-size:16px;border-bottom:1px solid var(--line);padding:10px 0;min-height:44px;display:inline-flex;align-items:center}
+.quiet:hover{color:var(--ink);border-color:var(--ink)}
+.facts{margin-top:20px;color:var(--muted);font-size:16px}
+/* שלושת השמות כשורת-מותגים: לבן, 800, בלי לוגואים (אבי, 20.10) */
+.facts .brands{display:inline-flex;align-items:center;gap:8px;direction:ltr;color:var(--ink);font-weight:800;letter-spacing:.01em;vertical-align:baseline}
+.facts .brands i{font-style:normal;color:var(--muted)}
+.shot{width:100%;height:auto;border-radius:28px;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.5);display:block;background:var(--bg)}
+.pair{display:flex;gap:20px;align-items:flex-start;justify-content:center}
+.pair figure{margin:0;width:232px}
+.pair .back{margin-top:48px;width:212px}
+.pair figcaption{text-align:center;color:var(--muted);font-size:13px;font-weight:700;letter-spacing:.06em;margin-top:12px}
+
+.site section{padding:72px 0;border-top:1px solid var(--line)}
+.site h2{font-weight:900;font-style:italic;font-size:36px;line-height:1.1;text-wrap:balance;margin:0}
+.site h2 em{font-style:inherit;color:var(--lime)}
+.sub{color:var(--muted);font-size:16px;margin-top:12px;max-width:52ch}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+.step{display:flex;flex-direction:column}
+.step .shot{max-width:240px;margin:24px auto 0}
+.step p{flex:1}
+.n{font-weight:800;color:var(--muted);font-size:13px;letter-spacing:.08em}
+.site h3{font-weight:800;font-size:22px;line-height:1.25;margin-top:8px;text-wrap:balance}
+.step p{color:var(--muted);margin-top:8px}
+/* הספרה היא הסימן של השלב: גדולה, 900 נטוי, לבנה (ליים שמור לפעולה — 20.8) */
+.step .n{font-size:64px;line-height:1;font-weight:900;font-style:italic;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.02em;margin-bottom:10px}
+
+/* הסולם — ה-V שמתרחב. גיאומטריית DeltaRing, שלוש דרגות. */
+/* הסולם — שלוש דמויות; הנבחרת גדולה ודלתאותיה בליים (כמו RankTitle + DeltaRing באפליקציה). לוח-פירוט אחד מתחלף. */
+#rank .lede{max-width:46ch}
+.ranks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;align-items:end;max-width:720px}
+.rk{all:unset;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:14px;padding:22px 12px 18px;border-radius:20px;border:1px solid transparent;cursor:pointer;transition:transform .45s cubic-bezier(.4,0,.2,1),border-color .3s,background .3s}
+.rk svg{width:96px;height:auto;display:block;overflow:visible;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.rk svg path{fill:var(--steel);transform-origin:50% 10%;transform-box:view-box;transition:fill .35s,filter .35s}
+.rk .nm{font-size:24px;font-weight:900;font-style:italic;letter-spacing:.01em;color:var(--ink);white-space:nowrap}
+.rk .nm em{font-style:inherit;color:var(--lime)}
+.rk:not(.on){opacity:.75;border-color:var(--line)}
+.rk:hover{opacity:1;border-color:#3A3A40}
+.rk:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.rk.on{opacity:1;background:rgba(255,255,255,.03);border-color:var(--line);transform:scale(1.08)}
+.rk.on svg path{fill:var(--lime);filter:drop-shadow(0 0 14px rgba(232,255,60,.45))}
+.rkpanels{margin-top:28px;max-width:720px}
+.rkp[hidden]{display:none}
+.rkp{display:block;padding-top:8px;animation:rkin .35s ease-out}
+@keyframes rkin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* לוח-הזהות (27.8): קווי-שיער, המשפט כהצהרת-מותג, התכונות עם נקודות-ליים */
+.who{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.who .eye{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.02em}
+/* גובה קבוע לשתי שורות — הלוח לא זז בין הדמויות (אבי, 20.10) */
+.who b{font-size:24px;font-weight:900;font-style:italic;color:var(--ink);line-height:1.2;max-width:28ch;text-wrap:balance;min-height:2.4em;display:flex;align-items:center;justify-content:center}
+.who .traits{color:var(--ink2);font-size:13px;font-weight:700;letter-spacing:.04em}
+.who .traits i{font-style:normal;color:var(--lime);font-weight:900;margin:0 2px}
+.conds{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rkp .conds{margin-top:16px}
+.conds li{display:flex;flex-direction:column;gap:6px;padding:14px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
+.conds svg{width:30px;height:30px;fill:none;stroke:var(--steel);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:4px}
+.rkp .conds li:first-child svg{fill:var(--steel);stroke:none}
+.conds b{font-size:17px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.conds span{font-size:13px;color:var(--muted)}
+.cond{margin-top:32px;color:var(--ink2);max-width:52ch}
+.fine{margin-top:16px;color:var(--muted);font-size:16px;max-width:40ch}
+
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 32px;margin-top:40px}
+.grid8 h3{font-size:22px;margin:0;padding-top:12px;border-top:1px solid var(--line)}
+.grid8 p{color:var(--muted);margin-top:4px;font-size:15px}
+/* "המאמן רואה אותך" — טקסט מימין, מסך ״המאמן ראה״ משמאל */
+.see{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.seeshot{margin:0;text-align:center}
+.seeshot .shot{max-width:300px;margin:0 auto}
+.seeshot figcaption{color:var(--muted);font-size:13px;margin-top:16px;max-width:36ch;margin-inline:auto}
+html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
+.facts3{margin-top:28px}
+.facts3+.sub{margin-top:20px}
+/* השעון — שלושה מסכים אמיתיים זה לצד זה (לא סליידר, אפשטיין #18) */
+#connect .lede{max-width:46ch}
+.watches{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;text-align:center}
+.watches figure{margin:0}
+.watches img{width:180px;max-width:70%;height:auto;border-radius:28px;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.watches figcaption{margin-top:16px;color:var(--muted);font-size:14px}
+.watches figcaption b{display:block;color:var(--ink);font-size:17px;font-weight:800;margin-bottom:2px}
+.cond b{color:var(--ink);font-weight:800}
+.nots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.site .card{padding:24px;margin:0}
+.site .card h3{font-size:20px;margin:0}
+.site .card p{color:var(--muted);margin-top:8px}
+.notlist{list-style:none;padding:0;margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;font-size:17px;color:var(--muted)}
+.notlist b{color:var(--ink);font-weight:800}
+.privacy{margin-top:32px;font-weight:800;font-size:18px;color:var(--ink)}
+.privacy small{display:block;font-weight:400;color:var(--muted);font-size:16px;margin-top:4px}
+
+/* המחיר — אותו מסך כמו באפליקציה (PaywallCopy): שנתי מסומן, "הכי משתלם", והמילים של המאמן */
+.tiers{margin-top:28px;max-width:560px;display:flex;flex-direction:column;gap:10px}
+.tier{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.02)}
+.tier.on{border:1.5px solid var(--lime);box-shadow:0 0 0 4px rgba(232,255,60,.08)}
+.tier b{font-size:17px;font-weight:800;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tier .tag{color:var(--lime);font-size:13px;font-weight:800}
+.tier small{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.tier .p{text-align:left;font-size:24px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;direction:ltr}
+.tier .p span{display:block;font-size:13px;color:var(--muted);font-weight:500;direction:rtl}
+#price .lede{max-width:560px}
+#price .note{margin-top:20px;font-size:15px;color:var(--ink2)}
+.note{color:var(--muted);margin-top:16px;max-width:52ch}
+
+.faq{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px 48px}
+.faq h3{font-size:18px;margin:0}
+.faq p{color:var(--ink2);margin-top:8px}
+.more{display:inline-flex;align-items:center;min-height:44px;margin-top:24px;font-weight:800;border-bottom:1px solid var(--ink)}
+.more:hover{border-color:var(--lime);color:var(--lime)}
+
+/* הפוטר: המשימה · חתימה · קו · קישורים בשורה · שורת-מטא */
+.site footer{display:grid;gap:0;margin:0;padding:28px 0 40px;align-items:start}
+.site footer .maker{margin:0;color:var(--ink);font-size:17px;font-weight:700;max-width:40ch;line-height:1.5;text-wrap:balance}
+.site footer .maker .sig{display:block;margin-top:10px;color:var(--muted);font-size:13px;font-weight:400}
+.site footer .maker a{color:var(--muted)}
+.site footer .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px;padding-top:12px;border-top:1px solid var(--line)}
+.site footer nav{height:auto}
+.site footer ul{display:flex;flex-wrap:wrap;gap:4px 24px;margin:0;padding:0;list-style:none;font-size:14px}
+.site footer li{white-space:nowrap}
+.site footer li a{display:inline-block;padding:12px 0;color:var(--muted)}
+.site footer li a:hover{color:var(--ink)}
+.site footer .meta{color:var(--muted);font-size:13px;white-space:nowrap}
+
+/* ---- דפי-טקסט שיווקיים (faq · vs · en) ---- */
+.text{max-width:720px;margin:0 auto;padding:0 20px}
+.text h1{font-size:44px;margin-top:32px}
+.text .lede{margin-top:12px;font-size:17px;max-width:none}
+.group{margin-top:48px;color:var(--muted);font-size:13px;font-weight:700;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:8px}
+.text article{margin-top:32px}
+.text article h2{font-style:normal;font-size:22px;line-height:1.25}
+.text article p{color:var(--ink2);margin-top:8px}
+.text article ol,.text article ul{margin:10px 20px 0 0;color:var(--ink2);padding:0}
+.text article li{margin-top:4px}
+.text article li b{font-weight:800;color:var(--ink)}
+.text .close{padding:72px 0 48px;border-top:1px solid var(--line);margin-top:64px}
+.text .close h2{font-style:italic;font-size:40px}
+.text .close .badge{margin-top:24px}
+.table{margin-top:32px;border:1px solid var(--line);border-radius:16px;overflow:auto}
+.table table{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+.table th,.table td{padding:14px 16px;border-top:1px solid var(--line);text-align:start;vertical-align:top}
+.table thead th{border-top:0;background:var(--card);font-weight:800}
+.table tbody th{font-weight:800;color:var(--ink);white-space:nowrap}
+.table td{color:var(--ink2)}
+.table td.y{color:var(--ink);font-weight:800}
+.table td.n{color:var(--muted);font-weight:400;font-size:15px;letter-spacing:0}
+.table .me{background:rgba(232,255,60,.04)}
+
+/* המילה המתחלפת בהירו: רוחב קבוע (נמדד ב-JS) כדי שהשורה לא תקפוץ; דהייה בלבד */
+.rot{display:inline-block;direction:ltr;unicode-bidi:isolate;text-align:center;transition:opacity .22s cubic-bezier(.4,0,.2,1)}
+.rot.fade{opacity:0}
+/* ---- שכבת-ההרגשה ---- */
+.site h1 em{text-shadow:0 0 40px rgba(232,255,60,.45),0 0 90px rgba(232,255,60,.18)}
+/* הפוסטר: המילים באות אליך בגלילה */
+.poster{display:flex;flex-direction:column;font-weight:900;font-style:italic;font-size:56px;line-height:1.04;letter-spacing:-.01em}
+.poster span,.poster em{font-style:inherit;opacity:.14;transition:opacity .45s cubic-bezier(.4,0,.2,1)}
+.poster em{color:var(--lime);text-shadow:0 0 40px rgba(232,255,60,.35)}
+.poster.l1 span:nth-child(1),.poster.l2 span:nth-child(-n+2),.poster.l3 span:nth-child(-n+3),.poster.l4 span:nth-child(-n+4),.poster.l5 span,.poster.l6 span,.poster.l6 em{opacity:1}
+html:not(.js) .poster span,html:not(.js) .poster em{opacity:1}
+.grid8{margin-top:48px}
+/* פרלקסה עדינה: הטלפונים נעים מעט מהר יותר מהדף */
+html.js .pair .front,html.js .step .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
+html.js .pair .back{transform:translateY(calc((0.5 - var(--p,0.5)) * 64px))}
+/* הסיום: כוריאוגרפיית-הספלאש (DeltaSpin: 0.6 סיבוב ונעילה · 1.2 ליים · 1.45 שם) */
+.splash{width:160px;height:160px;display:block;margin:0 auto;overflow:visible}
+.splash path{fill:var(--lime)}
+.wordmark{font-weight:900;font-style:italic;font-size:44px;line-height:1;letter-spacing:.02em;margin-top:12px}
+.wordmark b{color:var(--lime)}
+.site .close{text-align:center;padding:72px 0 48px;border-top:1px solid var(--line);margin-top:64px}
+.site .close .badge{margin-top:32px}
+.site .close h2{font-size:36px;line-height:1.1;margin:24px 0 0}
+html.js .close .splash{opacity:0;transform:scale(.82)}
+html.js .close .wordmark{opacity:0;letter-spacing:.3em}
+html.js .close.go .splash{animation:spinlock .6s cubic-bezier(.4,0,.2,1) forwards}
+html.js .close.go .splash path{animation:light .25s ease-out .6s forwards}
+html.js .close.go .wordmark{animation:name .4s ease-out 1.2s forwards}
+/* הסלוגן נחשף אחרי השם; "גִּבּוֹר." נדלק אחרון (DeltaSpin: heroTime 1.45 · total 1.80) */
+html.js .close h2{opacity:0;transform:translateY(8px)}
+html.js .close h2 em{color:var(--ink);text-shadow:none}
+html.js .close.go h2{animation:rise .45s ease-out 1.45s forwards}
+html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes hero{to{color:var(--lime);text-shadow:0 0 40px rgba(232,255,60,.45),0 0 90px rgba(232,255,60,.18)}}
+@keyframes spinlock{from{opacity:0;transform:scale(.82) rotateY(0)}to{opacity:1;transform:scale(1) rotateY(900deg)}}
+@keyframes light{to{filter:drop-shadow(0 0 26px rgba(232,255,60,.55))}}
+@keyframes name{to{opacity:1;letter-spacing:.02em}}
+/* ---- תנועה: ברירת-המחדל נראה; ה-JS רק מוסיף ---- */
+/* הסולם מתרחב לפי כמה גללת (scrub), לא פעם אחת */
+html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
+@media (prefers-reduced-motion:reduce){
+  html.js .rk svg path{transform:none}
+  .rk,.rk svg,.rk svg path{transition:none}
+  .rkp{animation:none}
+  html.js .pair .front,html.js .pair .back,html.js .step .shot,html.js .seeshot .shot{transform:none}
+  .poster span,.poster em{opacity:1;transition:none}
+  html.js .close .splash,html.js .close .wordmark,html.js .close h2{opacity:1;transform:none;letter-spacing:.02em;animation:none}
+  html.js .close h2 em{color:var(--lime);animation:none}
+  html.js .close .splash path{fill:var(--lime)}
+  .rot{transition:none}
+  html{scroll-behavior:auto}
+}
+
+@media (max-width:760px){
+  .site nav ul{display:none}
+  /* בטלפון הכותרת דביקה, והבאדג' בה מופיע רק אחרי שההירו יצא מהמסך (אבי, 20.10) */
+  .site .wrap>nav,.site .text>nav{position:sticky;top:0;z-index:5;height:56px;margin:0 -16px;padding:0 16px;background:rgba(10,10,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  html.js .wrap>nav .badge.sm,html.js .text>nav .badge.sm{opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .3s,transform .3s}
+  html.js.past-hero .wrap>nav .badge.sm,html.js.past-hero .text>nav .badge.sm{opacity:1;pointer-events:auto;transform:none}
+  .site footer nav ul{display:flex;gap:4px 18px;font-size:13px}
+  .hero{grid-template-columns:1fr;gap:32px;padding:24px 0 48px}
+  .site h1{font-size:42px}
+  .poster{font-size:40px;line-height:1.04}
+  .grid8{margin-top:32px}
+  .splash{width:120px;height:120px}
+  .wordmark{font-size:34px}
+  .lede{font-size:18px}
+  .pair{gap:12px;margin-top:8px}
+  .pair figure{width:48%}
+  .pair .back{margin-top:32px;width:48%}
+  .pair .shot{aspect-ratio:600/900;object-fit:cover;object-position:top}
+  .facts{font-size:15px}
+  .site section{padding:40px 0}
+  .notlist{grid-template-columns:1fr;gap:10px}
+  .site h2{font-size:30px}
+  .steps{grid-template-columns:1fr;gap:0}
+  .step{padding:32px 0;border-top:1px solid var(--line)}
+  .step .n{font-size:56px}
+  .step:first-child{border-top:0;padding-top:8px}
+  .step .shot{max-width:220px;margin-top:20px;aspect-ratio:600/640;object-fit:cover;object-position:top;border-bottom-left-radius:0;border-bottom-right-radius:0;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+  .ranks{gap:6px;margin-top:28px}
+  .rk{padding:14px 4px 12px;gap:10px}
+  .rk svg{width:64px}
+  .rk .nm{font-size:18px}
+  .rk.on{transform:scale(1.06)}
+  .rkpanels{margin-top:20px}
+  .who{padding:18px 0}
+  .who b{font-size:20px}
+  .conds{grid-template-columns:repeat(3,1fr);gap:8px}
+  .conds li{padding:12px 10px}
+  .conds b{font-size:15px}
+  .conds svg{width:24px;height:24px}
+  .nots,.faq{grid-template-columns:1fr}
+  .grid8{grid-template-columns:1fr 1fr;gap:20px}
+  .see{grid-template-columns:1fr;gap:28px}
+  .seeshot .shot{max-width:260px;aspect-ratio:562/760;object-fit:cover;object-position:top;border-bottom-left-radius:0;border-bottom-right-radius:0;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}
+  .watches{grid-template-columns:repeat(3,1fr);gap:12px}
+  .watches img{width:100%;max-width:110px;border-radius:20px}
+  .watches figcaption{font-size:13px}
+  .watches figcaption b{font-size:14px}
+  .close h2{font-size:40px}
+  .close{padding:64px 0}
+  .text h1{font-size:34px}
+  /* טבלת-ההשוואה: בטלפון כל שורה הופכת לכרטיס, בלי גלילה-לצד */
+  .table{border:0;border-radius:0;overflow:visible}
+  .table table{min-width:0;display:block}
+  .table thead{display:none}
+  .table tbody,.table tr{display:block}
+  .table tr{border:1px solid var(--line);border-radius:16px;padding:8px 16px 12px;margin-top:12px;background:var(--card)}
+  .table tbody th,.table td{display:block;padding:6px 0;border:0;white-space:normal}
+  .table tbody th{font-size:13px;color:var(--muted);letter-spacing:.06em;padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:4px}
+  .table td::before{display:inline-block;min-width:96px;color:var(--muted);font-weight:700;font-size:13px;letter-spacing:.04em}
+  .table td:nth-child(2)::before{content:"IBRA"}
+  .table td:nth-child(3)::before{content:"Hevy"}
+  .table td:nth-child(4)::before{content:"Strong"}
+  .table td:nth-child(5)::before{content:"ChatGPT לבד"}
+  .table .me{background:transparent}
+}
