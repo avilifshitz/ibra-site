@@ -313,3 +313,41 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
   .table td:nth-child(5)::before{content:"ChatGPT לבד"}
   .table .me{background:transparent}
 }
+
+/* guide */
+.guide .gs{margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.guide .gs:first-of-type{margin-top:56px}
+.guide .n{font-size:64px;line-height:1;font-weight:900;font-style:italic;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.guide .gs h2{font-style:normal;font-size:28px;line-height:1.2;margin-top:12px}
+.guide .gs h3{font-size:20px;margin-top:40px}
+.guide .gs p{color:var(--ink2);margin-top:12px;max-width:60ch}
+.guide .gs p.big{color:var(--ink);font-size:22px;font-weight:800;line-height:1.35;margin-top:24px;text-wrap:balance}
+.guide .gs p.note{color:var(--muted);font-size:15px;margin-top:16px}
+.facts5{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.facts5 li{display:flex;flex-direction:column;gap:6px;padding:16px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
+.facts5 svg{width:30px;height:30px;fill:none;stroke:var(--steel);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:4px;flex:none}
+.facts5 b{font-size:17px;font-weight:800;color:var(--ink)}
+.facts5 span{font-size:14px;color:var(--muted);line-height:1.4}
+.chat{margin-top:16px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.chat .bubble{position:relative;padding:18px 20px;border-radius:20px 20px 20px 6px;background:var(--card2);color:var(--ink);font-size:16px;line-height:1.6;white-space:pre-wrap;user-select:all;max-width:56ch}
+.copybtn{padding:12px 20px;border:0;border-radius:12px;background:var(--lime);color:#0A0A0C;font:inherit;font-size:16px;font-weight:800;cursor:pointer;transition:transform .15s cubic-bezier(.4,0,.2,1)}
+.copybtn:active{transform:scale(.97)}
+.ways{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ways li{padding:20px;border:1px solid var(--line);border-radius:20px;background:var(--card);display:flex;flex-direction:column}
+.ways li.us{border-color:var(--lime)}
+.ways b{font-size:18px;font-weight:800;color:var(--ink);line-height:1.25}
+.ways span{display:block;margin-top:4px;color:var(--muted);font-size:14px}
+.ways p{margin-top:8px;flex:1}
+.ways i{font-style:normal;display:block;margin-top:16px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;line-height:1.45}
+.ways li.us i{color:var(--ink)}
+.checks{list-style:none;margin:16px 0 0;padding:0}
+.checks li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:17px;font-weight:700;color:var(--ink)}
+.checks svg{width:22px;height:22px;flex:none;fill:none;stroke:var(--ink);stroke-width:2.4;stroke-linecap:square;stroke-linejoin:miter}
+@media (max-width:720px){
+  .guide .n{font-size:56px}
+  .guide .gs{margin-top:44px}
+  .guide .gs h2{font-size:24px}
+  .facts5{grid-template-columns:1fr 1fr}
+  .ways{grid-template-columns:1fr}
+  .chat .bubble{max-width:none}
+}
