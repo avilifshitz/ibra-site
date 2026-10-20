@@ -377,3 +377,7 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
   .matrix tbody th{font-size:14px;padding-inline-start:12px}
   .matrix td.y svg{width:20px;height:20px}
 }
+/* sticky header, desktop */
+@media (min-width:761px){
+  .site .wrap>nav,.site .text>nav{position:sticky;top:0;z-index:5;background:rgba(10,10,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+}
