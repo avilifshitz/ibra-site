@@ -254,7 +254,11 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
   .site .wrap>nav,.site .text>nav{position:sticky;top:0;z-index:5;height:56px;margin:0 -16px;padding:0 16px;background:rgba(10,10,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
   html.js .wrap>nav .badge.sm,html.js .text>nav .badge.sm{opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .3s,transform .3s}
   html.js.past-hero .wrap>nav .badge.sm,html.js.past-hero .text>nav .badge.sm{opacity:1;pointer-events:auto;transform:none}
-  .site footer nav ul{display:flex;gap:4px 18px;font-size:13px}
+  .site footer .row{gap:12px 0}
+  .site footer nav{width:100%}
+  .site footer nav ul{display:flex;flex-wrap:nowrap;justify-content:space-between;width:100%;gap:0;font-size:13px;white-space:nowrap}
+  .site footer nav ul a{padding:12px 0}
+  .site footer .meta{width:100%;text-align:center}
   .hero{grid-template-columns:1fr;gap:32px;padding:24px 0 48px}
   .site h1{font-size:42px}
   .poster{font-size:40px;line-height:1.04}
