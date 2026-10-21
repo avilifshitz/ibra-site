@@ -358,7 +358,7 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
 .scene .pin{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--bg);box-shadow:0 30px 60px rgba(0,0,0,.5);width:min(236px,58%);aspect-ratio:600/1000;flex:none}
 .scene .track{display:flex;height:100%;width:300%;transform:translateX(calc(var(--sp) * 66.6667%));will-change:transform}
 .scene .track img{width:33.3333%;max-width:none;height:100%;object-fit:cover;object-position:top;flex:none;display:block;border:0;border-radius:0;box-shadow:none}
-.scene .pinw{width:min(240px,64%);aspect-ratio:422/514;border-radius:40px}
+.scene .pinw{width:min(250px,66%);aspect-ratio:422/514;border:9px solid #1E1E23;border-radius:46px;box-shadow:0 0 0 1px #2C2C32,0 30px 60px rgba(0,0,0,.55)}
 .scene .bars{display:flex;gap:6px;width:min(236px,58%);margin-top:14px;flex:none}
 .scene .bars i{flex:1;height:3px;border-radius:2px;background:var(--line);position:relative;overflow:hidden}
 .scene .bars i::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:right;transform:scaleX(var(--f,0))}
@@ -380,7 +380,10 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .scene{--nav:64px;height:calc(100vh - var(--nav) + 180vh)}
   .scene .stage{top:var(--nav);height:calc(100vh - var(--nav));flex-direction:row;align-items:center;gap:80px;padding-top:0}
   .scene .pin{width:auto;height:min(820px,calc(100vh - var(--nav) - 80px));aspect-ratio:600/1304;border-radius:40px;order:2}
-  .scene .pinw{height:auto;width:300px;aspect-ratio:422/514;border-radius:48px}
+  .scene .pinw{height:auto;width:380px;aspect-ratio:422/514;border-width:12px;border-radius:64px}
+  .scene.watches{height:calc(100vh + 140vh)}
+  .scene.watches .stage{--sh:470px;height:var(--sh);top:calc(var(--nav) + (100vh - var(--nav) - var(--sh)) / 2);justify-content:center;gap:96px;max-width:960px;margin-inline:auto}
+  .scene.watches .txts{flex:0 1 440px;height:240px}
   .scene .bars{display:none}
   .scene .txts{flex:1;height:100%;margin:0;order:1}
   .scene .txts>*{padding:0;display:flex;flex-direction:column;justify-content:center;transform:translateY(calc((1 - var(--a,0)) * 16px))}
