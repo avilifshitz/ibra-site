@@ -187,7 +187,7 @@ html.js .pair .back{transform:translateY(calc((0.5 - var(--p,0.5)) * 64px))}
 .wordmark{font-weight:900;font-style:italic;font-size:44px;line-height:1;letter-spacing:.02em;margin-top:12px}
 .wordmark b{color:var(--lime)}
 .site .close{text-align:center;padding:72px 0 48px;border-top:1px solid var(--line);margin-top:64px}
-.site .close .badge{margin-top:32px}
+.site .close .badge{margin-top:32px}.site .close .badge img{height:64px}
 .site .close h2{font-size:36px;line-height:1.1;margin:24px 0 0}
 html.js .close .splash{opacity:0;transform:scale(.82)}
 html.js .close .wordmark{opacity:0;letter-spacing:.3em}
@@ -350,7 +350,7 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
   .splash{width:300px;height:300px}
   .wordmark{font-size:88px;margin-top:20px}
   .site .close h2{font-size:64px;margin-top:28px}
-  .site .close .badge{margin-top:40px}
+  .site .close .badge{margin-top:44px}.site .close .badge img{height:76px}
 }
 /* scenes: a pinned stage, scrubbed by scroll (progress --sp 0→1, reversible, no thresholds) */
 .scene{--sp:0;--nav:56px;position:relative;display:block;grid-template-columns:none;height:190svh;margin-top:16px;text-align:start}
@@ -378,6 +378,8 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
 .scene figcaption{margin:0;font-size:16px;color:var(--ink2)}
 .scene figcaption b{display:block;font-size:24px;color:var(--ink);font-weight:800;margin-bottom:4px}
 .watches.scene{margin-top:24px}
+.scene.watches figcaption b{font-size:40px;font-weight:900;font-style:italic;line-height:1;margin-bottom:8px;letter-spacing:-.01em}
+.scene.watches figcaption{font-size:17px}
 #connect .cond{margin-top:0}
 html:not(.js) .scene{height:auto}
 html:not(.js) .scene .stage{position:static;height:auto}
@@ -391,7 +393,9 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .scene .pinw{height:auto;width:380px;aspect-ratio:422/514;border-width:12px;border-radius:64px}
   .scene.watches{height:calc(100vh + 140vh)}
   .scene.watches .stage{--sh:470px;height:var(--sh);top:calc(var(--nav) + (100vh - var(--nav) - var(--sh)) / 2);justify-content:center;gap:96px;max-width:960px;margin-inline:auto}
-  .scene.watches .txts{flex:0 1 440px;height:240px}
+  .scene.watches .txts{flex:0 1 520px;height:260px}
+  .scene.watches figcaption b{font-size:64px;margin-bottom:14px}
+  .scene.watches figcaption{font-size:21px}
   .scene .bars{display:none}
   .scene .txts{flex:1;height:100%;margin:0;order:1}
   .scene .txts>*{padding:0;display:flex;flex-direction:column;justify-content:center;transform:translateY(calc((1 - var(--a,0)) * 16px))}
