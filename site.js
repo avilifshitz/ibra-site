@@ -151,7 +151,7 @@ window.__watchMoment=function(p){var b=seg(p,0.3,0.7);h2.textContent=118+Math.ro
 (function(){var c=document.getElementById('coachshot');if(!c)return;
 window.__coachMoment=function(p){var t=function(k,v){c.classList.toggle(k,v)};t('marked',p>=0.08);t('found',p>=0.2);t('rx',p>=0.28);t('rx1',p>=0.32);t('rx2',p>=0.38);t('rx3',p>=0.44);t('pg2',p>=0.54);t('marked2',p>=0.6);t('found2',p>=0.68);t('rxb',p>=0.74);t('rxb1',p>=0.78);t('rxb2',p>=0.84);t('rxb3',p>=0.9)}})();
 
-// כרטיסיות (איך זה עובד · השעון): מתקדם לבד כשהמקטע על המסך; הקשה על צעד לוקחת שליטה (האוטומט נעצר)
+// כרטיסיות (איך זה עובד · השעון): מתקדם לבד כשהמקטע על המסך; הקשה בוחרת מאיפה ממשיכים (האוטומט ממשיך)
 (function(){var CFG={how:{durs:[4000,6000,6500,7000,6000,4000],moment:function(k,f){if(window.__setMoment)window.__setMoment((k-0.3+f*0.9)/5)}},
  watch:{durs:[3500,5000,5000],moment:function(k,f){if(window.__watchMoment)window.__watchMoment(k===0?0:k===1?0.3+f*0.4:0.65+f*0.35)}}};
 window.__steppers={};
@@ -168,7 +168,7 @@ function show(i,f){k=(i+N)%N;st.style.setProperty('--k',k);
 function frame(now){raf=null;if(!on)return;var f=Math.min(1,(now-t0)/DUR);paint(f);if(f>=1){if(auto)show(k+1);else return}raf=requestAnimationFrame(frame)}
 function start(){on=true;if(!raf)raf=requestAnimationFrame(frame)}
 function stop(){on=false;if(raf){cancelAnimationFrame(raf);raf=null}}
-tabs.concat(lis.map(function(l){return l.querySelector('button')})).forEach(function(b){b.addEventListener('click',function(){auto=false;show(+b.getAttribute('data-step'));start()})});
+tabs.concat(lis.map(function(l){return l.querySelector('button')})).forEach(function(b){b.addEventListener('click',function(){show(+b.getAttribute('data-step'));start()})});
 show(0,0);
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){es[0].isIntersecting?start():stop()},{threshold:.35}).observe(st)}else start();
 window.__steppers[st.getAttribute('data-stepper')]={show:function(i,f){auto=false;stop();show(i,f)}}});
