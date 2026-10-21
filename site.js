@@ -157,8 +157,8 @@ window.__coachMoment=function(p){var t=function(k,v){c.classList.toggle(k,v)};t(
 window.__steppers={};
 [].forEach.call(document.querySelectorAll('[data-stepper]'),function(st){var cfg=CFG[st.getAttribute('data-stepper')]||CFG.how;
 var tabs=[].slice.call(st.querySelectorAll('.tabs button')),lis=[].slice.call(st.querySelectorAll('.list li')),cur=st.querySelector('.curstep');
-var N=lis.length,DUR=5000,k=-1,t0=0,auto=!matchMedia('(prefers-reduced-motion: reduce)').matches,raf=null,on=false;
-function paint(f){var bar=lis[k]&&lis[k].querySelector('.bar'),tb=tabs[k]&&tabs[k].querySelector('.bar');if(bar)bar.style.setProperty('--f',f.toFixed(3));if(tb)tb.style.setProperty('--f',f.toFixed(3));cfg.moment(k,f)}
+var N=lis.length,DUR=5000,k=-1,t0=0,fl=0,auto=!matchMedia('(prefers-reduced-motion: reduce)').matches,raf=null,on=false;
+function paint(f){fl=f;var bar=lis[k]&&lis[k].querySelector('.bar'),tb=tabs[k]&&tabs[k].querySelector('.bar');if(bar)bar.style.setProperty('--f',f.toFixed(3));if(tb)tb.style.setProperty('--f',f.toFixed(3));cfg.moment(k,f)}
 function show(i,f){k=(i+N)%N;st.style.setProperty('--k',k);
  tabs.forEach(function(b,j){b.classList.toggle('on',j===k);b.setAttribute('aria-selected',j===k);b.querySelector('.bar').style.setProperty('--f',0)});
  lis.forEach(function(l,j){l.classList.toggle('on',j===k);l.querySelector('.bar').style.setProperty('--f',0)});
@@ -166,9 +166,9 @@ function show(i,f){k=(i+N)%N;st.style.setProperty('--k',k);
  if(tabs[k]&&tabs[k].scrollIntoView)try{tabs[k].scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'})}catch(e){}
  DUR=cfg.durs[k]||5000;t0=performance.now()-(f||0)*DUR;paint(f||0)}
 function frame(now){raf=null;if(!on)return;var f=Math.min(1,(now-t0)/DUR);paint(f);if(f>=1){if(auto)show(k+1);else return}raf=requestAnimationFrame(frame)}
-function start(){on=true;if(!raf)raf=requestAnimationFrame(frame)}
+function start(){if(on)return;on=true;t0=performance.now()-fl*DUR;if(!raf)raf=requestAnimationFrame(frame)}
 function stop(){on=false;if(raf){cancelAnimationFrame(raf);raf=null}}
-tabs.concat(lis.map(function(l){return l.querySelector('button')})).forEach(function(b){b.addEventListener('click',function(){show(+b.getAttribute('data-step'));start()})});
+tabs.concat(lis.map(function(l){return l.querySelector('button')})).forEach(function(b){b.addEventListener('click',function(){stop();show(+b.getAttribute('data-step'));start()})});
 show(0,0);
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){es[0].isIntersecting?start():stop()},{rootMargin:'0px 0px -45% 0px',threshold:0}).observe(st)}else start();
 window.__steppers[st.getAttribute('data-stepper')]={show:function(i,f){auto=false;stop();show(i,f)}}});
