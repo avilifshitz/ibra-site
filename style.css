@@ -626,3 +626,17 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hs .tfoot{display:flex;justify-content:space-between;margin-top:4cqw;font-size:2.8cqw;font-weight:700;color:rgba(255,255,255,.6)}.hs .tfoot .tq{color:#fff}
 .hs .ttabs{position:absolute;left:50%;transform:translateX(-50%);bottom:5cqw;display:flex;gap:1cqw;background:#141417;border:0.3cqw solid rgba(255,255,255,.08);border-radius:10cqw;padding:1.5cqw}.hs .ttabs span{display:flex;flex-direction:column;align-items:center;gap:.6cqw;width:22cqw;height:14cqw;justify-content:center;border-radius:9cqw;font-size:2.6cqw;font-weight:800;color:rgba(255,255,255,.55)}.hs .ttabs span.on{background:#1C1C20;color:#E8FF3C}.hs .ttabs svg{width:5cqw;height:5cqw}
 @media (prefers-reduced-motion:reduce){.hs .tdeck{transition:none}}
+
+/* גיליון-השבוע מהטבעת */
+.hs .tring{transition:transform .15s}.hs .tring.hit{transform:scale(.94)}
+.hs .wk{position:absolute;left:0;right:0;bottom:0;height:46%;background:#141417;border-radius:7cqw 7cqw 0 0;padding:0 5cqw;transform:translateY(104%);transition:transform .5s cubic-bezier(.4,0,.2,1);z-index:2}
+.hs.sheet .wk{transform:none}
+.hs .wkh{font-size:5.5cqw;font-weight:900;font-style:italic;margin-top:4cqw}
+.hs .wkrow{display:flex;justify-content:space-between;margin-top:4cqw}
+.hs .wd{display:flex;flex-direction:column;align-items:center;gap:1.2cqw;width:11.5cqw}
+.hs .wd svg{width:10cqw;height:10cqw;transform:rotate(-90deg)}
+.hs .wd circle{fill:none;stroke-width:3.4}.hs .wd .tr{stroke:rgba(255,255,255,.12)}.hs .wd .ar{stroke:#E8FF3C;stroke-linecap:round}
+.hs .wd.today .tr{stroke:#3A4016}.hs .wd.fut .tr{stroke-dasharray:2 3;stroke:rgba(255,255,255,.22)}.hs .wd.fut .ar{display:none}.hs .wd.rest .tr{stroke-dasharray:none;stroke:rgba(255,255,255,.08)}
+.hs .wd b{font-size:2.5cqw;font-weight:800;color:rgba(255,255,255,.7)}.hs .wd.full b,.hs .wd.part b{color:#fff}.hs .wd small{font-size:2.2cqw;color:#E8FF3C;font-weight:800;margin-top:-.6cqw}
+.hs .wkline{font-size:3cqw;font-weight:700;color:rgba(255,255,255,.6);margin-top:4.5cqw;text-align:center}.hs .wkline b{color:#fff}
+@media (prefers-reduced-motion:reduce){.hs .wk{transition:none}}

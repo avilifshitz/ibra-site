@@ -68,7 +68,7 @@ document.documentElement.classList.add('js');
     S.forEach(function(s){var r=s.g.getBoundingClientRect();var st=s.g.querySelector('.stage');var range=r.height-st.offsetHeight;
       var p=range>0?(st.getBoundingClientRect().top-r.top)/range:0;p=Math.max(0,Math.min(1,p));s.g.style.setProperty('--sp',p.toFixed(4));if(s.g.classList.contains('five')){var N=s.txts.length-1,u=p*N,i0=Math.floor(u),f0=u-i0,f1=f0<0.65?0:(f0-0.65)/0.35;f1=f1*f1*(3-2*f1);s.g.style.setProperty('--tx',((i0+f1)/N).toFixed(4))}
       var n=s.txts.length,x=p*(n-1),best=Math.round(x);s.g.setAttribute('data-active',best+1);
-      s.txts.forEach(function(el,i){var a=Math.max(0,Math.min(1,1-Math.abs(x-i)*2.2));el.style.setProperty('--a',a.toFixed(3));el.classList.toggle('on',i===best)});
+      var five=s.g.classList.contains('five');s.txts.forEach(function(el,i){var a;if(five){var d=x-i;a=d<=-0.17?0:d<0?1+d/0.17:d<=0.65?1:d<0.82?1-(d-0.65)/0.17:0}else a=Math.max(0,Math.min(1,1-Math.abs(x-i)*2.2));el.style.setProperty('--a',a.toFixed(3));el.classList.toggle('on',i===best)});
       s.bars.forEach(function(b,i){b.style.setProperty('--f',Math.max(0,Math.min(1,x-i+1)).toFixed(3))});
       if(s.g.classList.contains('steps')&&window.__setMoment)window.__setMoment(p);if(s.g.classList.contains('watches')&&window.__watchMoment)window.__watchMoment(p);
     });}
@@ -120,7 +120,7 @@ var M={g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr:ml
 function live(i,v){var f=V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
 window.__setMoment=function(p){
  // שלב 2 · מסך-היום: החפיסה מחליקה (ב-RTL הקלפים הבאים משמאל ⇒ הרצועה זזה ימינה)
- var t=seg(p*5,0.7,1.6),ts=seg(t,0.2,0.9);ts=ts*ts*(3-2*ts);if(deck)deck.style.transform='translateX('+(ts*92).toFixed(1)+'cqw)';
+ var t=seg(p*5,0.7,1.6),ts=seg(t,0.12,0.5);ts=ts*ts*(3-2*ts);if(deck)deck.style.transform='translateX('+(ts*92).toFixed(1)+'cqw)';var td=document.getElementById('todayshot');if(td){on(td.querySelector('.tring'),'hit',t>=0.56&&t<0.64);on(td,'sheet',t>=0.64)}
  // שלב 2 · 0.125–0.375
  var u=p*5;var q=seg(u,2.7,3.6);
  on(L.rest,'on',q<0.3);on(L.set,'on',q>=0.3&&q<0.82);on(L.earn,'on',q>=0.82);
