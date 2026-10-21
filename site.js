@@ -14,17 +14,6 @@ document.documentElement.classList.add('js');
     }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
     items.forEach(function (e) { io.observe(e); });
   } else { items.forEach(function (e) { e.classList.add('go'); }); }
-  // הסולם: הקשה על דמות בוחרת אותה — הדלתאות שלה בליים, ולוח-הפירוט מתחלף. השם לא זז.
-  var tabs = [].slice.call(document.querySelectorAll('.rk'));
-  tabs.forEach(function (t) {
-    t.addEventListener('click', function () {
-      tabs.forEach(function (o) {
-        var on = o === t;
-        o.classList.toggle('on', on); o.setAttribute('aria-selected', on);
-        document.getElementById(o.getAttribute('aria-controls')).hidden = !on;
-      });
-    });
-  });
   // הכותרת: הבאדג' בה נדלק רק כשההירו מחוץ למסך (ה-CSS מחיל זאת בטלפון בלבד).
   var hero = document.querySelector('.hero');
   if (hero && 'IntersectionObserver' in window) {
@@ -45,7 +34,7 @@ document.documentElement.classList.add('js');
       p = Math.max(0, Math.min(1, p));
       el.style.setProperty('--p', p.toFixed(3));
       if (el === poster) {
-        var n = Math.min(6, Math.floor(p * 9));      // שש שורות נדלקות בזו-אחר-זו במחצית הראשונה של המעבר
+        var n = Math.min(6, Math.floor(p * 14));     // שש המילים נדלקות בזו-אחר-זו בשליש הראשון של המעבר
         el.className = 'poster' + (n ? ' l' + n : '');
       }
     });

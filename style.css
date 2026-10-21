@@ -78,41 +78,16 @@ footer a{color:var(--muted)}
 /* הסולם — ה-V שמתרחב. גיאומטריית DeltaRing, שלוש דרגות. */
 /* הסולם — שלוש דמויות; הנבחרת גדולה ודלתאותיה בליים (כמו RankTitle + DeltaRing באפליקציה). לוח-פירוט אחד מתחלף. */
 #rank .lede{max-width:46ch}
-.ranks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;align-items:end;max-width:720px}
-.rk{all:unset;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:14px;padding:22px 12px 18px;border-radius:20px;border:1px solid transparent;cursor:pointer;transition:transform .45s cubic-bezier(.4,0,.2,1),border-color .3s,background .3s}
-.rk svg{width:96px;height:auto;display:block;overflow:visible;transition:transform .45s cubic-bezier(.4,0,.2,1)}
-.rk svg path{fill:var(--steel);transform-origin:50% 10%;transform-box:view-box;transition:fill .35s,filter .35s}
-.rk .nm{font-size:24px;font-weight:900;font-style:italic;letter-spacing:.01em;color:var(--ink);white-space:nowrap}
-.rk .nm em{font-style:inherit;color:var(--lime)}
-.rk:not(.on){opacity:.75;border-color:var(--line)}
-.rk:hover{opacity:1;border-color:#3A3A40}
-.rk:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
-.rk.on{opacity:1;background:rgba(255,255,255,.03);border-color:var(--line);transform:scale(1.08)}
-.rk.on svg path{fill:var(--lime);filter:drop-shadow(0 0 14px rgba(232,255,60,.45))}
-.rkpanels{margin-top:28px;max-width:720px}
-.rkp[hidden]{display:none}
-.rkp{display:block;padding-top:8px;animation:rkin .35s ease-out}
-@keyframes rkin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 /* לוח-הזהות (27.8): קווי-שיער, המשפט כהצהרת-מותג, התכונות עם נקודות-ליים */
-.who{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.who .eye{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.02em}
 /* גובה קבוע לשתי שורות — הלוח לא זז בין הדמויות (אבי, 20.10) */
-.who b{font-size:24px;font-weight:900;font-style:italic;color:var(--ink);line-height:1.2;max-width:28ch;text-wrap:balance;min-height:2.4em;display:flex;align-items:center;justify-content:center}
-.who .traits{color:var(--ink2);font-size:13px;font-weight:700;letter-spacing:.04em}
-.who .traits i{font-style:normal;color:var(--lime);font-weight:900;margin:0 2px}
 .conds{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.rkp .conds{margin-top:16px}
 .conds li{display:flex;flex-direction:column;gap:6px;padding:14px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
 .conds svg{width:30px;height:30px;fill:none;stroke:var(--steel);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:4px}
-.rkp .conds li:first-child svg{fill:var(--steel);stroke:none}
 .conds b{font-size:17px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
 .conds span{font-size:13px;color:var(--muted)}
 .cond{margin-top:32px;color:var(--ink2);max-width:52ch}
 .fine{margin-top:16px;color:var(--muted);font-size:16px;max-width:40ch}
 
-.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 32px;margin-top:40px}
-.grid8 h3{font-size:22px;margin:0;padding-top:12px;border-top:1px solid var(--line)}
-.grid8 p{color:var(--muted);margin-top:4px;font-size:15px}
 /* "המאמן רואה אותך" — טקסט מימין, מסך ״המאמן ראה״ משמאל */
 .see{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .seeshot{margin:0;text-align:center}
@@ -133,8 +108,6 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 .site .card{padding:24px;margin:0}
 .site .card h3{font-size:20px;margin:0}
 .site .card p{color:var(--muted);margin-top:8px}
-.notlist{list-style:none;padding:0;margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;font-size:17px;color:var(--muted)}
-.notlist b{color:var(--ink);font-weight:800}
 .privacy{margin-top:32px;font-weight:800;font-size:18px;color:var(--ink)}
 .privacy small{display:block;font-weight:400;color:var(--muted);font-size:16px;margin-top:4px}
 
@@ -205,7 +178,6 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 .poster em{color:var(--lime);text-shadow:0 0 40px rgba(232,255,60,.35)}
 .poster.l1 span:nth-child(1),.poster.l2 span:nth-child(-n+2),.poster.l3 span:nth-child(-n+3),.poster.l4 span:nth-child(-n+4),.poster.l5 span,.poster.l6 span,.poster.l6 em{opacity:1}
 html:not(.js) .poster span,html:not(.js) .poster em{opacity:1}
-.grid8{margin-top:48px}
 /* פרלקסה עדינה: הטלפונים נעים מעט מהר יותר מהדף */
 html.js .pair .front,html.js .step .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 html.js .pair .back{transform:translateY(calc((0.5 - var(--p,0.5)) * 64px))}
@@ -234,11 +206,7 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
 @keyframes name{to{opacity:1;letter-spacing:.02em}}
 /* ---- תנועה: ברירת-המחדל נראה; ה-JS רק מוסיף ---- */
 /* הסולם מתרחב לפי כמה גללת (scrub), לא פעם אחת */
-html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
 @media (prefers-reduced-motion:reduce){
-  html.js .rk svg path{transform:none}
-  .rk,.rk svg,.rk svg path{transition:none}
-  .rkp{animation:none}
   html.js .pair .front,html.js .pair .back,html.js .step .shot,html.js .seeshot .shot{transform:none}
   .poster span,.poster em{opacity:1;transition:none}
   html.js .close .splash,html.js .close .wordmark,html.js .close h2{opacity:1;transform:none;letter-spacing:.02em;animation:none}
@@ -262,7 +230,6 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
   .hero{grid-template-columns:1fr;gap:32px;padding:24px 0 48px}
   .site h1{font-size:42px}
   .poster{font-size:40px;line-height:1.04}
-  .grid8{margin-top:32px}
   .splash{width:120px;height:120px}
   .wordmark{font-size:34px}
   .lede{font-size:18px}
@@ -272,27 +239,17 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
   .pair .shot{aspect-ratio:600/900;object-fit:cover;object-position:top}
   .facts{font-size:15px}
   .site section{padding:40px 0}
-  .notlist{grid-template-columns:1fr;gap:10px}
   .site h2{font-size:30px}
   .steps{grid-template-columns:1fr;gap:0}
   .step{padding:32px 0;border-top:1px solid var(--line)}
   .step .n{font-size:56px}
   .step:first-child{border-top:0;padding-top:8px}
   .step .shot{max-width:220px;margin-top:20px;aspect-ratio:600/640;object-fit:cover;object-position:top;border-bottom-left-radius:0;border-bottom-right-radius:0;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
-  .ranks{gap:6px;margin-top:28px}
-  .rk{padding:14px 4px 12px;gap:10px}
-  .rk svg{width:64px}
-  .rk .nm{font-size:18px}
-  .rk.on{transform:scale(1.06)}
-  .rkpanels{margin-top:20px}
-  .who{padding:18px 0}
-  .who b{font-size:20px}
   .conds{grid-template-columns:repeat(3,1fr);gap:8px}
   .conds li{padding:12px 10px}
   .conds b{font-size:15px}
   .conds svg{width:24px;height:24px}
   .nots,.faq{grid-template-columns:1fr}
-  .grid8{grid-template-columns:1fr 1fr;gap:20px}
   .see{grid-template-columns:1fr;gap:28px}
   .seeshot .shot{max-width:260px;aspect-ratio:562/760;object-fit:cover;object-position:top;border-bottom-left-radius:0;border-bottom-right-radius:0;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}
   .watches{grid-template-columns:repeat(3,1fr);gap:12px}
@@ -441,7 +398,7 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .scene .bars{display:none}
 }
 /* composition: even lines, no half-lines */
-.lede,.sub,.cond,.note,#faq p,.step p,.step h3,.grid8 p,.conds span,.who b,.card p,figcaption,.maker,.tier i,.ways i,.ways p,.pick li{text-wrap:balance}
+.lede,.sub,.cond,.note,#faq p,.step p,.step h3,.conds span,.card p,figcaption,.maker,.tier i,.ways i,.ways p,.pick li{text-wrap:balance}
 @media (max-width:720px){
   .site h1{font-size:40px}
   .site h1 em{white-space:nowrap}
@@ -452,3 +409,24 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .facts3 span{font-size:14px;margin-inline-start:auto}
 }
 .pair video.shot{object-fit:cover;object-position:top}
+/* הסולם */
+.ladder{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-direction:column;gap:10px;max-width:460px}
+.ladder li{display:flex;align-items:center;gap:16px;padding:14px 16px;border:1px solid var(--line);border-radius:16px;opacity:.72}
+.ladder li.on{opacity:1;background:rgba(255,255,255,.03);border-color:#3A3A40}
+.ladder svg{width:52px;height:auto;flex:none;overflow:visible}
+.ladder svg path{fill:var(--steel)}
+.ladder li.on svg path{fill:var(--lime);filter:drop-shadow(0 0 12px rgba(232,255,60,.4))}
+.ladder .nm{display:flex;align-items:baseline;gap:10px;font-size:22px;font-weight:900;font-style:italic;color:var(--ink);white-space:nowrap}
+.ladder .nm em{font-style:inherit}
+.ladder li.on .nm{color:var(--lime)}
+.ladder .nm small{font-size:11px;font-weight:800;font-style:normal;letter-spacing:.08em;color:var(--bg);background:var(--lime);border-radius:6px;padding:2px 7px}
+.ladder span{display:block;color:var(--ink2);font-size:15px;margin-top:2px}
+.ladder i{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:5px;font-variant-numeric:tabular-nums}
+#rank .see,#road .see{align-items:center}
+#whole .see{margin-top:48px}
+@media (max-width:720px){.ladder{max-width:none}.ladder li{gap:12px;padding:12px}.ladder svg{width:44px}.ladder .nm{font-size:20px}}
+#whole .poster{flex-direction:row;flex-wrap:wrap;gap:0 .4em;font-size:26px;line-height:1.3;margin-top:22px;max-width:30ch}
+#whole .see{margin-top:0}
+@media (min-width:900px){#whole .poster{font-size:32px}}
+#whole .poster{max-width:19ch}
+@media (min-width:900px){#whole .poster{max-width:none}}
