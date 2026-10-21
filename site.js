@@ -66,7 +66,7 @@ document.documentElement.classList.add('js');
   var ticking=false;
   function frame(){ticking=false;var vh=innerHeight;
     S.forEach(function(s){var r=s.g.getBoundingClientRect();var st=s.g.querySelector('.stage');var range=r.height-st.offsetHeight;
-      var p=range>0?(st.getBoundingClientRect().top-r.top)/range:0;p=Math.max(0,Math.min(1,p));s.g.style.setProperty('--sp',p.toFixed(4));
+      var p=range>0?(st.getBoundingClientRect().top-r.top)/range:0;p=Math.max(0,Math.min(1,p));s.g.style.setProperty('--sp',p.toFixed(4));if(s.g.classList.contains('five')){var u=p*4,i0=Math.floor(u),f0=u-i0,f1=f0<0.65?0:(f0-0.65)/0.35;f1=f1*f1*(3-2*f1);s.g.style.setProperty('--tx',((i0+f1)/4).toFixed(4))}
       var n=s.txts.length,x=p*(n-1),best=Math.round(x);s.g.setAttribute('data-active',best+1);
       s.txts.forEach(function(el,i){var a=Math.max(0,Math.min(1,1-Math.abs(x-i)*2.2));el.style.setProperty('--a',a.toFixed(3));el.classList.toggle('on',i===best)});
       s.bars.forEach(function(b,i){b.style.setProperty('--f',Math.max(0,Math.min(1,x-i+1)).toFixed(3))});
@@ -110,15 +110,35 @@ apply(JSON.parse(document.querySelector('#rank .ladder li.on').getAttribute('dat
 if(!reduced&&'IntersectionObserver' in window){var len=el.line.getTotalLength();el.line.style.strokeDasharray=len+' '+len;el.line.style.strokeDashoffset=len;el.dots.style.opacity=0;
  new IntersectionObserver(function(es,io){if(!es[0].isIntersecting)return;io.disconnect();el.line.style.transition='stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)';el.line.style.strokeDashoffset=0;setTimeout(function(){el.line.style.strokeDasharray='';el.line.style.transition='';el.dots.style.transition='opacity .4s';el.dots.style.opacity=1},1500)},{threshold:.35}).observe(ph)}})();
 
-// הסט: בגלילה דרך שלב 2 — הכפתור נלחץ, המסך מתחלף למנוחה, השעון סופר.
-(function(){var hs=document.getElementById('setshot');if(!hs)return;var clk=hs.querySelector('[data-clock]');
-function mmss(sec){return Math.floor(sec/60)+':'+('0'+Math.floor(sec%60)).slice(-2)}
-window.__setMoment=function(p){var q=Math.max(0,Math.min(1,(p-0.38)/0.3));hs.classList.toggle('pressed',q>0.2&&q<0.36);hs.classList.toggle('resting',q>=0.36);var sec=90-Math.round(Math.max(0,(q-0.36)/0.64)*38);clk.textContent=mmss(sec)}})();
-// השעון: המנוחה סופרת, הדופק נושם, הרצועה נכנסת לזון, המדרגה עולה.
-(function(){var ws=document.querySelector('#connect .ws');if(!ws)return;var q=function(sel){return document.querySelector('#connect '+sel)};
-var wc=q('[data-wclock]'),h1=q('[data-hr1]'),zc=q('[data-zclock]'),h2=q('[data-hr2]'),zb=[].slice.call(document.querySelectorAll('#connect .zbar i')),lc=q('[data-lclock]'),h3=q('[data-hr3]'),r1=q('[data-rung]'),r2=q('[data-rung2]');
-function mmss(sec){return Math.floor(sec/60)+':'+('0'+Math.floor(sec%60)).slice(-2)}
+// הרגעים ב"איך זה עובד": הסט האחרון (יעד ⇒ מעלים ⇒ עוד חזרה ⇒ ההצלחה) · סרטון לכל תרגיל (▶ ⇒ הגיליון ⇒ מחליקים לבא) · הארוחה (200⇒220 ⇒ אכלתי בחוץ)
+(function(){var ls=document.getElementById('lastset'),vd=document.getElementById('vidshot'),ml=document.getElementById('mealshot');if(!ls||!vd||!ml)return;
 function seg(p,a,b){return Math.max(0,Math.min(1,(p-a)/(b-a)))}
-window.__watchMoment=function(p){var a=seg(p,0,0.4);wc.textContent=mmss(68-Math.round(a*16));h1.textContent=134-Math.round(a*3);
- var b=seg(p,0.3,0.7);zc.textContent='12:'+(39+Math.round(b*16));h2.textContent=118+Math.round(b*4);var lit=6+Math.round(b*3);zb.forEach(function(e,i){e.classList.toggle('on',i>=9-lit)});
- var c=seg(p,0.65,1);lc.textContent='10:'+(16+Math.round(c*42));h3.textContent=141+Math.round(c*3);var rung=c>0.6?6:5;r1.textContent=rung;r2.textContent=rung}})();
+function on(el,cls,v){el.classList.toggle(cls,v)}
+var L={rest:ls.querySelector('.rest'),set:ls.querySelector('.setn'),earn:ls.querySelector('.earned'),w:ls.querySelector('[data-w]'),r:ls.querySelector('[data-r]'),pw:ls.querySelector('.plus'),pr:ls.querySelector('.plus2'),cta:ls.querySelector('.cta')};
+var V={play:vd.querySelector('.play'),list:vd.querySelector('.vlist'),fr:[].slice.call(vd.querySelectorAll('iframe'))};
+var M={g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr:ml.querySelector('[data-pro]'),plus:ml.querySelector('.plus'),out:ml.querySelector('.mout')};
+function live(i,v){var f=V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
+window.__setMoment=function(p){
+ // שלב 2 · 0.125–0.375
+ var u=p*4;var q=seg(u,0.7,1.6);
+ on(L.rest,'on',q<0.3);on(L.set,'on',q>=0.3&&q<0.82);on(L.earn,'on',q>=0.82);
+ var up=q>=0.46;L.w.textContent=up?'62.5':'60';on(L.w,'lit',up);on(L.pw,'hit',q>=0.42&&q<0.5);
+ var rep=q>=0.62;L.r.textContent=rep?'9':'8';on(L.r,'lit',rep);on(L.pr,'hit',q>=0.58&&q<0.66);
+ on(L.cta,'hit',q>=0.74&&q<0.82);
+ // שלב 3 · 0.375–0.625
+ var v=seg(u,1.7,2.6);
+ on(V.play,'pulse',v>0.05&&v<0.28);on(vd,'sheet',v>=0.28);
+ var sw=seg(v,0.62,0.86);V.list.style.transform='translateY(-'+(sw*58).toFixed(1)+'%)';
+ live(0,v>=0.3&&sw<0.5);live(1,sw>=0.5);
+ // שלב 4 · 0.625–0.875
+ var m=seg(u,2.7,3.6);
+ var g=m<0.2?200:m<0.34?210:220;M.g2.textContent=g;on(M.g2,'lit',g>220-1&&m>=0.34);M.kc.textContent=612+Math.round((g-200)*1.65);M.pr.textContent=52+Math.round((g-200)*0.31);
+ on(M.plus,'hit',(m>=0.17&&m<0.23)||(m>=0.31&&m<0.37));
+ on(M.out,'hit',m>=0.56&&m<0.64);on(ml,'sheet',m>=0.64);on(ml,'ruled',m>=0.76);
+}})();
+// השעון: הרצועה נכנסת לזון, המדרגה עולה.
+(function(){var ws=document.querySelector('#connect .ws');if(!ws)return;var q=function(sel){return document.querySelector('#connect '+sel)};
+var h2=q('[data-hr2]'),zb=[].slice.call(document.querySelectorAll('#connect .zbar i')),h3=q('[data-hr3]'),r1=q('[data-rung]'),r2=q('[data-rung2]');
+function seg(p,a,b){return Math.max(0,Math.min(1,(p-a)/(b-a)))}
+window.__watchMoment=function(p){var b=seg(p,0.3,0.7);h2.textContent=118+Math.round(b*4);var lit=6+Math.round(b*3);zb.forEach(function(e,i){e.classList.toggle('on',i>=9-lit)});
+ var c=seg(p,0.65,1);h3.textContent=141+Math.round(c*3);var rung=c>0.6?6:5;r1.textContent=rung;r2.textContent=rung}})();
