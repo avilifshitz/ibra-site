@@ -645,3 +645,25 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hs .wd b{font-size:2.5cqw;font-weight:800;color:rgba(255,255,255,.7)}.hs .wd.full b,.hs .wd.part b{color:#fff}.hs .wd small{font-size:2.2cqw;color:#E8FF3C;font-weight:800;margin-top:-.6cqw}
 .hs .wkline{font-size:3cqw;font-weight:700;color:rgba(255,255,255,.6);margin-top:4.5cqw;text-align:center}.hs .wkline b{color:#fff}
 @media (prefers-reduced-motion:reduce){.hs .wk{transition:none}}
+
+/* המאמן ראה אותך — הסימון, הממצא, המרשם */
+.scene.coach{height:260svh;margin-top:0}
+.scene.coach .stage{padding-top:0}
+.scene.coach .pin{container-type:inline-size}
+.scene.coach .hs{width:100%;height:100%;position:relative;overflow:hidden;background:var(--bg);direction:rtl;font-family:Heebo,system-ui,sans-serif;color:#fff}
+.hs .cvh{display:flex;align-items:flex-start;gap:3cqw;margin-top:2cqw}.hs .cvh .x{flex:none;order:2;margin-inline-start:auto}.hs .cvh b{display:block;font-size:4.6cqw;font-weight:900;font-style:italic}.hs .cvh small{display:block;font-size:2.8cqw;color:rgba(255,255,255,.55);font-weight:700;margin-top:.6cqw}
+.hs .cph{position:relative;margin-top:3cqw;height:62cqw;border-radius:4cqw;overflow:hidden;background:radial-gradient(120% 90% at 50% 20%,#20291F,#0F130E 70%)}
+.hs .sil{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%}
+.hs .sil .mt{font-size:9px}
+.hs .mark .mj{fill:#fff;opacity:0;transition:opacity .25s}.hs .mark .ml{stroke:#fff;stroke-width:1;stroke-dasharray:40;stroke-dashoffset:40;transition:stroke-dashoffset .5s cubic-bezier(.4,0,.2,1)}
+.hs .mark .mt{fill:#fff;font-size:5.2px;font-weight:800;font-family:Heebo,system-ui,sans-serif;opacity:0;transition:opacity .3s}
+.hs.marked .mark .mj{opacity:1}.hs.marked .mark .ml{stroke-dashoffset:0}.hs.marked .mark .mt{opacity:1;transition-delay:.35s}
+.hs .cdots{display:flex;justify-content:center;gap:1.4cqw;margin-top:3cqw}.hs .cdots i{width:1.6cqw;height:1.6cqw;border-radius:50%;background:rgba(255,255,255,.25)}.hs .cdots i.on{background:#fff}
+.hs .ceye{font-size:2.6cqw;font-weight:800;letter-spacing:.14em;color:rgba(255,255,255,.55);margin-top:3cqw}
+.hs .cfind{opacity:0;transform:translateY(2cqw);transition:opacity .35s,transform .4s}.hs.found .cfind{opacity:1;transform:none}
+.hs .cfind b{display:block;font-size:5.6cqw;font-weight:900;font-style:italic;margin-top:1cqw}.hs .cfind p{font-size:3.4cqw;line-height:1.45;margin:1.5cqw 0 0;color:rgba(255,255,255,.85)}
+.hs .crx{margin-top:2.5cqw;background:#141417;border-radius:4cqw;padding:2.5cqw 4cqw 3cqw;border-inline-start:0.8cqw solid #E8FF3C;opacity:0;transition:opacity .3s}.hs.rx .crx{opacity:1}
+.hs .crx .ceye{margin-top:0}.hs .crx ul{list-style:none;margin:2cqw 0 0;padding:0}.hs .crx li{font-size:3.4cqw;font-weight:700;line-height:1.45;opacity:0;transform:translateX(-2cqw);transition:opacity .3s,transform .35s}
+.hs.rx1 .crx li:nth-child(1),.hs.rx2 .crx li:nth-child(-n+2),.hs.rx3 .crx li{opacity:1;transform:none}
+@media (min-width:900px){.scene.coach{height:calc(100vh - var(--nav) + 160vh)}.scene.coach .stage{justify-content:center}#whole .see{align-items:stretch}#whole .stick{position:sticky;top:112px}}
+@media (prefers-reduced-motion:reduce){.scene.coach .hs *{transition:none!important}.hs .cfind,.hs .crx,.hs .crx li,.hs .mark .mj,.hs .mark .mt{opacity:1!important;transform:none!important}.hs .mark .ml{stroke-dashoffset:0}}

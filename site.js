@@ -70,7 +70,7 @@ document.documentElement.classList.add('js');
       var n=s.txts.length,x=p*(n-1),best=Math.round(x);s.g.setAttribute('data-active',best+1);
       var five=s.g.classList.contains('five');s.txts.forEach(function(el,i){var a;if(five){var d=x-i;a=d<=-0.17?0:d<0?1+d/0.17:d<=0.65?1:d<0.82?1-(d-0.65)/0.17:0}else a=Math.max(0,Math.min(1,1-Math.abs(x-i)*2.2));el.style.setProperty('--a',a.toFixed(3));el.classList.toggle('on',i===best)});
       s.bars.forEach(function(b,i){b.style.setProperty('--f',Math.max(0,Math.min(1,x-i+1)).toFixed(3))});
-      if(s.g.classList.contains('steps')&&window.__setMoment)window.__setMoment(p);if(s.g.classList.contains('watches')&&window.__watchMoment)window.__watchMoment(p);
+      if(s.g.classList.contains('steps')&&window.__setMoment)window.__setMoment(p);if(s.g.classList.contains('watches')&&window.__watchMoment)window.__watchMoment(p);if(s.g.classList.contains('coach')&&window.__coachMoment)window.__coachMoment(p);
     });}
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
   addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);frame();
@@ -144,3 +144,7 @@ var h2=q('[data-hr2]'),zb=[].slice.call(document.querySelectorAll('#connect .zba
 function seg(p,a,b){return Math.max(0,Math.min(1,(p-a)/(b-a)))}
 window.__watchMoment=function(p){var b=seg(p,0.3,0.7);h2.textContent=118+Math.round(b*4);var lit=6+Math.round(b*3);zb.forEach(function(e,i){e.classList.toggle('on',i>=9-lit)});
  var c=seg(p,0.65,1);h3.textContent=141+Math.round(c*3);var rung=c>0.6?6:5;r1.textContent=rung;r2.textContent=rung}})();
+
+// המאמן ראה אותך: הסימון נמתח אל הצוואר ⇒ הממצא ⇒ המרשם נכנס לתוכנית, שורה אחר שורה
+(function(){var c=document.getElementById('coachshot');if(!c)return;
+window.__coachMoment=function(p){c.classList.toggle('marked',p>=0.14);c.classList.toggle('found',p>=0.34);c.classList.toggle('rx',p>=0.5);c.classList.toggle('rx1',p>=0.56);c.classList.toggle('rx2',p>=0.68);c.classList.toggle('rx3',p>=0.8)}})();
