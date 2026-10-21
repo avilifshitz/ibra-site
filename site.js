@@ -70,6 +70,7 @@ document.documentElement.classList.add('js');
       var n=s.txts.length,x=p*(n-1),best=Math.round(x);s.g.setAttribute('data-active',best+1);
       s.txts.forEach(function(el,i){var a=Math.max(0,Math.min(1,1-Math.abs(x-i)*2.2));el.style.setProperty('--a',a.toFixed(3));el.classList.toggle('on',i===best)});
       s.bars.forEach(function(b,i){b.style.setProperty('--f',Math.max(0,Math.min(1,x-i+1)).toFixed(3))});
+      if(s.g.classList.contains('steps')&&window.__setMoment)window.__setMoment(p);if(s.g.classList.contains('watches')&&window.__watchMoment)window.__watchMoment(p);
     });}
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
   addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);frame();
@@ -108,3 +109,16 @@ apply(JSON.parse(document.querySelector('#rank .ladder li.on').getAttribute('dat
 // הכניסה: הקו מצטייר פעם אחת כשהכרטיס נכנס למסך.
 if(!reduced&&'IntersectionObserver' in window){var len=el.line.getTotalLength();el.line.style.strokeDasharray=len+' '+len;el.line.style.strokeDashoffset=len;el.dots.style.opacity=0;
  new IntersectionObserver(function(es,io){if(!es[0].isIntersecting)return;io.disconnect();el.line.style.transition='stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)';el.line.style.strokeDashoffset=0;setTimeout(function(){el.line.style.strokeDasharray='';el.line.style.transition='';el.dots.style.transition='opacity .4s';el.dots.style.opacity=1},1500)},{threshold:.35}).observe(ph)}})();
+
+// הסט: בגלילה דרך שלב 2 — הכפתור נלחץ, המסך מתחלף למנוחה, השעון סופר.
+(function(){var hs=document.getElementById('setshot');if(!hs)return;var clk=hs.querySelector('[data-clock]');
+function mmss(sec){return Math.floor(sec/60)+':'+('0'+Math.floor(sec%60)).slice(-2)}
+window.__setMoment=function(p){var q=Math.max(0,Math.min(1,(p-0.38)/0.3));hs.classList.toggle('pressed',q>0.2&&q<0.36);hs.classList.toggle('resting',q>=0.36);var sec=90-Math.round(Math.max(0,(q-0.36)/0.64)*38);clk.textContent=mmss(sec)}})();
+// השעון: המנוחה סופרת, הדופק נושם, הרצועה נכנסת לזון, המדרגה עולה.
+(function(){var ws=document.querySelector('#connect .ws');if(!ws)return;var q=function(sel){return document.querySelector('#connect '+sel)};
+var wc=q('[data-wclock]'),h1=q('[data-hr1]'),zc=q('[data-zclock]'),h2=q('[data-hr2]'),zb=[].slice.call(document.querySelectorAll('#connect .zbar i')),lc=q('[data-lclock]'),h3=q('[data-hr3]'),r1=q('[data-rung]'),r2=q('[data-rung2]');
+function mmss(sec){return Math.floor(sec/60)+':'+('0'+Math.floor(sec%60)).slice(-2)}
+function seg(p,a,b){return Math.max(0,Math.min(1,(p-a)/(b-a)))}
+window.__watchMoment=function(p){var a=seg(p,0,0.4);wc.textContent=mmss(68-Math.round(a*16));h1.textContent=134-Math.round(a*3);
+ var b=seg(p,0.3,0.7);zc.textContent='12:'+(39+Math.round(b*16));h2.textContent=118+Math.round(b*4);var lit=6+Math.round(b*3);zb.forEach(function(e,i){e.classList.toggle('on',i>=9-lit)});
+ var c=seg(p,0.65,1);lc.textContent='10:'+(16+Math.round(c*42));h3.textContent=141+Math.round(c*3);var rung=c>0.6?6:5;r1.textContent=rung;r2.textContent=rung}})();
