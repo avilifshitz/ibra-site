@@ -69,7 +69,19 @@ document.documentElement.classList.add('js');
   setTimeout(next, 2400);
 })();
 
-(function(){var scenes=document.querySelectorAll('[data-scene]');if(!scenes.length)return;
-function upd(){scenes.forEach(function(g){var f=parseFloat(getComputedStyle(g).getPropertyValue('--mid'))||0.5,mid=innerHeight*f;var st=g.querySelectorAll(':scope > :not(.pin):not(.pinwrap)'),best=1,bd=1e9;st.forEach(function(el,i){var r=el.getBoundingClientRect();var d=Math.abs((r.top+r.bottom)/2-mid);if(d<bd){bd=d;best=i+1}});g.setAttribute('data-active',best);st.forEach(function(el,i){el.classList.toggle('on',i+1===best)})})}
-addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();})();
-
+// סצנות: במה נעוצה, והתקדמות-הגלילה דרך המקטע (0→1) מזיזה את המסכים בתוך המכשיר ומחליפה את הטקסט. רציף והפיך, בלי ספים.
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var scenes=[].slice.call(document.querySelectorAll('[data-scene]'));if(!scenes.length)return;
+  var S=scenes.map(function(g){return{g:g,txts:[].slice.call(g.querySelectorAll('.txts > *')),bars:[].slice.call(g.querySelectorAll('.bars i'))}});
+  var ticking=false;
+  function frame(){ticking=false;var vh=innerHeight;
+    S.forEach(function(s){var r=s.g.getBoundingClientRect();var range=r.height-(s.g.querySelector('.stage').offsetHeight);
+      var p=range>0?(-r.top)/range:0;p=Math.max(0,Math.min(1,p));s.g.style.setProperty('--sp',p.toFixed(4));
+      var n=s.txts.length,x=p*(n-1),best=Math.round(x);s.g.setAttribute('data-active',best+1);
+      s.txts.forEach(function(el,i){var a=Math.max(0,Math.min(1,1-Math.abs(x-i)*2.2));el.style.setProperty('--a',a.toFixed(3));el.classList.toggle('on',i===best)});
+      s.bars.forEach(function(b,i){b.style.setProperty('--f',Math.max(0,Math.min(1,x-i+1)).toFixed(3))});
+    });}
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);frame();
+})();
