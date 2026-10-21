@@ -637,18 +637,16 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .scene.coach .pin{container-type:inline-size}
 .scene.coach .hs{width:100%;height:100%;position:relative;overflow:hidden;background:var(--bg);direction:rtl;font-family:Heebo,system-ui,sans-serif;color:#fff}
 .hs .cvh{display:flex;align-items:flex-start;gap:3cqw;margin-top:2cqw}.hs .cvh .x{flex:none;order:2;margin-inline-start:auto}.hs .cvh b{display:block;font-size:4.6cqw;font-weight:900;font-style:italic}.hs .cvh small{display:block;font-size:2.8cqw;color:rgba(255,255,255,.55);font-weight:700;margin-top:.6cqw}
-.hs .cph{position:relative;margin-top:3cqw;height:62cqw;border-radius:4cqw;overflow:hidden;background:radial-gradient(120% 90% at 50% 20%,#20291F,#0F130E 70%)}.hs .cph::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 14cqw rgba(0,0,0,.55);pointer-events:none}
-.hs .figw{position:absolute;left:50%;top:0;height:100%;aspect-ratio:3/4;transform:translateX(-50%)}.hs .pan{position:relative;width:100%;transition:transform .6s cubic-bezier(.4,0,.2,1)}.hs.pg2 .pan{transform:translateY(-32%)}.hs .figw img{display:block;width:100%;height:auto;border:0;border-radius:0;box-shadow:none;max-width:none}
+.hs .cph{position:relative;margin-top:3cqw;height:104cqw;border-radius:4cqw;overflow:hidden;background:radial-gradient(120% 90% at 50% 20%,#20291F,#0F130E 70%)}.hs .cph::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 14cqw rgba(0,0,0,.55);pointer-events:none}
+.hs .figw{position:absolute;left:50%;top:0;height:100%;aspect-ratio:3/4;transform:translateX(-50%)}.hs .pan{position:relative;width:100%;transition:transform .6s cubic-bezier(.4,0,.2,1)}.hs.pg2 .pan{transform:translateY(-32%)}.hs .figw .sil{display:block;width:100%;height:auto}
 .hs .mark{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.hs .mark .mj{fill:#fff;opacity:0;transition:opacity .25s}.hs .mark .ml{stroke:#fff;stroke-width:2.6;stroke-dasharray:130;stroke-dashoffset:130;transition:stroke-dashoffset .5s cubic-bezier(.4,0,.2,1)}
+.hs .mark .mj{fill:#fff;opacity:0;transition:opacity .25s}.hs .mark .ml{stroke:#fff;stroke-width:2.6;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .5s cubic-bezier(.4,0,.2,1)}
 .hs .mark .mt{fill:#fff;font-size:24px;font-weight:800;font-family:Heebo,system-ui,sans-serif;opacity:0;transition:opacity .3s}
 .hs.marked .mark>.mj{opacity:1}.hs.marked .mark>.ml{stroke-dashoffset:0}.hs.marked .mark>.mt{opacity:1;transition-delay:.35s}
-.hs .mark .m2 .ml{stroke-dasharray:112;stroke-dashoffset:112}.hs.marked2 .mark .m2 .mj{opacity:1}.hs.marked2 .mark .m2 .ml{stroke-dashoffset:0}.hs.marked2 .mark .m2 .mt{opacity:1;transition-delay:.35s}
+.hs .mark .m2 .ml{stroke-dasharray:48;stroke-dashoffset:48}.hs.marked2 .mark .m2 .mj{opacity:1}.hs.marked2 .mark .m2 .ml{stroke-dashoffset:0}.hs.marked2 .mark .m2 .mt{opacity:1;transition-delay:.35s}
 .hs.pg2 .mark>.mj,.hs.pg2 .mark>.ml,.hs.pg2 .mark>.mt{opacity:0;transition-delay:0s}
 .hs .cpages{position:relative}.hs .cpage.p2{position:absolute;inset:0;opacity:0;pointer-events:none}.hs.pg2 .cpage.p1{opacity:0;transition:opacity .25s}.hs.pg2 .cpage.p2{opacity:1;transition:opacity .3s .2s}
-.hs.pg2 .cdots .d1{background:rgba(255,255,255,.25)}.hs.pg2 .cdots .d2{background:#fff}
-.hs .cdots{display:flex;justify-content:center;gap:1.4cqw;margin-top:3cqw}.hs .cdots i{width:1.6cqw;height:1.6cqw;border-radius:50%;background:rgba(255,255,255,.25)}.hs .cdots i.on{background:#fff}
-.hs .ceye{font-size:2.6cqw;font-weight:800;letter-spacing:.14em;color:rgba(255,255,255,.55);margin-top:3cqw}
+.hs .ceye{font-size:2.6cqw;font-weight:800;letter-spacing:.14em;color:rgba(255,255,255,.55);margin-top:4cqw}
 .hs .cfind{opacity:0;transform:translateY(2cqw);transition:opacity .35s,transform .4s}.hs.found .cfind{opacity:1;transform:none}
 .hs .cfind b{display:block;font-size:5.6cqw;font-weight:900;font-style:italic;margin-top:1cqw}.hs .cfind p{font-size:3.4cqw;line-height:1.45;margin:1.5cqw 0 0;color:rgba(255,255,255,.85)}
 .hs .crx{margin-top:2.5cqw;background:#141417;border-radius:4cqw;padding:2.5cqw 4cqw 3cqw;border-inline-start:0.8cqw solid #E8FF3C;opacity:0;transition:opacity .3s}.hs.rx .crx{opacity:1}
