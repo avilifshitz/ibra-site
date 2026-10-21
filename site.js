@@ -74,3 +74,7 @@ document.documentElement.classList.add('js');
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
   addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);frame();
 })();
+// הדרגה ⇒ הדרך. הקשה על דרגה מזיזה את הליים ומחליפה את מסך "כל הדרך".
+(function(){var L=[].slice.call(document.querySelectorAll('#rank .ladder li'));var img=document.querySelector('#rank .seeshot .shot');if(!L.length||!img)return;
+function pick(li){L.forEach(function(o){var on=o===li;o.classList.toggle('on',on);o.setAttribute('aria-selected',on);var s=o.querySelector('.nm small');if(s)s.hidden=!on});var src=li.getAttribute('data-shot');if(img.getAttribute('src')===src)return;img.classList.add('swap');setTimeout(function(){img.src=src;img.onload=function(){img.classList.remove('swap')}},250)}
+L.forEach(function(li){li.addEventListener('click',function(){pick(li)});li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(li)}})});})();

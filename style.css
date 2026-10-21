@@ -424,7 +424,7 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .ladder li.on .nm{color:var(--lime)}
 .ladder .nm small{font-size:11px;font-weight:800;font-style:normal;letter-spacing:.08em;color:var(--bg);background:var(--lime);border-radius:6px;padding:2px 7px}
 .ladder span{display:block;color:var(--ink2);font-size:15px;margin-top:2px}
-.ladder i{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:5px;font-variant-numeric:tabular-nums}
+.ladder i{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:5px;font-variant-numeric:tabular-nums;text-wrap:balance}
 #rank .see,#road .see{align-items:center}
 #whole .see{margin-top:48px}
 @media (max-width:720px){.ladder{max-width:none}.ladder li{gap:12px;padding:12px}.ladder svg{width:44px}.ladder .nm{font-size:20px}}
@@ -433,3 +433,14 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 @media (min-width:900px){#whole .poster{font-size:32px}}
 #whole .poster{max-width:19ch}
 @media (min-width:900px){#whole .poster{max-width:none}}
+/* הדרגה + הדרך */
+.ladder li{cursor:pointer;position:relative;transition:opacity .3s,border-color .3s,background .3s}
+.ladder li:hover{opacity:.9}
+.ladder li:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.ladder time{margin-inline-start:auto;flex:none;align-self:flex-start;font-size:13px;font-weight:800;color:var(--muted);white-space:nowrap;padding-top:4px}
+.ladder li.on time{color:var(--lime)}
+.ladder svg path{transition:fill .3s,filter .3s}
+#rank .seeshot .shot{transition:opacity .25s}
+#rank .seeshot .shot.swap{opacity:0}
+@media (max-width:720px){.ladder time{font-size:12px}}
+@media (max-width:720px){.ladder li{position:relative;padding-top:14px}.ladder time{position:absolute;top:12px;left:14px;margin:0;padding:0}.ladder li>div{padding-inline-end:0}}

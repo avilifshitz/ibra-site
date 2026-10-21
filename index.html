@@ -74,39 +74,21 @@
   </div>
 </section>
 
-<!-- beat 3 · מי תהיה -->
+<!-- beat 3 · מי תהיה, ומתי -->
 <section id="rank">
   <div class="see">
     <div>
-      <h2>שלוש דרגות.<br><em>זה מי שתהיה.</em></h2>
-      <p class="lede">היעד שלך קובע את הדרגה. היא נמדדת, סגירה אחרי סגירה, עד שהיא שלך.</p>
-      <ol class="ladder" aria-label="הסולם">
-        <li><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M39.2,10 L56.5,10 L56.5,92 Z M80.8,10 L63.5,10 L63.5,92 Z"/></svg><div><b class="nm"><em>בֶּן</em> חַיִל</b><span>הבסיס בנוי. ה-V נראה.</span><i>כתפיים/מותן 1.45 · שומן עד 18% · FFMI 20</i></div></li>
-        <li class="on" aria-current="true"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M23.6,10 L56.5,10 L56.5,92 Z M96.4,10 L63.5,10 L63.5,92 Z"/></svg><div><b class="nm"><em>אִישׁ</em> חַיִל <small>היעד</small></b><span>גוף מבצעי, מוכן לכל משימה.</span><i>כתפיים/מותן 1.52 · שומן עד 15% · FFMI 22</i></div></li>
-        <li><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M8,10 L56.5,10 L56.5,92 Z M112,10 L63.5,10 L63.5,92 Z"/></svg><div><b class="nm"><em>גִּבּוֹר</em> חַיִל</b><span>גוף של מגדל. רואים אותו מרחוק.</span><i>כתפיים/מותן 1.60 · שומן עד 13% · FFMI 23.5</i></div></li>
+      <h2>זה מי שתהיה.<br><em>וזו הדרך לשם.</em></h2>
+      <p class="lede">היעד שלך קובע את הדרגה, והדרגה את הדרך: השלב הקרוב מהמאמן, עם תאריך. הרחוקים הערכה, לפי הקצב שלך.</p>
+      <ol class="ladder" role="tablist" aria-label="הסולם">
+        <li role="tab" tabindex="0" data-shot="/assets/road-1.webp" aria-selected="false"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M39.2,10 L56.5,10 L56.5,92 Z M80.8,10 L63.5,10 L63.5,92 Z"/></svg><div><b class="nm"><em>בֶּן</em> חַיִל <small hidden>היעד</small></b><span>הבסיס בנוי. ה-V נראה.</span><i>כתפיים/מותן 1.45 · שומן עד 18% · FFMI 20</i></div><time>סביב 2027</time></li>
+        <li class="on" role="tab" tabindex="0" data-shot="/assets/road-2.webp" aria-selected="true"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M23.6,10 L56.5,10 L56.5,92 Z M96.4,10 L63.5,10 L63.5,92 Z"/></svg><div><b class="nm"><em>אִישׁ</em> חַיִל <small>היעד</small></b><span>גוף מבצעי, מוכן לכל משימה.</span><i>כתפיים/מותן 1.52 · שומן עד 15% · FFMI 22</i></div><time>2029</time></li>
+        <li role="tab" tabindex="0" data-shot="/assets/road-3.webp" aria-selected="false"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M8,10 L56.5,10 L56.5,92 Z M112,10 L63.5,10 L63.5,92 Z"/></svg><div><b class="nm"><em>גִּבּוֹר</em> חַיִל <small hidden>היעד</small></b><span>גוף של מגדל. רואים אותו מרחוק.</span><i>כתפיים/מותן 1.60 · שומן עד 13% · FFMI 23.5</i></div><time>2030</time></li>
       </ol>
+      <p class="sub">בחר דרגה, והדרך מתחלפת. כל סגירת-שבוע מדייקת אותה.</p>
     </div>
     <figure class="seeshot" data-p>
-      <img class="shot" src="/assets/ladder.webp" width="562" height="1218" loading="lazy" alt="מסך ״הסולם״ באפליקציה: שלוש הדרגות, וחמשת התנאים של הדרגה הבאה עם המדידה האחרונה של כל אחד">
-    </figure>
-  </div>
-</section>
-
-<!-- beat 4 · לאן ומתי -->
-<section id="road">
-  <div class="see">
-    <div>
-      <h2>לאן ומתי.<br><em>המאמן מביא אותך.</em></h2>
-      <p class="lede">השלב הקרוב מהמאמן, עם תאריך. הרחוקים הערכה, לפי הקצב שלך. כל סגירה מדייקת.</p>
-      <ul class="conds facts3">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18L10 10l4 4 6-8"/><circle cx="20" cy="6" r="1.6"/></svg><b>Cut · עד דצמ׳ 26</b><span>השלב הזה, לפי המאמן</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h3M10 12h4M17 12h3"/><circle cx="8.5" cy="12" r="1.2"/><circle cx="15.5" cy="12" r="1.2"/></svg><b>5 שלבים</b><span>עד היעד, בהערכה</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 5.2h8.5v14.8h-1.1zM21.2 5.2h-8.5v14.8h1.1z"/></svg><b>סביב 2028</b><span>אִישׁ חַיִל</span></li>
-      </ul>
-      <p class="sub">קודם מורידים שומן. אחר כך בונים שריר. המספרים זזים עם הגוף.</p>
-    </div>
-    <figure class="seeshot" data-p>
-      <img class="shot" src="/assets/road.webp" width="562" height="1218" loading="lazy" alt="מסך ״כל הדרך״ באפליקציה: קו המשקל וקו בלי השומן מהיום עד היעד, השלבים עם תאריכים, וסביב 2028">
+      <img class="shot" src="/assets/road-2.webp" width="562" height="1218" loading="lazy" alt="מסך ״כל הדרך״ באפליקציה לדרגת-היעד שנבחרה: קו המשקל וקו בלי השומן מהיום עד היעד, השלבים עם תאריכים, והשנה">
     </figure>
   </div>
 </section>
