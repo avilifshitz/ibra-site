@@ -120,7 +120,7 @@ var M={g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr:ml
 function live(i,v){var f=V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
 window.__setMoment=function(p){
  // שלב 2 · מסך-היום: החפיסה מחליקה (ב-RTL הקלפים הבאים משמאל ⇒ הרצועה זזה ימינה)
- var t=seg(p*5,0.7,1.6),ts=seg(t,0.12,0.5);ts=ts*ts*(3-2*ts);if(deck)deck.style.transform='translateX('+(ts*92).toFixed(1)+'cqw)';var td=document.getElementById('todayshot');if(td){on(td.querySelector('.tring'),'hit',t>=0.56&&t<0.64);on(td,'sheet',t>=0.64)}
+ var t=seg(p*5,0.7,1.6),ts=seg(t,0.12,0.5);ts=ts*ts*(3-2*ts);if(deck)deck.style.transform='translateX('+(ts*92).toFixed(1)+'cqw)';var td=document.getElementById('todayshot');if(td){on(td.querySelector('.tring'),'hit',t>=0.54&&t<0.66);on(td,'sheet',t>=0.66)}
  // שלב 2 · 0.125–0.375
  var u=p*5;var q=seg(u,2.7,3.6);
  on(L.rest,'on',q<0.3);on(L.set,'on',q>=0.3&&q<0.82);on(L.earn,'on',q>=0.82);
@@ -129,7 +129,7 @@ window.__setMoment=function(p){
  on(L.cta,'hit',q>=0.74&&q<0.82);
  // שלב 3 · 0.375–0.625
  var v=seg(u,1.7,2.6);
- on(V.play,'pulse',v>0.05&&v<0.28);on(vd,'sheet',v>=0.28);
+ on(V.play,'pulse',v>0.05&&v<0.2);on(V.play,'hit',v>=0.2&&v<0.3);on(vd,'sheet',v>=0.3);
  var sw=seg(v,0.62,0.86);V.list.style.transform='translateY(-'+(sw*58).toFixed(1)+'%)';
  live(0,v>=0.3&&sw<0.5);live(1,sw>=0.5);
  // שלב 4 · 0.625–0.875

@@ -571,7 +571,8 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hs .gbar::after{content:"סיים ושמור";color:#0A0A0C;font-weight:800;font-size:4.2cqw;display:flex;align-items:center;justify-content:center;height:100%}
 /* הגיליונות: וידאו · סוג-הארוחה */
 .hs .dim.on{opacity:1}.hs.sheet .dim{filter:brightness(.45)}
-.hs .play.pulse{box-shadow:0 0 0 1.5cqw rgba(232,255,60,.25);border-color:#E8FF3C}
+.hs .play{transition:transform .15s,background .15s,color .15s,box-shadow .2s}.hs .play.pulse{box-shadow:0 0 0 1.5cqw rgba(232,255,60,.25);border-color:#E8FF3C}
+.hs .play.hit{background:#E8FF3C;color:#0A0A0C;border-color:#E8FF3C;transform:scale(.86);box-shadow:0 0 24px rgba(232,255,60,.6)}
 .hs .vsheet,.hs .ksheet{position:absolute;left:0;right:0;bottom:0;height:82%;background:#141417;border-radius:7cqw 7cqw 0 0;padding:0 5cqw;transform:translateY(104%);transition:transform .5s cubic-bezier(.4,0,.2,1);overflow:hidden;z-index:2}
 .hs.sheet .vsheet,.hs.sheet .ksheet{transform:none}
 .hs .grab{width:10cqw;height:1.2cqw;border-radius:1cqw;background:rgba(255,255,255,.25);margin:2.5cqw auto 0}
@@ -628,7 +629,7 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 @media (prefers-reduced-motion:reduce){.hs .tdeck{transition:none}}
 
 /* גיליון-השבוע מהטבעת */
-.hs .tring{transition:transform .15s}.hs .tring.hit{transform:scale(.94)}
+.hs .tring{transition:transform .15s}.hs .tring.hit{transform:scale(.9)}.hs .tring.hit i{box-shadow:0 0 0 1.6cqw rgba(232,255,60,.35),0 0 28px rgba(232,255,60,.6)}
 .hs .wk{position:absolute;left:0;right:0;bottom:0;height:46%;background:#141417;border-radius:7cqw 7cqw 0 0;padding:0 5cqw;transform:translateY(104%);transition:transform .5s cubic-bezier(.4,0,.2,1);z-index:2}
 .hs.sheet .wk{transform:none}
 .hs .wkh{font-size:5.5cqw;font-weight:900;font-style:italic;margin-top:4cqw}
