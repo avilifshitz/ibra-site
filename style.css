@@ -462,9 +462,9 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
 @media (max-width:720px) and (prefers-reduced-motion:reduce){.pin img,.step,.watches figure{transition:none}}
 /* composition: even lines, no half-lines */
 .lede,.sub,.cond,.note,#faq p,.step p,.step h3,.grid8 p,.conds span,.who b,.card p,figcaption,.maker,.tier i,.ways i,.ways p,.pick li{text-wrap:balance}
-.site h1 em{white-space:nowrap}
 @media (max-width:720px){
   .site h1{font-size:40px}
+  .site h1 em{white-space:nowrap}
   .facts3{grid-template-columns:1fr;gap:8px}
   .facts3 li{flex-direction:row;align-items:center;gap:12px;padding:12px 14px}
   .facts3 svg{margin:0;width:26px;height:26px;flex:none}
