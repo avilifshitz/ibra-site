@@ -676,3 +676,36 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hs.found2 .p2 .cfind{opacity:1;transform:none}.hs.rxb .p2 .crx{opacity:1}.hs.rxb1 .p2 .crx li:nth-child(1),.hs.rxb2 .p2 .crx li:nth-child(-n+2),.hs.rxb3 .p2 .crx li{opacity:1;transform:none}
 @media (min-width:900px){.scene.coach{height:calc(100vh - var(--nav) + 170vh)}.scene.coach .stage{justify-content:center}#whole .see{align-items:stretch}#whole .stick{position:sticky;top:112px}}
 @media (prefers-reduced-motion:reduce){.scene.coach .hs *{transition:none!important}.hs .cfind,.hs .crx,.hs .crx li,.hs .mark .mj,.hs .mark .mt{opacity:1!important;transform:none!important}.hs .mark .ml{stroke-dashoffset:0}}
+
+/* איך זה עובד — כרטיסיות: מתקדם לבד, הקשה לוקחת שליטה */
+.stepper{margin-top:16px;display:grid;grid-template-columns:1fr;gap:16px;justify-items:center}
+.stepper .pin{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--bg);box-shadow:0 30px 60px rgba(0,0,0,.5);width:min(260px,66%);aspect-ratio:600/1000;container-type:inline-size}
+.stepper .track{display:flex;height:100%;width:600%;transform:translateX(calc(var(--k,0) * 16.6667%));transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.stepper .track>*{width:16.6667%!important;height:100%;flex:none}
+.stepper .track img{max-width:none;object-fit:cover;object-position:top;display:block;border:0;border-radius:0;box-shadow:none}
+.stepper .track>.hs{position:relative;overflow:hidden;background:var(--bg);direction:rtl;font-family:Heebo,system-ui,sans-serif;color:#fff}
+/* כרטיסיות (טלפון) */
+.stepper .tabs{display:flex;gap:8px;width:100%;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 16px;margin:0 -16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.stepper .tabs::-webkit-scrollbar{display:none}
+.stepper .tabs button{flex:none;scroll-snap-align:center;position:relative;display:flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:20px;border:1px solid var(--line);background:transparent;color:var(--muted);font:inherit;font-size:14px;font-weight:700;overflow:hidden;transition:color .2s,border-color .2s}
+.stepper .tabs button .n{font-size:14px;font-weight:900;font-style:italic;color:var(--muted)}
+.stepper .tabs button.on{color:var(--ink);border-color:var(--ink)}.stepper .tabs button.on .n{color:var(--ink)}
+.stepper .tabs .bar,.stepper .list .bar{position:absolute;left:0;bottom:0;height:2px;width:100%;background:#8E9A1E;transform-origin:right;transform:scaleX(var(--f,0))}
+/* הרשימה (מחשב) */
+.stepper .list{display:none;list-style:none;margin:0;padding:0;width:100%}
+.stepper .list button{position:relative;display:flex;gap:18px;align-items:flex-start;width:100%;text-align:start;padding:12px 0 14px;background:none;border:0;color:inherit;font:inherit;cursor:pointer}
+.stepper .list .n{font-size:22px;font-weight:900;font-style:italic;color:var(--muted);width:32px;flex:none;line-height:1.1;transition:color .25s,font-size .25s}
+.stepper .list .t b{display:block;font-size:19px;font-weight:800;color:var(--muted);line-height:1.25;transition:color .25s,font-size .25s}
+.stepper .list .t small{display:block;font-size:16px;color:var(--ink2);margin-top:6px;max-width:40ch;line-height:1.5;max-height:0;opacity:0;overflow:hidden;transition:max-height .4s,opacity .3s}
+.stepper .list li.on .n{color:var(--ink);font-size:34px}.stepper .list li.on .t b{color:var(--ink);font-size:26px}.stepper .list li.on .t small{max-height:6em;opacity:1}
+.stepper .list .bar{height:2px}
+/* הטקסט של הצעד הפעיל בטלפון */
+.stepper .curstep{width:100%;min-height:5.6em}
+.stepper .curstep h3{font-size:22px;margin:0}.stepper .curstep p{font-size:16px;color:var(--ink2);margin:8px 0 0}
+@media (min-width:900px){
+  .stepper{grid-template-columns:1fr auto;gap:80px;align-items:center;max-width:980px;margin-inline:auto}
+  .stepper .pin{width:auto;height:min(720px,calc(100vh - 160px));aspect-ratio:600/1304;border-radius:40px;order:2;justify-self:end}
+  .stepper .tabs,.stepper .curstep{display:none}
+  .stepper .list{display:block;order:1;max-width:520px}
+}
+@media (prefers-reduced-motion:reduce){.stepper .track{transition:none}}
