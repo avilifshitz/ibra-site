@@ -111,7 +111,7 @@ if(!reduced&&'IntersectionObserver' in window){var len=el.line.getTotalLength();
  new IntersectionObserver(function(es,io){if(!es[0].isIntersecting)return;io.disconnect();el.line.style.transition='stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)';el.line.style.strokeDashoffset=0;setTimeout(function(){el.line.style.strokeDasharray='';el.line.style.transition='';el.dots.style.transition='opacity .4s';el.dots.style.opacity=1},1500)},{threshold:.35}).observe(ph)}})();
 
 // הרגעים ב"איך זה עובד": הסט האחרון (יעד ⇒ מעלים ⇒ עוד חזרה ⇒ ההצלחה) · סרטון לכל תרגיל (▶ ⇒ הגיליון ⇒ מחליקים לבא) · הארוחה (200⇒220 ⇒ אכלתי בחוץ)
-(function(){var ls=document.getElementById('lastset'),vd=document.getElementById('vidshot'),ml=document.getElementById('mealshot');if(!ls||!vd||!ml)return;
+(function(){var ls=document.getElementById('lastset'),vd=document.getElementById('vidshot'),ml=document.getElementById('mealshot');if(!ls||!vd||!ml)return;var deck=document.querySelector('#todayshot .tdeck');
 function seg(p,a,b){return Math.max(0,Math.min(1,(p-a)/(b-a)))}
 function on(el,cls,v){el.classList.toggle(cls,v)}
 var L={rest:ls.querySelector('.rest'),set:ls.querySelector('.setn'),earn:ls.querySelector('.earned'),w:ls.querySelector('[data-w]'),r:ls.querySelector('[data-r]'),pw:ls.querySelector('.plus'),pr:ls.querySelector('.plus2'),cta:ls.querySelector('.cta')};
@@ -119,6 +119,8 @@ var V={play:vd.querySelector('.play'),list:vd.querySelector('.vlist'),fr:[].slic
 var M={g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr:ml.querySelector('[data-pro]'),plus:ml.querySelector('.plus'),out:ml.querySelector('.mout')};
 function live(i,v){var f=V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
 window.__setMoment=function(p){
+ // שלב 2 · מסך-היום: החפיסה מחליקה (ב-RTL הקלפים הבאים משמאל ⇒ הרצועה זזה ימינה)
+ var t=seg(p*5,0.7,1.6),ts=seg(t,0.2,0.9);ts=ts*ts*(3-2*ts);if(deck)deck.style.transform='translateX('+(ts*92).toFixed(1)+'cqw)';
  // שלב 2 · 0.125–0.375
  var u=p*5;var q=seg(u,2.7,3.6);
  on(L.rest,'on',q<0.3);on(L.set,'on',q>=0.3&&q<0.82);on(L.earn,'on',q>=0.82);
