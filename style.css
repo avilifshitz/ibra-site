@@ -370,7 +370,8 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
 .scene .bars i::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:right;transform:scaleX(var(--f,0))}
 .scene .txts{position:relative;width:100%;flex:none;height:6.2em;margin-top:12px}
 .scene .txts>*{position:absolute;inset:0;margin:0;padding:0 8px 0 0;opacity:var(--a,0);transform:translateY(calc((1 - var(--a,0)) * 10px));text-align:start}
-.scene .step .n{padding-inline-end:.12em}
+.scene .step .n{padding-inline-end:.3em;overflow:visible}
+.scene .txts,.scene .txts>*{overflow:visible}
 .scene .step{display:block;padding:0;border:0;min-height:0}
 .scene .step .n{font-size:56px;margin-bottom:8px}
 .scene .step h3{font-size:22px}
