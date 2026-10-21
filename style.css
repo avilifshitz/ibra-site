@@ -396,17 +396,18 @@ html.js .rk svg path{transform:scaleX(calc(.4 + .6 * var(--p,1)))}
   .site .close .badge{margin-top:40px}
 }
 /* scenes: a pinned stage, scrubbed by scroll (progress --sp 0→1, reversible, no thresholds) */
-.scene{--sp:0;--nav:56px;position:relative;display:block;grid-template-columns:none;height:calc(100svh - var(--nav) + 150svh);margin-top:16px;text-align:start}
-.scene .stage{position:sticky;top:var(--nav);height:calc(100svh - var(--nav));display:flex;flex-direction:column;align-items:center;padding-top:12px}
+.scene{--sp:0;--nav:56px;position:relative;display:block;grid-template-columns:none;height:190svh;margin-top:16px;text-align:start}
+.scene .stage{position:sticky;top:calc(var(--nav) + 6svh);height:auto;display:flex;flex-direction:column;align-items:center;padding-top:12px}
 .scene .pin{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--bg);box-shadow:0 30px 60px rgba(0,0,0,.5);width:min(236px,58%);aspect-ratio:600/1000;flex:none}
 .scene .track{display:flex;height:100%;width:300%;transform:translateX(calc(var(--sp) * 66.6667%));will-change:transform}
 .scene .track img{width:33.3333%;max-width:none;height:100%;object-fit:cover;object-position:top;flex:none;display:block;border:0;border-radius:0;box-shadow:none}
-.scene .pinw{width:min(200px,52%);aspect-ratio:422/514;border-radius:34px}
+.scene .pinw{width:min(240px,64%);aspect-ratio:422/514;border-radius:40px}
 .scene .bars{display:flex;gap:6px;width:min(236px,58%);margin-top:14px;flex:none}
 .scene .bars i{flex:1;height:3px;border-radius:2px;background:var(--line);position:relative;overflow:hidden}
 .scene .bars i::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:right;transform:scaleX(var(--f,0))}
-.scene .txts{position:relative;width:100%;flex:1;margin-top:18px}
-.scene .txts>*{position:absolute;inset:0;margin:0;opacity:var(--a,0);transform:translateY(calc((1 - var(--a,0)) * 10px));text-align:start}
+.scene .txts{position:relative;width:100%;flex:none;height:6.2em;margin-top:12px}
+.scene .txts>*{position:absolute;inset:0;margin:0;padding:0 8px 0 0;opacity:var(--a,0);transform:translateY(calc((1 - var(--a,0)) * 10px));text-align:start}
+.scene .step .n{padding-inline-end:.12em}
 .scene .step{display:block;padding:0;border:0;min-height:0}
 .scene .step .n{font-size:56px;margin-bottom:8px}
 .scene .step h3{font-size:22px}
@@ -420,12 +421,12 @@ html:not(.js) .scene .stage{position:static;height:auto}
 html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top:16px}
 @media (min-width:900px){
   .scene{--nav:64px;height:calc(100vh - var(--nav) + 180vh)}
-  .scene .stage{flex-direction:row;align-items:center;gap:80px;padding-top:0}
+  .scene .stage{top:var(--nav);height:calc(100vh - var(--nav));flex-direction:row;align-items:center;gap:80px;padding-top:0}
   .scene .pin{width:auto;height:min(820px,calc(100vh - var(--nav) - 80px));aspect-ratio:600/1304;border-radius:40px;order:2}
   .scene .pinw{height:auto;width:300px;aspect-ratio:422/514;border-radius:48px}
   .scene .bars{display:none}
   .scene .txts{flex:1;height:100%;margin:0;order:1}
-  .scene .txts>*{display:flex;flex-direction:column;justify-content:center;transform:translateY(calc((1 - var(--a,0)) * 16px))}
+  .scene .txts>*{padding:0;display:flex;flex-direction:column;justify-content:center;transform:translateY(calc((1 - var(--a,0)) * 16px))}
   .scene .step .n{font-size:112px;margin-bottom:16px}
   .scene .step h3{font-size:30px;line-height:1.2}
   .scene .step p{font-size:19px;max-width:38ch}
