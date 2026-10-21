@@ -43,6 +43,9 @@ footer a{color:var(--muted)}
 .badge.sm img{height:40px}
 .badge:hover{opacity:.9}
 .badge:active{transform:scale(.97)}
+.badges{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap}
+.badge.play[hidden]{display:none}
+@media (max-width:720px){.badges .badge img{height:50px}.badges .badge.sm img{height:36px}.site .close .badges .badge img{height:50px}}
 
 .hero{padding:40px 0 64px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
 .site h1{font-size:56px;line-height:1.08;letter-spacing:-.01em;text-wrap:balance;margin:0}

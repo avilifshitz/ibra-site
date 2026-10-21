@@ -1,3 +1,5 @@
+// Google Play: מתג אחד — data-play על <html> עם קישור-הרשומה; ריק ⇒ התגים מוסתרים
+(function(){var u=document.documentElement.getAttribute("data-play");if(!u)return;[].forEach.call(document.querySelectorAll(".badge.play"),function(a){a.href=u;a.hidden=false})})();
 // ibra.fit — תנועה בלבד. הטקסט נראה גם בלי הקובץ הזה.
 document.documentElement.classList.add('js');
 (function () {
