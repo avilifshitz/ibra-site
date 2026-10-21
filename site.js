@@ -66,7 +66,7 @@ document.documentElement.classList.add('js');
   var ticking=false;
   function frame(){ticking=false;var vh=innerHeight;
     S.forEach(function(s){var r=s.g.getBoundingClientRect();var st=s.g.querySelector('.stage');var range=r.height-st.offsetHeight;
-      var p=range>0?(st.getBoundingClientRect().top-r.top)/range:0;p=Math.max(0,Math.min(1,p));s.g.style.setProperty('--sp',p.toFixed(4));if(s.g.classList.contains('five')){var u=p*4,i0=Math.floor(u),f0=u-i0,f1=f0<0.65?0:(f0-0.65)/0.35;f1=f1*f1*(3-2*f1);s.g.style.setProperty('--tx',((i0+f1)/4).toFixed(4))}
+      var p=range>0?(st.getBoundingClientRect().top-r.top)/range:0;p=Math.max(0,Math.min(1,p));s.g.style.setProperty('--sp',p.toFixed(4));if(s.g.classList.contains('five')){var N=s.txts.length-1,u=p*N,i0=Math.floor(u),f0=u-i0,f1=f0<0.65?0:(f0-0.65)/0.35;f1=f1*f1*(3-2*f1);s.g.style.setProperty('--tx',((i0+f1)/N).toFixed(4))}
       var n=s.txts.length,x=p*(n-1),best=Math.round(x);s.g.setAttribute('data-active',best+1);
       s.txts.forEach(function(el,i){var a=Math.max(0,Math.min(1,1-Math.abs(x-i)*2.2));el.style.setProperty('--a',a.toFixed(3));el.classList.toggle('on',i===best)});
       s.bars.forEach(function(b,i){b.style.setProperty('--f',Math.max(0,Math.min(1,x-i+1)).toFixed(3))});
@@ -120,18 +120,18 @@ var M={g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr:ml
 function live(i,v){var f=V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
 window.__setMoment=function(p){
  // שלב 2 · 0.125–0.375
- var u=p*4;var q=seg(u,1.7,2.6);
+ var u=p*5;var q=seg(u,2.7,3.6);
  on(L.rest,'on',q<0.3);on(L.set,'on',q>=0.3&&q<0.82);on(L.earn,'on',q>=0.82);
  var up=q>=0.46;L.w.textContent=up?'62.5':'60';on(L.w,'lit',up);on(L.pw,'hit',q>=0.42&&q<0.5);
  var rep=q>=0.62;L.r.textContent=rep?'9':'8';on(L.r,'lit',rep);on(L.pr,'hit',q>=0.58&&q<0.66);
  on(L.cta,'hit',q>=0.74&&q<0.82);
  // שלב 3 · 0.375–0.625
- var v=seg(u,0.7,1.6);
+ var v=seg(u,1.7,2.6);
  on(V.play,'pulse',v>0.05&&v<0.28);on(vd,'sheet',v>=0.28);
  var sw=seg(v,0.62,0.86);V.list.style.transform='translateY(-'+(sw*58).toFixed(1)+'%)';
  live(0,v>=0.3&&sw<0.5);live(1,sw>=0.5);
  // שלב 4 · 0.625–0.875
- var m=seg(u,2.7,3.6);
+ var m=seg(u,3.7,4.6);
  var g=m<0.2?200:m<0.34?210:220;M.g2.textContent=g;on(M.g2,'lit',g>220-1&&m>=0.34);M.kc.textContent=612+Math.round((g-200)*1.65);M.pr.textContent=52+Math.round((g-200)*0.31);
  on(M.plus,'hit',(m>=0.17&&m<0.23)||(m>=0.31&&m<0.37));
  on(M.out,'hit',m>=0.56&&m<0.64);on(ml,'sheet',m>=0.64);on(ml,'ruled',m>=0.76);
