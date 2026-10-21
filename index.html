@@ -25,7 +25,7 @@
 <meta property="og:locale" content="he_IL">
 <meta name="theme-color" content="#0A0A0C">
 <link rel="preload" href="/assets/heebo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=2610211650">
+<link rel="stylesheet" href="/style.css?v=2610211700">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"MobileApplication","@id":"https://ibra.fit/#app","name":"IBRA","alternateName":["איברה","IBRA — גבר. מלשון גִּבּוֹר."],"dateModified":"2026-10-20","url":"https://ibra.fit/","operatingSystem":"iOS 17 ומעלה","applicationCategory":"HealthApplication","inLanguage":"he","description":"אפליקציה שמריצה את תוכנית האימונים והתזונה שה-AI שלך (ChatGPT, Claude או Gemini) כתב: אימון יומי, ארוחות, מדידות, וסגירת-שבוע שחוזרת למאמן. בלי חשבון ובלי שרת.","author":{"@id":"https://ibra.fit/#org"},"offers":[{"@type":"Offer","price":"0","priceCurrency":"ILS","description":"השבוע הראשון חינם"},{"@type":"Offer","price":"29.90","priceCurrency":"ILS","description":"מנוי חודשי"},{"@type":"Offer","price":"199.90","priceCurrency":"ILS","description":"מנוי שנתי"},{"@type":"Offer","price":"399.90","priceCurrency":"ILS","description":"רכישה אחת לכל החיים"}]},
@@ -196,20 +196,15 @@
   <div>
     <h2>Apple Watch.&#x200E;<br><em>כל אימון, מהיד.</em></h2>
     <p class="lede">הטלפון נשאר בתיק. השעון סופר מנוחה, מראה את הסט הבא ומודד דופק. לא חובה.</p>
-    <div class="scene watches" data-scene>
-      <div class="stage">
-        <div class="pin pinw" aria-hidden="true"><div class="track">
+    <div class="stepper watchsteps" data-stepper="watch">
+      <div class="pin pinw" aria-hidden="true"><div class="track">
 <div class="ws rest"><div class="wt">16:16</div><div class="wl">מנוחה</div><div class="wclock lime">1:08</div><div class="wset">סט 3 · <b>10 חזרות</b></div><div class="wname">Single-Arm Dumbbell Row</div><div class="whr">♥ <span>134</span></div><div class="wdots"><i></i><i class="on"></i></div></div>
 <div class="ws zone"><div class="wt">16:16</div><div class="wl">LISS</div><div class="wclock" data-zclock>12:39</div><div class="zbar"><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i></div><div class="zhr"><span class="h">♥<small>בזון</small></span><b data-hr2>122</b></div><div class="wdots"><i></i><i class="on"></i></div></div>
 <div class="ws lad"><div class="wt">19:15</div><div class="lrow"><span class="lt lime" data-lclock>10:16</span><span class="lhr">♥ <b data-hr3>141</b></span></div><div class="lrung">מדרגה <span data-rung>5</span></div><div class="lsub">עולים · המטרה 7</div><div class="lcounts"><span><b>25</b><small>סקווט</small></span><span><b>20</b><small>בטן</small></span><span><b>15</b><small>שכיב׳</small></span><span><b>10</b><small>מקב׳</small></span><span><b>5</b><small>מתח</small></span></div><div class="lbtn">סיימתי מדרגה&nbsp;<span data-rung2>5</span></div><div class="wdots"><i></i><i class="on"></i></div></div>
 </div></div>
-        <div class="bars" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="txts">
-          <figure class="on"><figcaption><b>כוח</b>המנוחה, הסט הבא, הדופק.</figcaption></figure>
-          <figure><figcaption><b>הליכה</b>רטט כשהדופק יוצא מהטווח.</figcaption></figure>
-          <figure><figcaption><b>מבחן הכושר</b>המדרגה והמטרה, בלי טלפון.</figcaption></figure>
-        </div>
-      </div>
+      <div class="tabs" role="tablist" aria-label="מסכי השעון"><button type="button" role="tab" class="on" data-step="0">כוח<i class="bar"></i></button><button type="button" role="tab" class="" data-step="1">הליכה<i class="bar"></i></button><button type="button" role="tab" class="" data-step="2">מבחן הכושר<i class="bar"></i></button></div>
+      <div class="curstep"><h3></h3><p></p></div>
+      <ol class="list"><li class="on"><button type="button" data-step="0"><span class="t"><b>כוח</b><small>המנוחה, הסט הבא, הדופק.</small></span><i class="bar"></i></button></li><li class=""><button type="button" data-step="1"><span class="t"><b>הליכה</b><small>רטט כשהדופק יוצא מהטווח.</small></span><i class="bar"></i></button></li><li class=""><button type="button" data-step="2"><span class="t"><b>מבחן הכושר</b><small>המדרגה והמטרה, בלי טלפון.</small></span><i class="bar"></i></button></li></ol>
     </div>
     <p class="cond"><b>״בריאות״.</b> שינה, דופק ומשקל נקראים בהרשאתך ונשארים במכשיר. למאמן הם מגיעים בלי שתקליד.</p>
   </div>
@@ -258,6 +253,6 @@
   </div>
 </footer>
 </div>
-<script src="/site.js?v=2610211650" defer></script>
+<script src="/site.js?v=2610211700" defer></script>
 </body>
 </html>

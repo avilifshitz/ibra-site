@@ -101,11 +101,6 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 .facts3+.sub{margin-top:20px}
 /* השעון — שלושה מסכים אמיתיים זה לצד זה (לא סליידר, אפשטיין #18) */
 #connect .lede{max-width:46ch}
-.watches{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;text-align:center}
-.watches figure{margin:0}
-.watches img{width:180px;max-width:70%;height:auto;border-radius:28px;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.5)}
-.watches figcaption{margin-top:16px;color:var(--muted);font-size:14px}
-.watches figcaption b{display:block;color:var(--ink);font-size:17px;font-weight:800;margin-bottom:2px}
 .cond b{color:var(--ink);font-weight:800}
 .nots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
 .site .card{padding:24px;margin:0}
@@ -255,10 +250,6 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
   .nots,.faq{grid-template-columns:1fr}
   .see{grid-template-columns:1fr;gap:28px}
   .seeshot .shot{max-width:260px;aspect-ratio:562/760;object-fit:cover;object-position:top;border-bottom-left-radius:0;border-bottom-right-radius:0;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}
-  .watches{grid-template-columns:repeat(3,1fr);gap:12px}
-  .watches img{width:100%;max-width:110px;border-radius:20px}
-  .watches figcaption{font-size:13px}
-  .watches figcaption b{font-size:14px}
   .close h2{font-size:40px}
   .close{padding:64px 0}
   .text h1{font-size:34px}
@@ -367,7 +358,6 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
 .scene.six .track>*{width:16.6667%!important}
 .scene.six{height:400svh}
 .scene .track img{width:33.3333%;max-width:none;height:100%;object-fit:cover;object-position:top;flex:none;display:block;border:0;border-radius:0;box-shadow:none}
-.scene .pinw{width:min(250px,66%);aspect-ratio:422/514;border:9px solid #1E1E23;border-radius:46px;box-shadow:0 0 0 1px #2C2C32,0 30px 60px rgba(0,0,0,.55)}
 .scene .bars{display:flex;gap:6px;width:min(236px,58%);margin-top:14px;flex:none}
 .scene .bars i{flex:1;height:3px;border-radius:2px;background:var(--line);position:relative;overflow:hidden}
 .scene .bars i::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:right;transform:scaleX(var(--f,0))}
@@ -381,9 +371,6 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
 .scene .step p{font-size:16px;margin-top:8px}
 .scene figcaption{margin:0;font-size:16px;color:var(--ink2)}
 .scene figcaption b{display:block;font-size:24px;color:var(--ink);font-weight:800;margin-bottom:4px}
-.watches.scene{margin-top:24px}
-.scene.watches figcaption b{font-size:40px;font-weight:900;font-style:italic;line-height:1;margin-bottom:8px;letter-spacing:-.01em}
-.scene.watches figcaption{font-size:17px}
 #connect .cond{margin-top:0}
 html:not(.js) .scene{height:auto}
 html:not(.js) .scene .stage{position:static;height:auto}
@@ -394,12 +381,6 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .scene.six{height:calc(100vh - var(--nav) + 500vh)}
   .scene .stage{top:var(--nav);height:calc(100vh - var(--nav));flex-direction:row;align-items:center;gap:80px;padding-top:0}
   .scene .pin{width:auto;height:min(820px,calc(100vh - var(--nav) - 80px));aspect-ratio:600/1304;border-radius:40px;order:2}
-  .scene .pinw{height:auto;width:380px;aspect-ratio:422/514;border-width:12px;border-radius:64px}
-  .scene.watches{height:calc(100vh + 140vh)}
-  .scene.watches .stage{--sh:470px;height:var(--sh);top:calc(var(--nav) + (100vh - var(--nav) - var(--sh)) / 2);justify-content:center;gap:96px;max-width:960px;margin-inline:auto}
-  .scene.watches .txts{flex:0 1 520px;height:260px}
-  .scene.watches figcaption b{font-size:64px;margin-bottom:14px}
-  .scene.watches figcaption{font-size:21px}
   .scene .bars{display:none}
   .scene .txts{flex:1;height:100%;margin:0;order:1}
   .scene .txts>*{padding:0;display:flex;flex-direction:column;justify-content:center;transform:translateY(calc((1 - var(--a,0)) * 16px))}
@@ -709,3 +690,18 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .stepper .list{display:block;order:1;max-width:520px}
 }
 @media (prefers-reduced-motion:reduce){.stepper .track{transition:none}}
+
+/* השעון ככרטיסיות */
+.watchsteps{margin-top:24px}
+.watchsteps .pin.pinw{width:min(250px,66%);aspect-ratio:422/514;border:9px solid #1E1E23;border-radius:46px;box-shadow:0 0 0 1px #2C2C32,0 30px 60px rgba(0,0,0,.55)}
+.watchsteps .track{width:300%;transform:translateX(calc(var(--k,0) * 33.3333%))}
+.watchsteps .track>*{width:33.3333%!important}
+.watchsteps .track>.ws{padding:0 7cqw;text-align:center}
+.watchsteps .list .t b{font-size:22px}.watchsteps .list li.on .t b{font-size:34px;font-weight:900;font-style:italic}
+.watchsteps .list button{gap:0}
+@media (min-width:900px){
+  .watchsteps{grid-template-columns:1fr auto;gap:96px;max-width:960px}
+  .watchsteps .pin.pinw{width:380px;height:auto;aspect-ratio:422/514;border-width:12px;border-radius:64px}
+  .watchsteps .list{max-width:440px}
+  .watchsteps .list li.on .t b{font-size:44px}
+}
