@@ -147,4 +147,4 @@ window.__watchMoment=function(p){var b=seg(p,0.3,0.7);h2.textContent=118+Math.ro
 
 // המאמן ראה אותך: הסימון נמתח אל הצוואר ⇒ הממצא ⇒ המרשם נכנס לתוכנית, שורה אחר שורה
 (function(){var c=document.getElementById('coachshot');if(!c)return;
-window.__coachMoment=function(p){c.classList.toggle('marked',p>=0.14);c.classList.toggle('found',p>=0.34);c.classList.toggle('rx',p>=0.5);c.classList.toggle('rx1',p>=0.56);c.classList.toggle('rx2',p>=0.68);c.classList.toggle('rx3',p>=0.8)}})();
+window.__coachMoment=function(p){var t=function(k,v){c.classList.toggle(k,v)};t('marked',p>=0.08);t('found',p>=0.2);t('rx',p>=0.28);t('rx1',p>=0.32);t('rx2',p>=0.38);t('rx3',p>=0.44);t('pg2',p>=0.54);t('marked2',p>=0.6);t('found2',p>=0.68);t('rxb',p>=0.74);t('rxb1',p>=0.78);t('rxb2',p>=0.84);t('rxb3',p>=0.9)}})();
