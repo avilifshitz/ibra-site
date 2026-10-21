@@ -50,7 +50,7 @@
       <a class="badge" href="https://apps.apple.com/il/app/ibra/id6794155896"><img src="/assets/appstore-he.svg" width="162" height="56" alt="הורד ב-App Store"></a>
       <a class="quiet" href="#how">איך זה עובד ↓</a>
     </div>
-    <p class="facts">עובד עם <span class="brands"><span>ChatGPT</span><i>·</i><span>Claude</span><i>·</i><span>Gemini</span></span>. יום לדוגמה בלי להירשם, ושבוע ראשון חינם.</p>
+    <p class="facts">עובד עם <span class="brands"><span>ChatGPT</span><i>·</i><span>Claude</span><i>·</i><span>Gemini</span></span>.<br>יום לדוגמה, בלי להירשם.</p>
   </div>
   <div class="pair" data-p aria-label="שני מסכים מהאפליקציה: היום, וסגירת-השבוע שבה המאמן החזיר שני שינויים">
     <figure class="front"><img class="shot" src="/assets/1-today.webp" width="600" height="1304" alt="מסך היום ב-IBRA: אימון PULL B, שגרת בוקר, וטבעת השבוע" fetchpriority="high"><figcaption>כל יום</figcaption></figure>
@@ -62,21 +62,20 @@
 <section id="how">
   <div><h2>איך זה עובד</h2></div>
   <div class="steps" data-scene>
-    <div class="pin" aria-hidden="true"><img src="/assets/3-activate.webp" width="600" height="1304" alt="" loading="lazy"><img src="/assets/4-set.webp" width="600" height="1304" alt="" loading="lazy"><img src="/assets/2-decision.webp" width="600" height="1304" alt="" loading="lazy"></div>
-    <div class="step" data-p>
-      <div class="n">1</div><h3>אתה עונה פעם אחת.</h3><p>IBRA כותבת תדריך. המאמן שלך מחזיר תוכנית.</p>
+    <div class="pinwrap"><div class="pin" aria-hidden="true"><img src="/assets/3-activate.webp" width="600" height="1304" alt="" loading="lazy"><img src="/assets/4-set.webp" width="600" height="1304" alt="" loading="lazy"><img src="/assets/2-decision.webp" width="600" height="1304" alt="" loading="lazy"></div></div>
+    <div class="step" data-p id="s1">
+      <div class="n">1</div><h3>אתה עונה פעם אחת.</h3><p>IBRA כותבת תדריך. ה-AI שלך מחזיר תוכנית, ומכאן הוא המאמן שלך.</p>
       <img class="shot" src="/assets/3-activate.webp" width="600" height="1304" loading="lazy" alt="המאמן שלך מוכן: סיכום התדריך לפני השיתוף">
     </div>
-    <div class="step" data-p>
+    <div class="step" data-p id="s2">
       <div class="n">2</div><h3>כל יום אתה יודע מה מחכה.</h3><p>הסט, המשקל מהפעם הקודמת, המנוחה, הארוחות.</p>
       <img class="shot" src="/assets/4-set.webp" width="600" height="1304" loading="lazy" alt="סט בנגן: 60 ק״ג × 8 חזרות, המשקל מהפעם הקודמת">
     </div>
-    <div class="step" data-p>
+    <div class="step" data-p id="s3">
       <div class="n">3</div><h3>כל שבוע המאמן מדייק.</h3><p>מה שבאמת קרה חוזר אליו. השינויים חוזרים אליך, לאישור.</p>
       <img class="shot" src="/assets/2-decision.webp" width="600" height="1304" loading="lazy" alt="סגירת שבוע: השבוע נקרא, 2 שינויים מוצעים">
     </div>
   </div>
-  <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
 </section>
 
 <!-- beat 3 · ההיקף -->
@@ -86,13 +85,13 @@
   </div>
   <div class="grid8">
     <div><h3>אימון</h3><p>סטים, משקלים, מנוחה</p></div>
-    <div><h3>תזונה</h3><p>ארוחות בגרמים, רשימת קניות</p></div>
-    <div><h3>שינה</h3><p>מ״בריאות״. לילה קצר, יום קל</p></div>
+    <div><h3>תזונה</h3><p>ארוחות בגרמים, קניות</p></div>
+    <div><h3>שינה</h3><p>לילה קצר, יום קל</p></div>
     <div><h3>יציבה</h3><p>נמדדת מתמונת-הצד</p></div>
-    <div><h3>גמישות</h3><p>שישה אזורים, סולמות קבועים</p></div>
-    <div><h3>ליבה</h3><p>פלאנק והגב, בדיקות-מקסימום</p></div>
+    <div><h3>גמישות</h3><p>שישה אזורים, נמדדים</p></div>
+    <div><h3>ליבה</h3><p>פלאנק והגב, עד הסוף</p></div>
     <div><h3>מבחן כושר</h3><p>הפירמידה, כל 6 שבועות</p></div>
-    <div><h3>מדידות</h3><p>משקל, מותן, כתפיים, שומן</p></div>
+    <div><h3>מדידות</h3><p>משקל, מותן, שומן</p></div>
   </div>
 </section>
 
@@ -102,11 +101,11 @@
     <div>
       <h2>המאמן<br><em>רואה אותך.</em></h2>
       <ul class="conds facts3">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg><b>3 תנוחות</b><span>חזית, צד, דאבל-בייספס</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg><b>3 תנוחות</b><span>חזית · צד · בייספס</span></li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg><b>כל 3 שבועות</b><span>עם סגירת-השבוע</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/><circle cx="12" cy="12" r="2.6"/></svg><b>אותה זווית, אותו אור</b><span>המסגרת מנחה את הצילום</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/><circle cx="12" cy="12" r="2.6"/></svg><b>אותה זווית, אותו אור</b><span>מסגרת מנחה</span></li>
       </ul>
-      <p class="sub">המאמן מחזיר מה ראה, תנוחה-תנוחה, ומה זה משנה בתוכנית.</p>
+      <p class="sub">המאמן מחזיר מה ראה בכל תנוחה, ומה זה משנה.</p>
     </div>
     <figure class="seeshot" data-p>
       <img class="shot" src="/assets/coach-saw.webp" width="562" height="1180" loading="lazy" alt="מסך ״המאמן ראה״ באפליקציה: שלוש תנוחות, ולכל ממצא מה המאמן ראה ומה נכנס לתוכנית">
@@ -118,13 +117,12 @@
 <section id="connect">
   <div>
     <h2>Apple Watch.&#x200E;<br><em>כל אימון, מהיד.</em></h2>
-    <p class="lede">הטלפון נשאר בתיק. השעון סופר את המנוחה, מראה את הסט הבא, ומודד את הדופק. לא חובה.</p>
-    <div class="wchips" role="tablist" aria-label="מסכי השעון"><button type="button" role="tab" class="on" aria-selected="true">כוח</button><button type="button" role="tab" aria-selected="false">הליכה</button><button type="button" role="tab" aria-selected="false">מבחן הכושר</button></div>
+    <p class="lede">הטלפון נשאר בתיק. השעון סופר מנוחה, מראה את הסט הבא ומודד דופק. לא חובה.</p>
     <div class="watches" data-scene>
-      <div class="pin pinw" aria-hidden="true"><img src="/assets/watch-01-rest.webp" width="422" height="514" alt="" loading="lazy"><img src="/assets/watch-02-zone.webp" width="422" height="514" alt="" loading="lazy"><img src="/assets/watch-03-ladder.webp" width="422" height="514" alt="" loading="lazy"></div>
-      <figure><img src="/assets/watch-01-rest.webp" width="422" height="514" loading="lazy" alt="IBRA בשעון באימון כוח: מנוחה 1:08, סט 3, 10 חזרות, דופק 134"><figcaption><b>כוח</b>המנוחה, הסט הבא, הדופק.</figcaption></figure>
-      <figure><img src="/assets/watch-02-zone.webp" width="422" height="514" loading="lazy" alt="IBRA בשעון בהליכה: 12:39, דופק 122 בזון"><figcaption><b>הליכה</b>רטט כשהדופק יוצא מהטווח.</figcaption></figure>
-      <figure><img src="/assets/watch-03-ladder.webp" width="422" height="514" loading="lazy" alt="IBRA בשעון במבחן הכושר: מדרגה 5, מתח 5, מקבילים 10, שכיבות 15, בטן 20, סקווט 25"><figcaption><b>מבחן הכושר</b>המדרגה והמטרה, בלי טלפון.</figcaption></figure>
+      <div class="pinwrap"><div class="pin pinw" aria-hidden="true"><img src="/assets/watch-01-rest.webp" width="422" height="514" alt="" loading="lazy"><img src="/assets/watch-02-zone.webp" width="422" height="514" alt="" loading="lazy"><img src="/assets/watch-03-ladder.webp" width="422" height="514" alt="" loading="lazy"></div></div>
+      <figure id="w1"><img src="/assets/watch-01-rest.webp" width="422" height="514" loading="lazy" alt="IBRA בשעון באימון כוח: מנוחה 1:08, סט 3, 10 חזרות, דופק 134"><figcaption><b>כוח</b>המנוחה, הסט הבא, הדופק.</figcaption></figure>
+      <figure id="w2"><img src="/assets/watch-02-zone.webp" width="422" height="514" loading="lazy" alt="IBRA בשעון בהליכה: 12:39, דופק 122 בזון"><figcaption><b>הליכה</b>רטט כשהדופק יוצא מהטווח.</figcaption></figure>
+      <figure id="w3"><img src="/assets/watch-03-ladder.webp" width="422" height="514" loading="lazy" alt="IBRA בשעון במבחן הכושר: מדרגה 5, מתח 5, מקבילים 10, שכיבות 15, בטן 20, סקווט 25"><figcaption><b>מבחן הכושר</b>המדרגה והמטרה, בלי טלפון.</figcaption></figure>
     </div>
     <p class="cond"><b>״בריאות״.</b> שינה, דופק ומשקל נקראים בהרשאתך ונשארים במכשיר. למאמן הם מגיעים בלי שתקליד.</p>
   </div>
@@ -144,7 +142,7 @@
       <div class="rkp" id="rk-1" role="tabpanel" aria-labelledby="rk-tab-1" hidden>
         <div class="who"><span class="eye">בֶּן חַיִל · הבסיס בנוי.</span><b>כתפיים רחבות, מותן צרה. ה-V נראה.</b><span class="traits">חטוב <i>·</i> פרופורציונלי <i>·</i> זקוף</span></div>
         <ul class="conds">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 5.2h8.5v14.8h-1.1zM21.2 5.2h-8.5v14.8h1.1z"/></svg><b>1.45</b><span>כתפיים מול מותן</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 5.2h8.5v14.8h-1.1zM21.2 5.2h-8.5v14.8h1.1z"/></svg><b>1.45</b><span>כתפיים/מותן</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M5 4h5M5 20h5M19 4v16M19 4h-5M19 20h-5M12 9.5v5"/></svg><b>עד 18%</b><span>שומן</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.4"/></svg><b>FFMI 20</b><span>שריר לגובה</span></li>
         </ul>
@@ -152,7 +150,7 @@
       <div class="rkp" id="rk-2" role="tabpanel" aria-labelledby="rk-tab-2">
         <div class="who"><span class="eye">אִישׁ חַיִל · הגוף מרשים.</span><b>גוף מבצעי, מוכן לכל משימה.</b><span class="traits">אתלטי <i>·</i> מהיר <i>·</i> חזק <i>·</i> זקוף</span></div>
         <ul class="conds">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 5.2h8.5v14.8h-1.1zM21.2 5.2h-8.5v14.8h1.1z"/></svg><b>1.52</b><span>כתפיים מול מותן</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 5.2h8.5v14.8h-1.1zM21.2 5.2h-8.5v14.8h1.1z"/></svg><b>1.52</b><span>כתפיים/מותן</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M5 4h5M5 20h5M19 4v16M19 4h-5M19 20h-5M12 9.5v5"/></svg><b>עד 15%</b><span>שומן</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.4"/></svg><b>FFMI 22</b><span>שריר לגובה</span></li>
         </ul>
@@ -160,7 +158,7 @@
       <div class="rkp" id="rk-3" role="tabpanel" aria-labelledby="rk-tab-3" hidden>
         <div class="who"><span class="eye">גִּבּוֹר חַיִל · השיא הטבעי.</span><b>גוף של מגדל. רואים אותו מרחוק.</b><span class="traits">מסיבי <i>·</i> עוצמתי <i>·</i> בלתי נלאה <i>·</i> זקוף</span></div>
         <ul class="conds">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 5.2h8.5v14.8h-1.1zM21.2 5.2h-8.5v14.8h1.1z"/></svg><b>1.60</b><span>כתפיים מול מותן</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 5.2h8.5v14.8h-1.1zM21.2 5.2h-8.5v14.8h1.1z"/></svg><b>1.60</b><span>כתפיים/מותן</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M5 4h5M5 20h5M19 4v16M19 4h-5M19 20h-5M12 9.5v5"/></svg><b>עד 13%</b><span>שומן</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.4"/></svg><b>FFMI 23.5</b><span>שריר לגובה</span></li>
         </ul>
