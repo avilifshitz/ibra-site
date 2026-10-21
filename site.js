@@ -120,13 +120,13 @@ var M={g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr:ml
 function live(i,v){var f=V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
 window.__setMoment=function(p){
  // שלב 2 · 0.125–0.375
- var u=p*4;var q=seg(u,0.7,1.6);
+ var u=p*4;var q=seg(u,1.7,2.6);
  on(L.rest,'on',q<0.3);on(L.set,'on',q>=0.3&&q<0.82);on(L.earn,'on',q>=0.82);
  var up=q>=0.46;L.w.textContent=up?'62.5':'60';on(L.w,'lit',up);on(L.pw,'hit',q>=0.42&&q<0.5);
  var rep=q>=0.62;L.r.textContent=rep?'9':'8';on(L.r,'lit',rep);on(L.pr,'hit',q>=0.58&&q<0.66);
  on(L.cta,'hit',q>=0.74&&q<0.82);
  // שלב 3 · 0.375–0.625
- var v=seg(u,1.7,2.6);
+ var v=seg(u,0.7,1.6);
  on(V.play,'pulse',v>0.05&&v<0.28);on(vd,'sheet',v>=0.28);
  var sw=seg(v,0.62,0.86);V.list.style.transform='translateY(-'+(sw*58).toFixed(1)+'%)';
  live(0,v>=0.3&&sw<0.5);live(1,sw>=0.5);
