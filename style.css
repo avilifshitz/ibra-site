@@ -440,7 +440,47 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .ladder time{margin-inline-start:auto;flex:none;align-self:flex-start;font-size:13px;font-weight:800;color:var(--muted);white-space:nowrap;padding-top:4px}
 .ladder li.on time{color:var(--lime)}
 .ladder svg path{transition:fill .3s,filter .3s}
-#rank .seeshot .shot{transition:opacity .25s}
-#rank .seeshot .shot.swap{opacity:0}
 @media (max-width:720px){.ladder time{font-size:12px}}
 @media (max-width:720px){.ladder li{position:relative;padding-top:14px}.ladder time{position:absolute;top:12px;left:14px;margin:0;padding:0}.ladder li>div{padding-inline-end:0}}
+/* "לאן ומתי" חי — הכרטיס ב-HTML, הגרף ב-SVG */
+.phone{width:300px;aspect-ratio:562/1218;margin:0 auto;border-radius:28px;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.5);background:var(--bg);overflow:hidden;padding:0 14px;text-align:start;position:relative;font-family:Heebo,system-ui,sans-serif}
+.phone .pbar{direction:ltr;display:flex;justify-content:space-between;align-items:center;height:34px;font-size:11px;font-weight:700;color:#fff;padding:4px 6px 0}
+.phone .pbar i{width:28px;height:10px;border:1px solid rgba(255,255,255,.6);border-radius:3px;position:relative}
+.phone .pbar i::after{content:"";position:absolute;inset:1.5px;background:#fff;border-radius:1.5px}
+.phone .jh{display:flex;justify-content:space-between;align-items:baseline;margin:6px 2px 8px}
+.phone .jh b{font-size:13px;font-weight:800;color:#fff}.phone .jh span{font-size:11px;color:rgba(255,255,255,.55)}
+.rcard{background:#141417;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 12px 10px}
+.rcard .rh{font-size:22px;font-weight:900;font-style:italic;color:#fff;line-height:1.1;white-space:nowrap}
+.rcard .basis{font-size:10px;font-weight:600;color:rgba(255,255,255,.55);margin:5px 0 8px}
+.rcard .chart{position:relative;height:150px}
+.rcard svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rcard .band{fill:#565F1E;fill-opacity:.55}
+.rcard .fill{fill:url(#rg)}
+.rcard .axis{stroke:rgba(255,255,255,.14);stroke-width:1}
+.rcard .split{stroke:rgba(255,255,255,.22);stroke-width:1;stroke-dasharray:2 3;transition:opacity .4s}
+.rcard .line{fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.rcard .est{fill:none;stroke:rgba(255,255,255,.55);stroke-width:2;stroke-linecap:round;stroke-dasharray:1 5;transition:opacity .4s}
+.rcard .dots circle{fill:#fff;stroke:#fff;stroke-width:1.3;transition:opacity .3s}.rcard .dots circle.e{fill:#141417;stroke:rgba(255,255,255,.6)}
+.rcard .goal{fill:#fff}
+.rcard .halo{fill:#E8FF3C;fill-opacity:.18}.rcard .today{fill:#E8FF3C}
+.rcard .lbl{position:absolute;font-size:9px;font-weight:700;color:rgba(255,255,255,.55);white-space:nowrap;direction:rtl}
+.rcard .lbl b{font-size:9px;font-weight:800;color:#fff}
+.rcard .lbl.today{top:0;right:0}
+.rcard .lbl.peak{top:0;transition:left .8s,top .8s}
+.rcard .years{position:absolute;left:0;right:0;top:134px;height:14px;font-size:8px;font-weight:700;color:rgba(255,255,255,.4)}
+.rcard .years span{position:absolute;transform:translateX(50%);transition:right .8s,opacity .4s}
+.rcard .years .esl{transform:none;left:4px}
+.rcard .stations{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-top:6px}
+.rcard .stations i{display:block;font-style:normal;font-size:9px;font-weight:700;color:rgba(255,255,255,.55);white-space:nowrap}
+.rcard .stations b{display:block;font-size:16px;font-weight:900;font-style:italic;color:#fff;font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.rcard .stations .goal b{font-size:13px;font-style:normal;font-weight:800}
+.rcard .stations .goal{text-align:end}
+.rcard .stations small{display:block;font-size:9px;font-weight:600;color:rgba(255,255,255,.55);margin-top:1px}
+.rcard .door{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.08);margin-top:12px;padding-top:10px;font-size:11px;font-weight:700;color:rgba(255,255,255,.68)}
+.rcard .door .chev{color:rgba(255,255,255,.35)}
+.phone .mm{font-size:12px;font-weight:800;color:#fff;margin:18px 2px 8px}
+.phone .mrow{display:flex;justify-content:space-between;padding:12px 12px;background:#141417;border:1px solid rgba(255,255,255,.08);border-radius:14px;margin-bottom:6px;font-size:12px}
+.phone .mrow span{font-weight:800;color:#fff}.phone .mrow b{font-weight:700;color:#fff}.phone .mrow b.q{color:rgba(255,255,255,.55);font-weight:600}
+#rank .seeshot.live{align-self:center}
+@media (max-width:720px){.phone{width:260px;aspect-ratio:562/1040;border-bottom-left-radius:0;border-bottom-right-radius:0;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}}
+@media (prefers-reduced-motion:reduce){.rcard *{transition:none!important}}
