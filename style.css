@@ -310,15 +310,6 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
 .vs .fam{margin-top:40px}
 .vs .ways p{margin-top:8px;flex:1;color:var(--ink)}
 .vs .ways em{font-style:normal;display:block;margin-top:10px;color:var(--muted);font-size:14px}
-.matrix{margin-top:48px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.matrix table{width:100%;border-collapse:collapse;font-size:15px}
-.matrix th,.matrix td{padding:14px 12px;border-top:1px solid var(--line);text-align:center;vertical-align:middle;color:var(--ink2)}
-.matrix thead th{border-top:0;background:var(--card);font-weight:800;color:var(--ink);font-size:14px}
-.matrix tbody th{text-align:start;font-weight:700;color:var(--ink);padding-inline-start:16px}
-.matrix .me{background:rgba(232,255,60,.05);color:var(--ink);font-weight:700}
-.matrix td.y svg{width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linecap:square;stroke-linejoin:miter;vertical-align:middle}
-.matrix td.n{color:var(--muted)}
-.matrix td.n span{font-size:13px;opacity:.7}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .vs .note{color:var(--muted);font-size:14px;margin-top:12px}
 .pick{list-style:none;margin:16px 0 0;padding:0}
@@ -326,11 +317,6 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
 .pick li b{color:var(--ink);font-weight:800}
 .pick li.us b{color:var(--lime)}
 @media (max-width:720px){
-  .matrix{margin-top:36px}
-  .matrix table{font-size:13px}
-  .matrix th,.matrix td{padding:12px 6px}
-  .matrix tbody th{font-size:14px;padding-inline-start:12px}
-  .matrix td.y svg{width:20px;height:20px}
 }
 /* sticky header, desktop */
 @media (min-width:761px){
