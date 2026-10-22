@@ -113,13 +113,13 @@ if(!reduced&&'IntersectionObserver' in window){var len=el.line.getTotalLength();
  new IntersectionObserver(function(es,io){if(!es[0].isIntersecting)return;io.disconnect();el.line.style.transition='stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)';el.line.style.strokeDashoffset=0;setTimeout(function(){el.line.style.strokeDasharray='';el.line.style.transition='';el.dots.style.transition='opacity .4s';el.dots.style.opacity=1},1500)},{threshold:.35}).observe(ph)}})();
 
 // הרגעים ב"איך זה עובד": הסט האחרון (יעד ⇒ מעלים ⇒ עוד חזרה ⇒ ההצלחה) · סרטון לכל תרגיל (▶ ⇒ הגיליון ⇒ מחליקים לבא) · הארוחה (200⇒220 ⇒ אכלתי בחוץ)
-(function(){var ls=document.getElementById('lastset'),vd=document.getElementById('vidshot'),ml=document.getElementById('mealshot');if(!ls||!vd||!ml)return;var deck=document.querySelector('#todayshot .tdeck');
+(function(){var ls=document.getElementById('lastset'),vd=document.getElementById('vidshot'),ml=document.getElementById('mealshot');if(!ls)return;var deck=document.querySelector('#todayshot .tdeck');
 function seg(p,a,b){return Math.max(0,Math.min(1,(p-a)/(b-a)))}
 function on(el,cls,v){el.classList.toggle(cls,v)}
 var L={rest:ls.querySelector('.rest'),set:ls.querySelector('.setn'),earn:ls.querySelector('.earned'),w:ls.querySelector('[data-w]'),r:ls.querySelector('[data-r]'),pw:ls.querySelector('.plus'),pr:ls.querySelector('.plus2'),cta:ls.querySelector('.cta')};
-var V={play:vd.querySelector('.play'),list:vd.querySelector('.vlist'),fr:[].slice.call(vd.querySelectorAll('iframe'))};
-var M={g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr:ml.querySelector('[data-pro]'),plus:ml.querySelector('.plus'),out:ml.querySelector('.mout')};
-function live(i,v){var f=V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
+var V=vd?{play:vd.querySelector('.play'),list:vd.querySelector('.vlist'),fr:[].slice.call(vd.querySelectorAll('iframe'))}:null;
+var M=ml?{g2:ml.querySelector('[data-g2]'),kc:ml.querySelector('[data-kcal]'),pr:ml.querySelector('[data-pro]'),plus:ml.querySelector('.plus'),out:ml.querySelector('.mout')}:null;
+function live(i,v){var f=V&&V.fr[i];if(!f)return;if(v&&!f.src){f.src=f.getAttribute('data-src')}if(!v&&f.src){f.removeAttribute('src')}f.classList.toggle('live',v)}
 window.__setMoment=function(p){
  // שלב 2 · מסך-היום: החפיסה מחליקה (ב-RTL הקלפים הבאים משמאל ⇒ הרצועה זזה ימינה)
  var t=seg(p*5,0.7,1.6),ts=seg(t,0.12,0.5);ts=ts*ts*(3-2*ts);if(deck)deck.style.transform='translateX('+(ts*92).toFixed(1)+'cqw)';var td=document.getElementById('todayshot');if(td){on(td.querySelector('.tring'),'hit',t>=0.54&&t<0.66);on(td,'sheet',t>=0.66)}
@@ -130,19 +130,19 @@ window.__setMoment=function(p){
  var rep=q>=0.62;L.r.textContent=rep?'9':'8';on(L.r,'lit',rep);on(L.pr,'hit',q>=0.58&&q<0.66);
  on(L.cta,'hit',q>=0.74&&q<0.82);
  // שלב 3 · 0.375–0.625
- var v=seg(u,1.7,2.6);
+ if(V){var v=seg(u,1.7,2.6);
  on(V.play,'pulse',v>0.05&&v<0.2);on(V.play,'hit',v>=0.2&&v<0.3);on(vd,'sheet',v>=0.3);
  var sw=seg(v,0.62,0.86);V.list.style.transform='translateY(-'+(sw*58).toFixed(1)+'%)';
- live(0,v>=0.3&&sw<0.5);live(1,sw>=0.5);
+ live(0,v>=0.3&&sw<0.5);live(1,sw>=0.5)}
  // שלב 4 · 0.625–0.875
- var m=seg(u,3.7,4.6);
+ if(M){var m=seg(u,3.7,4.6);
  var g=m<0.2?200:m<0.34?210:220;M.g2.textContent=g;on(M.g2,'lit',g>220-1&&m>=0.34);M.kc.textContent=612+Math.round((g-200)*1.65);M.pr.textContent=52+Math.round((g-200)*0.31);
  on(M.plus,'hit',(m>=0.17&&m<0.23)||(m>=0.31&&m<0.37));
- on(M.out,'hit',m>=0.56&&m<0.64);on(ml,'sheet',m>=0.64);on(ml,'ruled',m>=0.76);
+ on(M.out,'hit',m>=0.56&&m<0.64);on(ml,'sheet',m>=0.64);on(ml,'ruled',m>=0.76)}
 }})();
 // השעון: הרצועה נכנסת לזון, המדרגה עולה.
-(function(){var ws=document.querySelector('#connect .ws');if(!ws)return;var q=function(sel){return document.querySelector('#connect '+sel)};
-var h2=q('[data-hr2]'),zb=[].slice.call(document.querySelectorAll('#connect .zbar i')),h3=q('[data-hr3]'),r1=q('[data-rung]'),r2=q('[data-rung2]');
+(function(){var ws=document.querySelector('.watchsteps .ws');if(!ws)return;var q=function(sel){return document.querySelector('.watchsteps '+sel)};
+var h2=q('[data-hr2]'),zb=[].slice.call(document.querySelectorAll('.watchsteps .zbar i')),h3=q('[data-hr3]'),r1=q('[data-rung]'),r2=q('[data-rung2]');
 function seg(p,a,b){return Math.max(0,Math.min(1,(p-a)/(b-a)))}
 window.__watchMoment=function(p){var b=seg(p,0.3,0.7);h2.textContent=118+Math.round(b*4);var lit=6+Math.round(b*3);zb.forEach(function(e,i){e.classList.toggle('on',i>=9-lit)});
  var c=seg(p,0.65,1);h3.textContent=141+Math.round(c*3);var rung=c>0.6?6:5;r1.textContent=rung;r2.textContent=rung}})();
@@ -152,7 +152,7 @@ window.__watchMoment=function(p){var b=seg(p,0.3,0.7);h2.textContent=118+Math.ro
 window.__coachMoment=function(p){var t=function(k,v){c.classList.toggle(k,v)};t('marked',p>=0.08);t('found',p>=0.2);t('rx',p>=0.28);t('rx1',p>=0.32);t('rx2',p>=0.38);t('rx3',p>=0.44);t('pg2',p>=0.54);t('marked2',p>=0.6);t('found2',p>=0.68);t('rxb',p>=0.74);t('rxb1',p>=0.78);t('rxb2',p>=0.84);t('rxb3',p>=0.9)}})();
 
 // כרטיסיות (איך זה עובד · השעון): מתקדם לבד כשהמקטע על המסך; הקשה בוחרת מאיפה ממשיכים (האוטומט ממשיך)
-(function(){var CFG={how:{durs:[4000,6000,6500,7000,6000,4000],moment:function(k,f){if(window.__setMoment)window.__setMoment((k-0.3+f*0.9)/5)}},
+(function(){var CFG={train:{durs:[6000,7000,4000],moment:function(k,f){var K=[1,3][k];if(K!=null&&window.__setMoment)window.__setMoment((K-0.3+f*0.9)/5)}},how:{durs:[4000,5000,4000,5000],moment:function(){}},
  watch:{durs:[3500,5000,5000],moment:function(k,f){if(window.__watchMoment)window.__watchMoment(k===0?0:k===1?0.3+f*0.4:0.65+f*0.35)}}};
 window.__steppers={};
 [].forEach.call(document.querySelectorAll('[data-stepper]'),function(st){var cfg=CFG[st.getAttribute('data-stepper')]||CFG.how;
