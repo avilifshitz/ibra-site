@@ -140,6 +140,7 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 .site footer li a{display:inline-block;padding:12px 0;color:var(--muted)}
 .site footer li a:hover{color:var(--ink)}
 .site footer .meta{color:var(--muted);font-size:13px;white-space:nowrap}
+.site footer .row:first-child{margin-top:0;padding-top:0;border-top:0}
 
 /* ---- דפי-טקסט שיווקיים (faq · vs · en) ---- */
 .text{max-width:720px;margin:0 auto;padding:0 20px}
