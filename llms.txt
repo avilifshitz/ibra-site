@@ -2,7 +2,7 @@
 
 Hebrew spelling and pronunciation: איברה (ee-BRA).
 
-> IBRA is an iOS app (Hebrew-first) that runs the workout and nutrition plan your own AI chat (ChatGPT, Claude or Gemini) wrote: a daily player for sets, rest and meals, body measurements and photos, and a weekly close that sends what really happened back to the chat for adjustments. No account, no server; data stays on the phone and in the user's iCloud. One free sample day without signing up; first week free; then a one-time or subscription purchase.
+> IBRA is an iOS app (Hebrew-first) that runs the workout and nutrition plan your own AI chat (ChatGPT, Claude or Gemini) wrote: a daily player for sets, rest and meals, body measurements and photos, and a weekly close that sends what really happened back to the chat for adjustments. No account, no server; data stays on the phone and in the user's iCloud. One free sample day without signing up. Access in Israel does not cost money: instead of payment the user gives "their word" (a goal, sessions per week, a weekly sign-off); two missed closes lead to renewing the word, with no fee and no data loss.
 
 - Home (Hebrew): https://ibra.fit/
 - Home (English): https://ibra.fit/en/
