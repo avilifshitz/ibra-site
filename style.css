@@ -708,7 +708,7 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .watchsteps .list li.on .t b{font-size:44px}
 }
 /* מבנה 4.4 (22.10): כרטיסיות של 3 ו-4 צעדים · תת-מקטע השעון · כרטיס-הסגירה */
-.stepper[style*="--n:3"] .track{width:300%;transform:translateX(calc(var(--k,0) * 33.3333%))}.stepper[style*="--n:3"] .track>*{width:33.3333%!important}.stepper[style*="--n:4"] .track{width:400%;transform:translateX(calc(var(--k,0) * 25%))}.stepper[style*="--n:4"] .track>*{width:25%!important}.watchsub{margin-top:56px}.watchsub h3{font-size:28px;font-weight:900;font-style:italic;margin:0}.watchsub .lede{margin-top:8px}figure.decision{margin:48px auto 0;max-width:300px;text-align:center}figure.decision img{width:100%;height:auto;border-radius:28px;border:1px solid var(--line)}figure.decision figcaption{margin-top:14px;color:var(--ink2);font-size:15px;line-height:1.5}figure.decision b{color:var(--ink)}
+.stepper[style*="--n:3"] .track{width:300%;transform:translateX(calc(var(--k,0) * 33.3333%))}.stepper[style*="--n:3"] .track>*{width:33.3333%!important}.stepper[style*="--n:4"] .track{width:400%;transform:translateX(calc(var(--k,0) * 25%))}.stepper[style*="--n:4"] .track>*{width:25%!important}.watchsub{margin-top:56px}.watchsub h3{font-size:28px;font-weight:900;font-style:italic;margin:0}.watchsub .lede{margin-top:8px}
 
 /* עמודי 22.10 — הדרגות · הדרך · המייסד · Home Gym · איך זה עובד */
 .brandbox{display:flex;flex-direction:column}
