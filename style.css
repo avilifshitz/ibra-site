@@ -900,3 +900,16 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
   .site .wrap>nav .get:hover{text-decoration:none;filter:brightness(1.05)}
   .site .wrap>nav .badges{display:none}
 }
+.vj-vj{position:relative;overflow:hidden}
+.vj-vj .vj-in{will-change:transform}
+.vj-vj .vj-road{margin-top:3cqw;border:1px solid var(--line);border-radius:6cqw;background:var(--card);padding:5cqw}
+.vj-vj .vj-why{margin:0;font-size:4.2cqw;color:var(--muted);font-weight:700}
+.vj-vj .vj-today{margin-top:4cqw;font-size:4.2cqw;font-weight:800}.vj-vj .vj-today span{color:var(--muted)}
+.vj-vj .vj-chart{display:block;width:100%;height:auto;margin-top:1cqw}
+.vj-vj .vj-est{text-align:center;font-size:3.6cqw;color:var(--muted);font-weight:700;margin-top:1cqw}
+.vj-vj .vj-next{display:flex;justify-content:space-between;gap:3cqw;margin-top:5cqw}
+.vj-vj .vj-next small{display:block;font-size:3.6cqw;color:var(--muted);font-weight:700}
+.vj-vj .vj-next b{display:block;margin-top:1.5cqw;font-size:6.6cqw;font-weight:900;font-style:italic}
+.vj-vj .vj-next>div:last-child b{color:var(--ink2);font-size:5.4cqw}
+.vj-vj .vj-next span{display:block;margin-top:1cqw;font-size:4cqw;color:var(--muted);font-weight:700}
+.vj-vj .vj-all{display:flex;justify-content:space-between;align-items:center;margin-top:5cqw;padding-top:4cqw;border-top:1px solid var(--line);font-size:4.2cqw;color:var(--muted);font-weight:700}

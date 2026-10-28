@@ -196,3 +196,8 @@ document.querySelectorAll('.gst button').forEach(b=>b.onclick=()=>{const k=b.dat
 var map={};links.forEach(function(a){var el=document.querySelector(a.getAttribute('href'));if(el)map[el.id]=a});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){a.classList.remove('on')});map[e.target.id].classList.add('on')})},{rootMargin:'-45% 0px -50% 0px'});
 Object.keys(map).forEach(function(id){io.observe(document.getElementById(id))})})();
+
+// "רואה שזה עובד": המסך גולל למטה יחד עם הדף — מהדלתא, דרך "לאן ומתי", עד "מה נמדד".
+(function(){var ph=document.querySelector('.vj-ph'),inn=ph&&ph.querySelector('.vj-in');if(!inn||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var raf=0;
+function paint(){raf=0;var r=ph.getBoundingClientRect(),h=innerHeight,p=(h*0.75-r.top)/(h*0.9);p=Math.max(0,Math.min(1,p));var max=Math.max(0,inn.scrollHeight-ph.clientHeight+24);inn.style.transform='translateY(-'+(p*max).toFixed(1)+'px)'}
+function on(){if(!raf)raf=requestAnimationFrame(paint)}addEventListener('scroll',on,{passive:true});addEventListener('resize',on);paint()})();
