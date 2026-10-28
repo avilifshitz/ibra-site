@@ -161,7 +161,7 @@ document.querySelectorAll('.gst button').forEach(b=>b.onclick=()=>{const k=b.dat
 // הכותרת: המקטע שבו הקורא נמצא מסומן בקו ליים.
 (function(){var links=[].slice.call(document.querySelectorAll('.wrap>nav ul a[href^="#"]'));if(!links.length||!('IntersectionObserver' in window))return;
 var map={};links.forEach(function(a){var el=document.querySelector(a.getAttribute('href'));if(el)map[el.id]=a});
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){a.classList.remove('on')});map[e.target.id].classList.add('on')})},{rootMargin:'-45% 0px -50% 0px'});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){a.classList.remove('on')});var t=map[e.target.id];t.classList.add('on');var u=t.parentNode.parentNode;if(u.scrollWidth>u.clientWidth){var r=t.getBoundingClientRect(),q=u.getBoundingClientRect();u.scrollBy({left:(r.left+r.width/2)-(q.left+q.width/2),behavior:'smooth'})}})},{rootMargin:'-45% 0px -50% 0px'});
 Object.keys(map).forEach(function(id){io.observe(document.getElementById(id))})})();
 
 // "רואה שזה עובד": המסך גולל למטה יחד עם הדף — מהדלתא, דרך "לאן ומתי", עד "מה נמדד".
