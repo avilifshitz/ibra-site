@@ -173,8 +173,3 @@ show(0,0);
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){es[0].isIntersecting?start():stop()},{rootMargin:'0px 0px -45% 0px',threshold:0}).observe(st)}else start();
 window.__steppers[st.getAttribute('data-stepper')]={show:function(i,f){auto=false;stop();show(i,f)}}});
 window.__stepper=window.__steppers.how})();
-
-// היציבה: הקו של היום חוזר 6° כשהכרטיס נכנס למסך, והמספר יורד 36→30.
-(function(){var c=document.querySelector('.pcard');if(!c)return;var d=c.querySelector('.today .deg');var red=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function go(){c.classList.add('in');if(red){d.textContent='30°';return}var n=36;var t=setInterval(function(){n--;d.textContent=n+'°';if(n<=30)clearInterval(t)},220);setTimeout(function(){},300)}
-if(!('IntersectionObserver' in window)){go();return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){o.disconnect();setTimeout(go,300)}})},{threshold:.4});o.observe(c)})();
