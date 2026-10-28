@@ -882,7 +882,8 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hw .sheet .x{width:8cqw;height:8cqw;border-radius:50%;background:#3a3a3c;display:flex;align-items:center;justify-content:center;font-size:3.6cqw;color:#c7c7cc;flex:none;order:2}
 .hw .sh-apps{display:flex;justify-content:space-between;margin-top:5cqw}
 .hw .sh-app{width:21cqw;text-align:center;font-size:3.4cqw;color:var(--ink2);font-weight:600;direction:ltr}
-.hw .sh-app i{display:flex;align-items:center;justify-content:center;width:16cqw;height:16cqw;margin:0 auto 1.8cqw;border-radius:4cqw}
+.hw .sh-app i{display:flex;align-items:center;justify-content:center;width:16cqw;height:16cqw;margin:0 auto 1.8cqw;border-radius:4cqw;background:#3a3a3c}
+.hw .sh-app text{fill:#fff;font:800 11px Heebo,system-ui,sans-serif}
 .hw .sh-app i svg{width:9.5cqw;height:9.5cqw}
 .hw .sh-app.sh-pick i{outline:0.8cqw solid rgba(255,255,255,.85);outline-offset:0.8cqw}
 .hw .sh-acts{margin-top:5cqw;border-radius:3.5cqw;background:#2c2c2e;overflow:hidden}
