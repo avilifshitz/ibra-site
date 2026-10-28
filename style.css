@@ -762,5 +762,15 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .founder-q p{font-size:clamp(26px,3vw,40px);font-weight:900;font-style:italic;line-height:1.2;margin:0}
 .founder-q cite{display:block;margin-top:14px;font-style:normal;font-size:15px;color:var(--muted,#9a9aa0)}
 /* הציוד — צילום רוחבי, ולכן רחב יותר משאר הצילומים */
-#gear .seeshot .shot{max-width:520px;width:100%;border-radius:22px;aspect-ratio:auto;object-fit:contain;-webkit-mask-image:none;mask-image:none;border-bottom-left-radius:22px;border-bottom-right-radius:22px}
 #gear .see{align-items:center}
+
+.gearcard{width:min(440px,100%);margin-inline:auto;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:26px 22px 22px}
+.gearcard .gh{font-size:13px;font-weight:700;color:var(--muted);margin:0 0 16px}
+.gearcard .chips{display:flex;flex-wrap:wrap;gap:10px}
+.gearcard .chip{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px;border-radius:14px;border:1.5px solid transparent;background:var(--card2);color:#6E6E76;font-weight:800;font-size:17px;transition:color .25s,border-color .25s,background .25s}
+.gearcard .chip.on{color:#fff;border-color:#fff;background:#232327}
+.gearcard .rng{display:none;padding-inline-start:10px;border-inline-start:1px solid #44444b;font-variant-numeric:tabular-nums}
+.gearcard .chip.on .rng{display:inline}
+.gearcard .sum{margin-top:20px;font-size:17px;font-weight:800;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.gearcard .sum em{font-style:normal;color:var(--lime)}
+.gearcard .sum.on{opacity:1;transform:none}

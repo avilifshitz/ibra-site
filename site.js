@@ -173,3 +173,11 @@ show(0,0);
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){es[0].isIntersecting?start():stop()},{rootMargin:'0px 0px -45% 0px',threshold:0}).observe(st)}else start();
 window.__steppers[st.getAttribute('data-stepper')]={show:function(i,f){auto=false;stop();show(i,f)}}});
 window.__stepper=window.__steppers.how})();
+
+// הציוד: הצ'יפים נדלקים לפי הגלילה. בלי JS או עם reduced-motion — כולם דלוקים.
+(function(){var g=document.querySelector('.gearcard');if(!g||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var ch=[].slice.call(g.querySelectorAll('.chip[data-k]')),sum=g.querySelector('.sum'),raf=0;
+function paint(){raf=0;var r=g.getBoundingClientRect(),h=innerHeight,p=(h-r.top)/(h*0.6);p=Math.max(0,Math.min(1,p));
+ch.forEach(function(c){c.classList.toggle('on',p>=c.dataset.k*0.17)});sum.classList.toggle('on',p>=0.85)}
+function on(){if(!raf)raf=requestAnimationFrame(paint)}
+addEventListener('scroll',on,{passive:true});addEventListener('resize',on);paint()})();
