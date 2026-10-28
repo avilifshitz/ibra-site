@@ -99,7 +99,7 @@ function draw(kg,d,final){var n=kg.length,lo=Math.min.apply(null,kg)-1.5,hi=Math
 var cur=null,raf=null;
 function tween(e,from,to,ms){var t0=null;function f(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/ms);p=1-Math.pow(1-p,3);e.textContent=Math.round(from+(to-from)*p);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f);setTimeout(function(){e.textContent=to},ms+80)}
 function apply(d){el.peak.querySelector('b').textContent=d.peak;['y1','y2','y3'].forEach(function(c,k){ph.querySelector('.years .'+c).style.right=(d.years[k]*100)+'%'});el.esl.style.opacity=d.est?1:0;
- el.gk.textContent=d.gk;el.gy.textContent=d.gy;el.door.textContent=d.door;
+ el.gk.textContent=d.gk;el.gy.textContent=d.gy;el.door.textContent=d.door;if(d.ms){var mx=X0-(X0-X1)*d.ms.at;var ml=ph.querySelector('line.ms');ml.setAttribute('x1',mx);ml.setAttribute('x2',mx);var lb=ph.querySelector('.lbl.ms');lb.style.left=(mx/W*100)+'%';lb.querySelector('b').textContent=d.ms.m;ph.querySelector('[data-ms]').textContent=d.ms.t}
  if(!cur||reduced){el.gw.textContent=d.gw;el.gf.textContent=d.gf;draw(d.kg,d,true);cur=d;return}
  tween(el.gw,cur.gw,d.gw,700);tween(el.gf,cur.gf,d.gf,700);
  var from=cur.kg,to=d.kg,t0=null;if(raf)cancelAnimationFrame(raf);
@@ -173,3 +173,8 @@ show(0,0);
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){es[0].isIntersecting?start():stop()},{rootMargin:'0px 0px -45% 0px',threshold:0}).observe(st)}else start();
 window.__steppers[st.getAttribute('data-stepper')]={show:function(i,f){auto=false;stop();show(i,f)}}});
 window.__stepper=window.__steppers.how})();
+
+// היציבה: הקו של היום חוזר 6° כשהכרטיס נכנס למסך, והמספר יורד 36→30.
+(function(){var c=document.querySelector('.pcard');if(!c)return;var d=c.querySelector('.today .deg');var red=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function go(){c.classList.add('in');if(red){d.textContent='30°';return}var n=36;var t=setInterval(function(){n--;d.textContent=n+'°';if(n<=30)clearInterval(t)},220);setTimeout(function(){},300)}
+if(!('IntersectionObserver' in window)){go();return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){o.disconnect();setTimeout(go,300)}})},{threshold:.4});o.observe(c)})();
