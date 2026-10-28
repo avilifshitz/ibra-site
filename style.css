@@ -135,6 +135,7 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 .note{color:var(--muted);margin-top:16px;max-width:52ch}
 
 .faq{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px 48px}
+.faq>div{padding-top:20px;border-top:1px solid var(--line)}
 .faq h3{font-size:18px;margin:0}
 .faq p{color:var(--ink2);margin-top:8px}
 .more{display:inline-flex;align-items:center;min-height:44px;margin-top:24px;font-weight:800;border-bottom:1px solid var(--ink)}
