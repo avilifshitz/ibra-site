@@ -50,7 +50,7 @@ footer a{color:var(--muted)}
 .hero{padding:40px 0 64px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
 .site h1{font-size:56px;line-height:1.08;letter-spacing:-.01em;text-wrap:balance;margin:0}
 .site h1 em{font-style:inherit;color:var(--lime);text-shadow:0 0 28px rgba(232,255,60,.35)}
-.lede{font-size:20px;line-height:1.5;color:var(--ink2);margin-top:24px;max-width:34ch}
+.lede{font-size:20px;font-weight:500;line-height:1.5;color:var(--ink2);margin-top:24px;max-width:34ch}
 .cta{display:flex;align-items:center;gap:24px;margin-top:32px;flex-wrap:wrap}
 .quiet{color:var(--muted);font-size:16px;border-bottom:1px solid var(--line);padding:10px 0;min-height:44px;display:inline-flex;align-items:center}
 .quiet:hover{color:var(--ink);border-color:var(--ink)}
