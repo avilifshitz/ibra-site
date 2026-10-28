@@ -670,14 +670,14 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 
 /* השעון ככרטיסיות */
 .watchsteps{margin-top:24px}
-.watchsteps .pin.pinw{width:min(250px,66%);aspect-ratio:422/514;border:9px solid #1E1E23;border-radius:46px;box-shadow:0 0 0 1px #2C2C32,0 30px 60px rgba(0,0,0,.55)}
+.watchsteps .pin.pinw{width:min(176px,48%);aspect-ratio:422/514;border:7px solid #1E1E23;border-radius:36px;box-shadow:0 0 0 1px #2C2C32,0 30px 60px rgba(0,0,0,.55)}
 .watchsteps .track{width:300%;transform:translateX(calc(var(--k,0) * 33.3333%))}
 .watchsteps .track>*{width:33.3333%!important}
 .watchsteps .list .t b{font-size:22px}.watchsteps .list li.on .t b{font-size:34px;font-weight:900;font-style:italic}
 .watchsteps .list button{gap:0}
 @media (min-width:900px){
   .watchsteps{grid-template-columns:1fr auto;gap:96px;max-width:960px}
-  .watchsteps .pin.pinw{width:380px;height:auto;aspect-ratio:422/514;border-width:12px;border-radius:64px}
+  .watchsteps .pin.pinw{width:260px;height:auto;aspect-ratio:422/514;border-width:10px;border-radius:50px}
   .watchsteps .list{max-width:440px}
   .watchsteps .list li.on .t b{font-size:44px}
 }
