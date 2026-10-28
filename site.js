@@ -190,3 +190,9 @@ document.querySelectorAll('.gst button').forEach(b=>b.onclick=()=>{const k=b.dat
  if(k==='hi'){S.hi=Math.max(S.lo+S.st,Math.min(60,S.hi+2*d))}
  paint()});
 })();
+
+// הכותרת: המקטע שבו הקורא נמצא מסומן בקו ליים.
+(function(){var links=[].slice.call(document.querySelectorAll('.wrap>nav ul a[href^="#"]'));if(!links.length||!('IntersectionObserver' in window))return;
+var map={};links.forEach(function(a){var el=document.querySelector(a.getAttribute('href'));if(el)map[el.id]=a});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){a.classList.remove('on')});map[e.target.id].classList.add('on')})},{rootMargin:'-45% 0px -50% 0px'});
+Object.keys(map).forEach(function(id){io.observe(document.getElementById(id))})})();

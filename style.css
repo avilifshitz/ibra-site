@@ -701,10 +701,7 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .stepper[style*="--n:3"] .track{width:300%;transform:translateX(calc(var(--k,0) * 33.3333%))}.stepper[style*="--n:3"] .track>*{width:33.3333%!important}.stepper[style*="--n:4"] .track{width:400%;transform:translateX(calc(var(--k,0) * 25%))}.stepper[style*="--n:4"] .track>*{width:25%!important}.watchsub{margin-top:56px}.watchsub h3{font-size:28px;font-weight:900;font-style:italic;margin:0}.watchsub .lede{margin-top:8px}
 
 /* עמודי 22.10 — הדרגות · הדרך · המייסד · Home Gym · איך זה עובד */
-.brandbox{display:flex;flex-direction:column}
-.brand-cat{display:block;text-decoration:none}
-.brand-cat:hover{color:var(--ink)}
-.brand small,.brand-cat{display:block;font:700 10px/1 "Heebo",system-ui,sans-serif;font-style:normal;letter-spacing:.04em;color:var(--muted);margin-top:3px}
+.brand small{display:block;font:700 10px/1 "Heebo",system-ui,sans-serif;font-style:normal;letter-spacing:.04em;color:var(--muted);margin-top:3px}
 .text table{width:100%;border-collapse:collapse;margin-top:14px;font-variant-numeric:tabular-nums}
 .text th,.text td{text-align:right;padding:10px 0;border-bottom:1px solid var(--line)}
 .text th{color:var(--muted);font-size:13px;font-weight:700;letter-spacing:.04em}
@@ -889,3 +886,17 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hw .sh-acts{margin-top:5cqw;border-radius:3.5cqw;background:#2c2c2e;overflow:hidden}
 .hw .sh-acts div{display:flex;align-items:center;justify-content:space-between;padding:3.2cqw 4cqw;font-size:4.1cqw;border-top:1px solid #3a3a3c}
 .hw .sh-acts div:first-child{border-top:0}.hw .sh-acts svg{width:5.5cqw;height:5.5cqw}
+/* הכותרת במחשב: הדלתא, קישורים בהירים, המקטע הנוכחי בקו ליים, והורדה בליים */
+.site nav .get{display:none}
+@media (min-width:761px){
+  .site .wrap>nav{height:76px}
+  .site .brand{font-size:26px}
+  .site .brand::before{content:"";display:inline-block;vertical-align:-2px;margin-inline-end:10px;width:26px;height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 100'%3E%3Cpath d='M23.6,10 L56.5,10 L56.5,92 Z M96.4,10 L63.5,10 L63.5,92 Z' fill='%23E8FF3C'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 8px rgba(232,255,60,.35))}
+  .site .wrap>nav ul{gap:30px;font-size:15px;font-weight:700;color:#C9C9CF}
+  .site .wrap>nav ul a{position:relative;padding:10px 0}
+  .site .wrap>nav ul a.on{color:#fff}
+  .site .wrap>nav ul a.on::after{content:"";position:absolute;inset-inline:0;bottom:2px;height:2px;border-radius:2px;background:var(--lime)}
+  .site .wrap>nav .get{display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:21px;background:var(--lime);color:#0A0A0C;font-weight:900;font-size:15px;text-decoration:none;box-shadow:0 0 24px rgba(232,255,60,.25)}
+  .site .wrap>nav .get:hover{text-decoration:none;filter:brightness(1.05)}
+  .site .wrap>nav .badges{display:none}
+}
