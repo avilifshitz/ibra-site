@@ -768,7 +768,9 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 #way-line .more{margin-top:40px}
 @media (max-width:760px){#way-line{padding:80px 0 72px}#way-line p br{display:inline}#way-line p{white-space:normal}}
 /* ציטוט המייסד — מתחת לתמונת המסע */
-.founder-q{margin:56px auto 0;max-width:24em;text-align:center}
+#voice{padding:112px 0}
+@media (max-width:760px){#voice{padding:72px 0}}
+.founder-q{margin:0 auto;max-width:24em;text-align:center}
 .founder-q p{font-size:clamp(26px,3vw,40px);font-weight:900;font-style:italic;line-height:1.2;margin:0}
 .founder-q cite{display:block;margin-top:14px;font-style:normal;font-size:15px;color:var(--muted,#9a9aa0)}
 /* הציוד — צילום רוחבי, ולכן רחב יותר משאר הצילומים */
