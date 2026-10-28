@@ -180,3 +180,20 @@ function paint(){raf=0;var r=g.getBoundingClientRect(),h=innerHeight,p=(h-r.top)
 ch.forEach(function(c){c.classList.toggle('on',p>=c.dataset.k*0.17)});sum.classList.toggle('on',p>=0.85)}
 function on(){if(!raf)raf=requestAnimationFrame(paint)}
 addEventListener('scroll',on,{passive:true});addEventListener('resize',on);paint()})();
+
+// הציוד: הקשה על "טווח?" של הדמבלס מראה את המשקל הבא שאפשר להרכיב.
+(function(){if(!document.getElementById("db"))return;
+const S={lo:4,hi:24,st:2},STEPS=[1,1.25,2,2.5],LAST=12;
+const $=id=>document.getElementById(id),f=n=>(+n.toFixed(2)).toString();
+function next(){for(let w=S.lo;w<=S.hi+1e-9;w+=S.st){if(w>LAST+1e-9)return w}return null}
+function paint(){$('lo').textContent=f(S.lo);$('hi').textContent=f(S.hi);$('st').textContent=f(S.st);
+ $('dbr').innerHTML='<bdi dir="ltr">'+f(S.lo)+'–'+f(S.hi)+'</bdi>';$('dbr').classList.remove('ask');
+ const n=next();$('nx').textContent=n?f(n)+' ק״ג':'אין משקל כבד יותר';
+ $('why').textContent=n?'המשקל הבא שאפשר באמת להרכיב: \u2066+'+f(n-LAST)+'\u2069 ק״ג.':'מיצית את הטווח. הצעד הבא: עוד חזרות, או תרגיל קשה יותר.'}
+$('db').onclick=()=>{$('ged').classList.add('on');$('hint').style.display='none';$('db').setAttribute('aria-expanded','true');paint()};
+document.querySelectorAll('.gst button').forEach(b=>b.onclick=()=>{const k=b.dataset.k,d=+b.dataset.d;
+ if(k==='st'){S.st=STEPS[Math.max(0,Math.min(STEPS.length-1,STEPS.indexOf(S.st)+d))]}
+ if(k==='lo'){S.lo=Math.max(1,Math.min(S.hi-S.st,S.lo+d))}
+ if(k==='hi'){S.hi=Math.max(S.lo+S.st,Math.min(60,S.hi+2*d))}
+ paint()});
+})();

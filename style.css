@@ -820,3 +820,22 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hw .next span{color:var(--muted);font-weight:700}.hw .next b{font-weight:800}
 #how .stepper .pin{aspect-ratio:600/1304}
 .gearcard .rng.ask{color:var(--muted);font-weight:700}
+.gearcard .chip.tap{cursor:pointer;font:inherit;font-weight:800;font-size:17px}
+.gearcard .chip.tap .rng.ask{color:var(--lime);font-weight:800}
+.gearcard .gedit{margin-top:16px;border-top:1px solid var(--line);padding-top:16px;display:none}
+.gearcard .gedit.on{display:block}
+.gearcard .gedit h4{margin:0 0 12px;font-size:15px;font-weight:800}
+.gearcard .gsteps{display:grid;gap:8px}
+.gearcard .gst{display:flex;align-items:center;justify-content:space-between;background:var(--card2);border-radius:14px;padding:8px 10px 8px 8px}
+.gearcard .gst small{font-size:14px;color:var(--ink2);font-weight:700}
+.gearcard .gst .v{display:flex;align-items:center;gap:14px}
+.gearcard .gst b{min-width:44px;text-align:center;font-size:20px;font-weight:900;font-variant-numeric:tabular-nums;direction:ltr}
+.gearcard .gst button{all:unset;cursor:pointer;width:40px;height:40px;border-radius:12px;background:#2A2A30;color:#fff;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center}
+.gearcard .gnext{margin-top:16px;border-radius:16px;border:1px solid var(--line);padding:14px 16px}
+.gearcard .gnext .prev{font-size:14px;color:var(--muted);font-weight:700}
+.gearcard .gnext .nx{margin-top:6px;font-size:22px;font-weight:900;font-style:italic}
+.gearcard .gnext .nx em{font-style:inherit;color:var(--lime)}
+.gearcard .gnext .why{margin-top:4px;font-size:14px;color:var(--ink2)}
+.gearcard .ghint{margin-top:16px;font-size:15px;color:var(--ink2)}
+.gearcard .ghint b{color:var(--lime)}
+.gearcard .gfine{margin-top:10px;font-size:13px;color:var(--muted)}

@@ -23,7 +23,7 @@
 <meta property="og:locale" content="he_IL">
 <meta name="theme-color" content="#0A0A0C">
 <link rel="preload" href="/assets/heebo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=2610282800">
+<link rel="stylesheet" href="/style.css?v=2610282900">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"MobileApplication","@id":"https://ibra.fit/#app","name":"IBRA","alternateName":["איברה","IBRA — גבר. מלשון גִּבּוֹר."],"dateModified":"2026-10-28","url":"https://ibra.fit/","operatingSystem":"iOS 17 ומעלה","applicationCategory":"HealthApplication","inLanguage":"he","description":"אפליקציה שמריצה את תוכנית האימונים והתזונה שה-AI שלך (ChatGPT, Claude או Gemini) כתב: אימון יומי, ארוחות, מדידות, וסגירת-שבוע שאתה משתף עם הצ׳אט שבחרת. בלי חשבון ובלי שרת.","author":{"@id":"https://ibra.fit/#org"},"offers":[{"@type":"Offer","name":"שנתי","price":"199.90","priceCurrency":"ILS","description":"מנוי שנתי. החודש הראשון חינם. צ׳אט ה-AI שהמשתמש בוחר נפרד."},{"@type":"Offer","name":"חודשי","price":"29.90","priceCurrency":"ILS","description":"מנוי חודשי. החודש הראשון חינם. צ׳אט ה-AI שהמשתמש בוחר נפרד."}]},
@@ -66,10 +66,10 @@
     </div>
     <div class="gearcard" aria-label="דוגמה: הציוד באפליקציה — מוט ומשקולות 20 עד 100, דמבלס, מתח ומקבילים">
       <p class="gh">מה יש לך בבית?</p>
-      <div class="chips" aria-hidden="true">
+      <div class="chips">
         <span class="chip">חדר כושר מאובזר</span>
         <span class="chip on" data-k="1">מוט ומשקולות<span class="rng"><bdi dir="ltr">20–100</bdi></span></span>
-        <span class="chip on" data-k="2">דמבלס<span class="rng ask">טווח?</span></span>
+        <button type="button" class="chip on tap" data-k="2" id="db" aria-expanded="false" aria-controls="ged">דמבלס<span class="rng ask" id="dbr">טווח?</span></button>
         <span class="chip">ספסל מתכוונן</span>
         <span class="chip on" data-k="3">מתח</span>
         <span class="chip on" data-k="4">מקבילים</span>
@@ -77,7 +77,22 @@
         <span class="chip">דלגית</span>
         <span class="chip">גומיות</span>
       </div>
+      <p class="ghint" id="hint">הקש על <b>טווח?</b> ותראה מה המשקל הבא שלך.</p>
+      <div class="gedit" id="ged">
+        <h4>דמבלס — מה יש לך?</h4>
+        <div class="gsteps">
+          <div class="gst"><small>מ־</small><div class="v"><button data-k="lo" data-d="-1">−</button><b id="lo"></b><button data-k="lo" data-d="1">+</button></div></div>
+          <div class="gst"><small>עד</small><div class="v"><button data-k="hi" data-d="-1">−</button><b id="hi"></b><button data-k="hi" data-d="1">+</button></div></div>
+          <div class="gst"><small>בקפיצות של</small><div class="v"><button data-k="st" data-d="-1">−</button><b id="st"></b><button data-k="st" data-d="1">+</button></div></div>
+        </div>
+        <div class="gnext">
+          <div class="prev">בפעם הקודמת: 12 ק״ג × 10 חזרות</div>
+          <div class="nx" aria-live="polite">הסט הבא: <em id="nx"></em></div>
+          <div class="why" id="why"></div>
+        </div>
+      </div>
       <p class="sum on">4 פריטים. <em>מספיק כדי להגיע לגִּבּוֹר חַיִל.</em></p>
+      <p class="gfine">דוגמה. במשקל הבא בוחר המאמן, לפי מה שהאפליקציה יודעת שיש לך.</p>
     </div>
   </div>
 </section>
@@ -345,6 +360,6 @@
   </div>
 </footer>
 </div>
-<script src="/site.js?v=2610282800" defer></script>
+<script src="/site.js?v=2610282900" defer></script>
 </body>
 </html>
