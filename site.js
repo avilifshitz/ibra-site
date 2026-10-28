@@ -77,40 +77,7 @@ document.documentElement.classList.add('js');
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
   addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);frame();
 })();
-// הדרגה ⇒ הדרך. הקשה על דרגה מזיזה את הליים ואת התג, והכרטיס "לאן ומתי" מצטייר מחדש:
-// הקו מתעקם לצורה החדשה (אינטרפולציה בין 40 הנקודות), המספרים מתגלגלים, השנים זזות.
-// הנתונים: מסכי "לאן ומתי" של האפליקציה לשלוש דרגות-יעד, על נתונים אמיתיים (21.10.2026).
-(function(){var L=[].slice.call(document.querySelectorAll('#rank .ladder li[data-road]'));var ph=document.getElementById('roadphone');if(!L.length||!ph)return;
-var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-var X0=293,X1=7,TOP=26,BOT=130,W=300;
-var el={line:ph.querySelector('.line'),est:ph.querySelector('.est'),fill:ph.querySelector('.fill'),goal:ph.querySelector('.goal'),today:ph.querySelector('.today'),halo:ph.querySelector('.halo'),split:ph.querySelector('.split'),peak:ph.querySelector('.lbl.peak'),dots:ph.querySelector('.dots'),esl:ph.querySelector('.years .esl'),gk:ph.querySelector('[data-gk]'),gy:ph.querySelector('[data-gy]'),door:ph.querySelector('[data-door]'),gw:ph.querySelector('[data-gw]'),gf:ph.querySelector('[data-gf]')};
-function pt(kg,j,lo,hi){return {x:X0-(X0-X1)*j/(kg.length-1),y:TOP+(hi-kg[j])/(hi-lo)*(BOT-TOP)}}
-function path(kg,from,to,lo,hi){var d='';for(var j=from;j<=to;j++){var p=pt(kg,j,lo,hi);d+=(j===from?'M':'L')+p.x.toFixed(1)+' '+p.y.toFixed(1)}return d}
-function extrema(kg){var out=[];for(var j=1;j<kg.length-1;j++){var a=kg[j]-kg[j-1],b=kg[j+1]-kg[j];if(a*b<0&&Math.abs(a)+Math.abs(b)>0.6)out.push(j)}return out}
-function draw(kg,d,final){var n=kg.length,lo=Math.min.apply(null,kg)-1.5,hi=Math.max.apply(null,kg)+0.8,ef=d.estFrom==null?n-1:d.estFrom;
- el.line.setAttribute('d',path(kg,0,Math.min(ef,n-1),lo,hi));
- if(d.estFrom!=null){el.est.style.opacity=1;el.est.setAttribute('d',path(kg,Math.max(0,ef-1),n-1,lo,hi))}else{el.est.style.opacity=0}
- el.fill.setAttribute('d',path(kg,0,n-1,lo,hi)+'L'+X1+' '+BOT+'L'+X0+' '+BOT+'Z');
- var g=pt(kg,n-1,lo,hi),t=pt(kg,0,lo,hi);el.goal.setAttribute('cx',g.x);el.goal.setAttribute('cy',g.y);el.today.setAttribute('cy',t.y);el.halo.setAttribute('cy',t.y);
- if(d.estFrom!=null){var s=pt(kg,ef,lo,hi);el.split.style.opacity=1;el.split.setAttribute('x1',s.x);el.split.setAttribute('x2',s.x);el.split.setAttribute('y1',s.y+7)}else el.split.style.opacity=0;
- var pk=kg.indexOf(Math.max.apply(null,kg)),pp=pt(kg,pk,lo,hi);el.peak.style.left=Math.max(0,pp.x/W*100-6)+'%';el.peak.style.top=Math.max(0,pp.y/150*100-12)+'%';
- if(final){var ex=extrema(kg),cs=el.dots.children;for(var i=0;i<cs.length;i++){var c=cs[i];if(i<ex.length){var p=pt(kg,ex[i],lo,hi);c.setAttribute('cx',p.x);c.setAttribute('cy',p.y);c.classList.toggle('e',ex[i]>=ef);c.style.opacity=1}else c.style.opacity=0}}
- else{var cs2=el.dots.children;for(var k=0;k<cs2.length;k++)cs2[k].style.opacity=0}}
-var cur=null,raf=null;
-function tween(e,from,to,ms){var t0=null;function f(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/ms);p=1-Math.pow(1-p,3);e.textContent=Math.round(from+(to-from)*p);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f);setTimeout(function(){e.textContent=to},ms+80)}
-function apply(d){el.peak.querySelector('b').textContent=d.peak;['y1','y2','y3'].forEach(function(c,k){ph.querySelector('.years .'+c).style.right=(d.years[k]*100)+'%'});el.esl.style.opacity=d.est?1:0;
- el.gk.textContent=d.gk;el.gy.textContent=d.gy;el.door.textContent=d.door;if(d.ms){var mx=X0-(X0-X1)*d.ms.at;var ml=ph.querySelector('line.ms');ml.setAttribute('x1',mx);ml.setAttribute('x2',mx);var lb=ph.querySelector('.lbl.ms');lb.style.left=(mx/W*100)+'%';lb.querySelector('b').textContent=d.ms.m;ph.querySelector('[data-ms]').textContent=d.ms.t}
- if(!cur||reduced){el.gw.textContent=d.gw;el.gf.textContent=d.gf;draw(d.kg,d,true);cur=d;return}
- tween(el.gw,cur.gw,d.gw,700);tween(el.gf,cur.gf,d.gf,700);
- var from=cur.kg,to=d.kg,t0=null;if(raf)cancelAnimationFrame(raf);
- function f(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/800);p=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;var kg=from.map(function(v,i){return v+(to[i]-v)*p});draw(kg,d,p>=1);if(p<1)raf=requestAnimationFrame(f)}
- raf=requestAnimationFrame(f);setTimeout(function(){if(cur===d)draw(d.kg,d,true)},900);cur=d}
-function pick(li){L.forEach(function(o){var on=o===li;o.classList.toggle('on',on);o.setAttribute('aria-selected',on);var s=o.querySelector('.nm small');if(s)s.hidden=!on});apply(JSON.parse(li.getAttribute('data-road')))}
-L.forEach(function(li){li.addEventListener('click',function(){pick(li)});li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(li)}})});
-apply(JSON.parse(document.querySelector('#rank .ladder li.on').getAttribute('data-road')));
-// הכניסה: הקו מצטייר פעם אחת כשהכרטיס נכנס למסך.
-if(!reduced&&'IntersectionObserver' in window){var len=el.line.getTotalLength();el.line.style.strokeDasharray=len+' '+len;el.line.style.strokeDashoffset=len;el.dots.style.opacity=0;
- new IntersectionObserver(function(es,io){if(!es[0].isIntersecting)return;io.disconnect();el.line.style.transition='stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)';el.line.style.strokeDashoffset=0;setTimeout(function(){el.line.style.strokeDasharray='';el.line.style.transition='';el.dots.style.transition='opacity .4s';el.dots.style.opacity=1},1500)},{threshold:.35}).observe(ph)}})();
+
 
 // הרגעים ב"איך זה עובד": הסט האחרון (יעד ⇒ מעלים ⇒ עוד חזרה ⇒ ההצלחה) · סרטון לכל תרגיל (▶ ⇒ הגיליון ⇒ מחליקים לבא) · הארוחה (200⇒220 ⇒ אכלתי בחוץ)
 (function(){var ls=document.getElementById('lastset'),vd=document.getElementById('vidshot'),ml=document.getElementById('mealshot');if(!ls)return;var deck=document.querySelector('#todayshot .tdeck');
@@ -201,3 +168,9 @@ Object.keys(map).forEach(function(id){io.observe(document.getElementById(id))})}
 (function(){var ph=document.querySelector('.vj-ph'),inn=ph&&ph.querySelector('.vj-in');if(!inn||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var raf=0;
 function paint(){raf=0;var r=ph.getBoundingClientRect(),h=innerHeight,p=(h*0.75-r.top)/(h*0.9);p=Math.max(0,Math.min(1,p));var max=Math.max(0,inn.scrollHeight-ph.clientHeight+24);inn.style.transform='translateY(-'+(p*max).toFixed(1)+'px)'}
 function on(){if(!raf)raf=requestAnimationFrame(paint)}addEventListener('scroll',on,{passive:true});addEventListener('resize',on);paint()})();
+
+// הדרגות: בחירת דרגה (ברשימה או בגליף) מחליפה את גיליון "הסולם".
+(function(){var ph=document.querySelector('.rk-ph');if(!ph)return;var L=[].slice.call(document.querySelectorAll('#rank .ladder li')),keys=['ben','ish','gib'];
+function show(k){[].forEach.call(ph.querySelectorAll('.rk-body'),function(b){b.classList.toggle('on',b.dataset.r===k)});[].forEach.call(ph.querySelectorAll('.rk-g'),function(g){g.classList.toggle('sel',g.dataset.r===k)});L.forEach(function(li,i){li.classList.toggle('on',keys[i]===k);li.setAttribute('aria-selected',keys[i]===k)})}
+L.forEach(function(li,i){li.addEventListener('click',function(){show(keys[i])});li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(keys[i])}})});
+[].forEach.call(ph.querySelectorAll('.rk-g'),function(g){g.addEventListener('click',function(){show(g.dataset.r)})})})();

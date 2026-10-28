@@ -913,3 +913,39 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .vj-vj .vj-next>div:last-child b{color:var(--ink2);font-size:5.4cqw}
 .vj-vj .vj-next span{display:block;margin-top:1cqw;font-size:4cqw;color:var(--muted);font-weight:700}
 .vj-vj .vj-all{display:flex;justify-content:space-between;align-items:center;margin-top:5cqw;padding-top:4cqw;border-top:1px solid var(--line);font-size:4.2cqw;color:var(--muted);font-weight:700}
+/* גיליון "הסולם" במקטע הדרגות — כמו RankLadderSheet באפליקציה */
+.rk-ph{width:300px;aspect-ratio:600/1304;margin-inline:auto;border:1px solid var(--line);border-radius:40px;overflow:hidden;container-type:inline-size;box-shadow:0 30px 60px rgba(0,0,0,.5);background:#000}
+.rk-in{height:100%;color:#fff;text-align:start;background:#000}
+.rk-in .rk-sb{display:flex;justify-content:space-between;direction:ltr;padding:5cqw 7cqw 0;font-size:4.3cqw;font-weight:700}
+.rk-in .rk-sb i{width:16cqw;height:3.6cqw;border-radius:2cqw;background:#2A2A30;align-self:center}
+.rk-in .rk-grab{width:12cqw;height:1.4cqw;border-radius:1cqw;background:#44444b;margin:4cqw auto 0}
+.rk-in .rk-top{display:flex;align-items:center;justify-content:space-between;padding:4cqw 5.5cqw 0}
+.rk-in .rk-top b{font-size:9.3cqw;font-weight:900;font-style:italic}
+.rk-in .rk-x{order:2;width:10cqw;height:10cqw;border-radius:50%;background:#2A2A2E;border:1px solid #3a3a3c;display:flex;align-items:center;justify-content:center;font-size:4.5cqw;color:#fff}
+.rk-in .rk-glyphs{display:flex;gap:2.7cqw;padding:3.5cqw 5.3cqw 0}
+.rk-in .rk-g{flex:1;text-align:center;padding:2.4cqw 0;border-radius:4.7cqw;border:1px solid transparent;cursor:pointer}
+.rk-in .rk-g.sel{background:var(--card);border-color:var(--line)}
+.rk-in .rk-g svg{display:block;height:15.3cqw;width:auto;margin:0 auto}
+.rk-in .rk-g .next path{fill:none;stroke:#fff;stroke-width:2.2}
+.rk-in .rk-g .goal path{fill:none;stroke:var(--lime);stroke-width:2.2}
+.rk-in .rk-g .off path{fill:#2B2B2F}
+.rk-in .rk-g b{display:block;margin-top:2cqw;font-size:5cqw;font-weight:900}
+.rk-in .rk-g:has(.off) b{color:#6E6E76}
+.rk-in .rk-g small{display:block;margin-top:.6cqw;font-size:3.7cqw;font-weight:600;color:var(--muted)}
+.rk-in .rk-g small.lime{color:var(--lime);font-weight:800}
+.rk-in .rk-body{display:none}.rk-in .rk-body.on{display:block}
+.rk-in .rk-eh{display:flex;justify-content:space-between;align-items:baseline;padding:4.7cqw 5.5cqw 0}
+.rk-in .rk-eh b{font-size:5cqw;font-weight:900;color:var(--lime)}.rk-in .rk-eh span{font-size:4cqw;color:var(--muted);font-weight:600}
+.rk-in .rk-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:2.7cqw;padding:2.7cqw 5.3cqw 0}
+.rk-in .rk-tiles>div{padding:2.7cqw;border-radius:4cqw;background:var(--card);border:1px solid rgba(232,255,60,.28)}
+.rk-in .rk-tiles b{display:block;font-size:6.6cqw;font-weight:900;font-style:italic;color:var(--lime);white-space:nowrap}
+.rk-in .rk-tiles span{display:block;font-size:4.3cqw;font-weight:800;white-space:nowrap}
+.rk-in .rk-tiles small{display:flex;justify-content:space-between;align-items:center;font-size:3.6cqw;color:var(--muted);font-weight:600;white-space:nowrap}
+.rk-in .rk-tiles small i{font-style:normal;color:var(--lime);font-weight:900}
+.rk-in .rk-oh{padding:4.7cqw 5.5cqw 2.7cqw;font-size:8cqw;font-weight:900;font-style:italic}
+.rk-in .rk-rows{margin:0 5.3cqw;border:1px solid var(--line);border-radius:5.3cqw;background:var(--card);overflow:hidden}
+.rk-in .rk-rows>div{display:flex;justify-content:space-between;align-items:center;padding:3.5cqw 4.5cqw;border-top:1px solid var(--line)}
+.rk-in .rk-rows>div:first-child{border-top:0}
+.rk-in .rk-rows b{display:block;font-size:5cqw;font-weight:900;font-style:italic}
+.rk-in .rk-rows small{display:block;margin-top:1cqw;font-size:3.9cqw;color:var(--muted);font-weight:600}
+.rk-in .rk-rows .v{text-align:left}.rk-in .rk-rows .v b{font-size:6.3cqw}
