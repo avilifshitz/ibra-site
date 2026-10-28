@@ -108,7 +108,7 @@ window.__setMoment=function(p){
 }})();
 // המאמן ראה אותך: הסימון נמתח אל הצוואר ⇒ הממצא ⇒ המרשם נכנס לתוכנית, שורה אחר שורה
 (function(){var c=document.getElementById('coachshot');if(!c)return;
-window.__coachMoment=function(p){var t=function(k,v){c.classList.toggle(k,v)};t('marked',p>=0.08);t('found',p>=0.2);t('rx',p>=0.28);t('rx1',p>=0.32);t('rx2',p>=0.38);t('rx3',p>=0.44);t('pg2',p>=0.54);t('marked2',p>=0.6);t('found2',p>=0.68);t('rxb',p>=0.74);t('rxb1',p>=0.78);t('rxb2',p>=0.84);t('rxb3',p>=0.9)}})();
+window.__coachMoment=function(p){var t=function(k,v){c.classList.toggle(k,v)};t('m1',p>=0.1);t('f1',p>=0.25);t('m2',p>=0.5);t('f2',p>=0.65)}})();
 
 // כרטיסיות (איך זה עובד · השעון): מתקדם לבד כשהמקטע על המסך; הקשה בוחרת מאיפה ממשיכים (האוטומט ממשיך)
 (function(){var CFG={train:{durs:[6000,7000,4000],moment:function(k,f){var K=[1,3][k];if(K!=null&&window.__setMoment)window.__setMoment((K-0.3+f*0.9)/5)}},how:{durs:[4000,5000,4000,5000],moment:function(){}},

@@ -631,25 +631,9 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .scene.coach .stage{padding-top:0}
 .scene.coach .pin{container-type:inline-size}
 .scene.coach .hs{width:100%;height:100%;position:relative;overflow:hidden;background:var(--bg);direction:rtl;font-family:Heebo,system-ui,sans-serif;color:#fff}
-.hs .cvh{display:flex;align-items:flex-start;gap:3cqw;margin-top:2cqw}.hs .cvh .x{flex:none;order:2;margin-inline-start:auto}.hs .cvh b{display:block;font-size:4.6cqw;font-weight:900;font-style:italic}.hs .cvh small{display:block;font-size:2.8cqw;color:rgba(255,255,255,.55);font-weight:700;margin-top:.6cqw}
-.hs .cph{position:relative;margin-top:3cqw;height:104cqw;border-radius:4cqw;overflow:hidden;background:radial-gradient(120% 90% at 50% 20%,#20291F,#0F130E 70%)}.hs .cph::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 14cqw rgba(0,0,0,.55);pointer-events:none}
-.hs .figw{position:absolute;left:50%;top:0;height:100%;aspect-ratio:3/4;transform:translateX(-50%)}.hs .pan{position:relative;width:100%;transition:transform .6s cubic-bezier(.4,0,.2,1)}.hs.pg2 .pan{transform:translateY(-32%)}.hs .figw .sil{display:block;width:100%;height:auto}
 .hs .mark{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.hs .mark .mj{fill:#fff;opacity:0;transition:opacity .25s}.hs .mark .ml{stroke:#fff;stroke-width:2.6;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .5s cubic-bezier(.4,0,.2,1)}
-.hs .mark .mt{fill:#fff;font-size:24px;font-weight:800;font-family:Heebo,system-ui,sans-serif;opacity:0;transition:opacity .3s}
-.hs.marked .mark>.mj{opacity:1}.hs.marked .mark>.ml{stroke-dashoffset:0}.hs.marked .mark>.mt{opacity:1;transition-delay:.35s}
-.hs .mark .m2 .ml{stroke-dasharray:48;stroke-dashoffset:48}.hs.marked2 .mark .m2 .mj{opacity:1}.hs.marked2 .mark .m2 .ml{stroke-dashoffset:0}.hs.marked2 .mark .m2 .mt{opacity:1;transition-delay:.35s}
-.hs.pg2 .mark>.mj,.hs.pg2 .mark>.ml,.hs.pg2 .mark>.mt{opacity:0;transition-delay:0s}
-.hs .cpages{position:relative}.hs .cpage.p2{position:absolute;inset:0;opacity:0;pointer-events:none}.hs.pg2 .cpage.p1{opacity:0;transition:opacity .25s}.hs.pg2 .cpage.p2{opacity:1;transition:opacity .3s .2s}
-.hs .ceye{font-size:2.6cqw;font-weight:800;letter-spacing:.14em;color:rgba(255,255,255,.55);margin-top:4cqw}
-.hs .cfind{opacity:0;transform:translateY(2cqw);transition:opacity .35s,transform .4s}.hs.found .cfind{opacity:1;transform:none}
-.hs .cfind b{display:block;font-size:5.6cqw;font-weight:900;font-style:italic;margin-top:1cqw}.hs .cfind p{font-size:3.4cqw;line-height:1.45;margin:1.5cqw 0 0;color:rgba(255,255,255,.85)}
-.hs .crx{margin-top:2.5cqw;background:#141417;border-radius:4cqw;padding:2.5cqw 4cqw 3cqw;border-inline-start:0.8cqw solid #E8FF3C;opacity:0;transition:opacity .3s}.hs.rx .crx{opacity:1}
-.hs .crx .ceye{margin-top:0}.hs .crx ul{list-style:none;margin:2cqw 0 0;padding:0}.hs .crx li{font-size:3.4cqw;font-weight:700;line-height:1.45;opacity:0;transform:translateX(-2cqw);transition:opacity .3s,transform .35s}
-.hs.rx1 .p1 .crx li:nth-child(1),.hs.rx2 .p1 .crx li:nth-child(-n+2),.hs.rx3 .p1 .crx li{opacity:1;transform:none}
-.hs.found2 .p2 .cfind{opacity:1;transform:none}.hs.rxb .p2 .crx{opacity:1}.hs.rxb1 .p2 .crx li:nth-child(1),.hs.rxb2 .p2 .crx li:nth-child(-n+2),.hs.rxb3 .p2 .crx li{opacity:1;transform:none}
 @media (min-width:900px){.scene.coach{height:calc(100vh - var(--nav) + 170vh)}.scene.coach .stage{justify-content:center}#whole .see{align-items:stretch}#whole .stick{position:sticky;top:112px}}
-@media (prefers-reduced-motion:reduce){.scene.coach .hs *{transition:none!important}.hs .cfind,.hs .crx,.hs .crx li,.hs .mark .mj,.hs .mark .mt{opacity:1!important;transform:none!important}.hs .mark .ml{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.scene.coach .hs *{transition:none!important}}
 
 /* איך זה עובד — כרטיסיות: מתקדם לבד, הקשה לוקחת שליטה */
 .stepper{margin-top:16px;display:grid;grid-template-columns:1fr;gap:16px;justify-items:center}
@@ -949,3 +933,33 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .rk-in .rk-rows b{display:block;font-size:5cqw;font-weight:900;font-style:italic}
 .rk-in .rk-rows small{display:block;margin-top:1cqw;font-size:3.9cqw;color:var(--muted);font-weight:600}
 .rk-in .rk-rows .v{text-align:left}.rk-in .rk-rows .v b{font-size:6.3cqw}
+/* "המאמן ראה" — כמו המסך באפליקציה (22.10): הכותרת, התמונה עם הסימונים הממוספרים, והמרשם */
+#coachshot .cs{position:absolute;inset:0;padding:0 5.5cqw;text-align:start;color:#fff;background:var(--bg)}
+#coachshot .cs-sb{display:flex;justify-content:space-between;direction:ltr;padding:5cqw 1.5cqw 0;font-size:4.3cqw;font-weight:700}
+#coachshot .cs-sb i{width:16cqw;height:3.6cqw;border-radius:2cqw;background:#2A2A30;align-self:center}
+#coachshot .cs-bars{display:flex;gap:2cqw;margin-top:4cqw}
+#coachshot .cs-bars i{flex:1;height:1.4cqw;border-radius:1cqw;background:#2A2A2E}#coachshot .cs-bars i.d{background:#565F1E}#coachshot .cs-bars i.c{background:var(--lime)}
+#coachshot .cs-top{display:flex;align-items:center;justify-content:space-between;margin-top:3cqw}
+#coachshot .cs-ey{font-size:3.8cqw;font-weight:800;color:var(--muted);letter-spacing:.04em}
+#coachshot .cs-x{order:2;width:9cqw;height:9cqw;border-radius:50%;background:#2A2A2E;border:1px solid #3a3a3c;display:flex;align-items:center;justify-content:center;font-size:4cqw}
+#coachshot .cs-h{margin-top:3cqw;font-size:9cqw;font-weight:900;font-style:italic;line-height:1.08}
+#coachshot .cs-photo{position:relative;margin-top:4cqw;height:52cqw;border-radius:5cqw;background:linear-gradient(#3a2f26,#241d18);overflow:hidden;display:flex;justify-content:center}
+#coachshot .cs-chip{position:absolute;top:3cqw;right:3cqw;padding:1.2cqw 3cqw;border-radius:3cqw;background:rgba(0,0,0,.55);font-size:3.6cqw;font-weight:800}
+#coachshot .cs-sil{height:100%;width:auto;overflow:visible;padding-top:3cqw}
+#coachshot .cs-m line{stroke:#fff;stroke-width:7}#coachshot .cs-m .j{fill:#fff}#coachshot .cs-m .n{fill:#fff}
+#coachshot .cs-m text{fill:#000;font:900 46px Heebo,system-ui,sans-serif;text-anchor:middle;dominant-baseline:central}
+#coachshot .cs-f{margin-top:4cqw}
+#coachshot .cs-ft{display:flex;align-items:center;gap:2.5cqw}
+#coachshot .cs-ft i{width:6.5cqw;height:6.5cqw;border-radius:50%;background:#fff;color:#000;font-style:normal;font-weight:900;font-size:4cqw;display:flex;align-items:center;justify-content:center}
+#coachshot .cs-ft b{font-size:6.6cqw;font-weight:900;font-style:italic}
+#coachshot .cs-rx{margin-top:2cqw;font-size:3.4cqw;font-weight:800;color:var(--muted);letter-spacing:.12em}
+#coachshot .cs-card{display:flex;align-items:center;justify-content:space-between;margin-top:1.5cqw;padding:3.2cqw 4cqw;border-radius:4cqw;background:var(--card)}
+#coachshot .cs-card b{display:block;font-size:4.6cqw;font-weight:800}#coachshot .cs-card span{display:block;margin-top:.6cqw;font-size:3.9cqw;color:var(--muted)}
+#coachshot .cs-card em{font-style:normal;font-weight:900;font-size:5cqw}
+#coachshot .cs-next{position:absolute;inset-inline:5.5cqw;bottom:5cqw;height:13cqw;border-radius:5cqw;border:1.5px solid #3a3a3c;display:flex;align-items:center;justify-content:center;font-size:4.6cqw;font-weight:800}
+/* החשיפה בגלילה: סימון ⇒ ממצא ⇒ מרשם */
+#coachshot .cs-m,#coachshot .cs-f{opacity:0;transition:opacity .35s,transform .35s}
+#coachshot .cs-f{transform:translateY(2cqw)}
+#coachshot.m1 .m1,#coachshot.f1 .f1,#coachshot.m2 .m2,#coachshot.f2 .f2{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){#coachshot .cs-m,#coachshot .cs-f{opacity:1;transform:none}}
+@media (max-width:899px){.scene.coach .pin{width:min(290px,78%);aspect-ratio:600/1260}}
