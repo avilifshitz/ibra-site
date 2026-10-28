@@ -971,3 +971,6 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 @media (prefers-reduced-motion:reduce){#coachshot .cs-m,#coachshot .cs-f{opacity:1;transform:none}}
 @media (max-width:899px){.scene.coach .pin{width:min(290px,78%);aspect-ratio:600/1260}}
 @media (max-width:760px){.scene{--nav:98px}}
+/* 'הדרגות' בטלפון: מסך הטלפון הוא הבוחר, בלי הרשימה שחוזרת עליו (אבי, 28.10, מוקאפ site-rank-mobile ג׳) */
+#rank .sub.m{display:none}
+@media (max-width:760px){#rank .ladder,#rank .sub.d{display:none}#rank .sub.m{display:block}}
