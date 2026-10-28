@@ -145,7 +145,7 @@ window.__coachMoment=function(p){var t=function(k,v){c.classList.toggle(k,v)};t(
 
 // כרטיסיות (איך זה עובד · השעון): מתקדם לבד כשהמקטע על המסך; הקשה בוחרת מאיפה ממשיכים (האוטומט ממשיך)
 (function(){var CFG={train:{durs:[6000,7000,4000],moment:function(k,f){var K=[1,3][k];if(K!=null&&window.__setMoment)window.__setMoment((K-0.3+f*0.9)/5)}},how:{durs:[4000,5000,4000,5000],moment:function(){}},
- watch:{durs:[4000,4000,4000,4000,4000,4000],moment:function(){}}};
+ watch:{durs:[4500,4500,4500],moment:function(){}}};
 window.__steppers={};
 [].forEach.call(document.querySelectorAll('[data-stepper]'),function(st){var cfg=CFG[st.getAttribute('data-stepper')]||CFG.how;
 var tabs=[].slice.call(st.querySelectorAll('.tabs button')),lis=[].slice.call(st.querySelectorAll('.list li')),cur=st.querySelector('.curstep');
