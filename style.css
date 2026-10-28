@@ -121,8 +121,6 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 .band{padding:40px 0;border-top:1px solid var(--line)}
 .band p{font-size:28px;font-weight:900;font-style:italic;line-height:1.2;text-wrap:balance;max-width:30ch}
 .band em{font-style:inherit;color:var(--lime)}
-#word .lede{max-width:40ch}
-#word .sub.wide{max-width:60ch;margin-top:32px}
 #price .plans{display:grid;gap:12px}
 .seeshot.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 .seeshot.duo .shot{max-width:none;width:100%}
@@ -134,16 +132,6 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 #price .incl{margin-top:20px;display:grid;gap:10px;color:var(--ink2);font-size:16px;padding:0;list-style:none}
 #price .incl li::before{content:"·";color:var(--lime);font-weight:900;margin-inline-end:8px}
 #price .more{margin-top:8px}
-.word-card .tier{flex-direction:column;align-items:stretch}
-.word-card .tier small{font-size:12px;font-weight:700;letter-spacing:.06em;margin:0 0 8px}
-.word-card .tier b{font-size:19px;line-height:1.35;display:block;font-weight:800}
-.ledger{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ledger div{padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.02)}
-.ledger span{display:block;color:var(--muted);font-size:13px}
-.ledger b{display:block;margin-top:6px;font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
-.ledger b.win{color:var(--lime)}
-.word-card .note{margin-top:16px;font-size:15px;color:var(--ink2);max-width:none}
-.word-card .eg{margin-top:10px;color:var(--muted);font-size:13px}
 .site .close .lede{margin:16px auto 0;text-align:center}
 .site .close .quiet{margin-top:20px}
 .note{color:var(--muted);margin-top:16px;max-width:52ch}
@@ -259,7 +247,7 @@ html.js .close.go h2 em{animation:hero .35s ease-out 1.8s forwards}
   .wordmark{font-size:34px}
   .lede{font-size:18px}
   .band p{font-size:22px}
-  .ledger b{font-size:20px}
+
   .pair{gap:12px;margin-top:8px}
   .pair figure{width:48%}
   .pair .back{margin-top:32px;width:48%}
