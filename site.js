@@ -139,20 +139,13 @@ window.__setMoment=function(p){
  on(M.plus,'hit',(m>=0.17&&m<0.23)||(m>=0.31&&m<0.37));
  on(M.out,'hit',m>=0.56&&m<0.64);on(ml,'sheet',m>=0.64);on(ml,'ruled',m>=0.76)}
 }})();
-// השעון: הרצועה נכנסת לזון, המדרגה עולה.
-(function(){var ws=document.querySelector('.watchsteps .ws');if(!ws)return;var q=function(sel){return document.querySelector('.watchsteps '+sel)};
-var h2=q('[data-hr2]'),zb=[].slice.call(document.querySelectorAll('.watchsteps .zbar i')),h3=q('[data-hr3]'),r1=q('[data-rung]'),r2=q('[data-rung2]');
-function seg(p,a,b){return Math.max(0,Math.min(1,(p-a)/(b-a)))}
-window.__watchMoment=function(p){var b=seg(p,0.3,0.7);h2.textContent=118+Math.round(b*4);var lit=6+Math.round(b*3);zb.forEach(function(e,i){e.classList.toggle('on',i>=9-lit)});
- var c=seg(p,0.65,1);h3.textContent=141+Math.round(c*3);var rung=c>0.6?6:5;r1.textContent=rung;r2.textContent=rung}})();
-
 // המאמן ראה אותך: הסימון נמתח אל הצוואר ⇒ הממצא ⇒ המרשם נכנס לתוכנית, שורה אחר שורה
 (function(){var c=document.getElementById('coachshot');if(!c)return;
 window.__coachMoment=function(p){var t=function(k,v){c.classList.toggle(k,v)};t('marked',p>=0.08);t('found',p>=0.2);t('rx',p>=0.28);t('rx1',p>=0.32);t('rx2',p>=0.38);t('rx3',p>=0.44);t('pg2',p>=0.54);t('marked2',p>=0.6);t('found2',p>=0.68);t('rxb',p>=0.74);t('rxb1',p>=0.78);t('rxb2',p>=0.84);t('rxb3',p>=0.9)}})();
 
 // כרטיסיות (איך זה עובד · השעון): מתקדם לבד כשהמקטע על המסך; הקשה בוחרת מאיפה ממשיכים (האוטומט ממשיך)
 (function(){var CFG={train:{durs:[6000,7000,4000],moment:function(k,f){var K=[1,3][k];if(K!=null&&window.__setMoment)window.__setMoment((K-0.3+f*0.9)/5)}},how:{durs:[4000,5000,4000,5000],moment:function(){}},
- watch:{durs:[3500,5000,5000],moment:function(k,f){if(window.__watchMoment)window.__watchMoment(k===0?0:k===1?0.3+f*0.4:0.65+f*0.35)}}};
+ watch:{durs:[4000,4000,4000,4000,4000,4000],moment:function(){}}};
 window.__steppers={};
 [].forEach.call(document.querySelectorAll('[data-stepper]'),function(st){var cfg=CFG[st.getAttribute('data-stepper')]||CFG.how;
 var tabs=[].slice.call(st.querySelectorAll('.tabs button')),lis=[].slice.call(st.querySelectorAll('.list li')),cur=st.querySelector('.curstep');
