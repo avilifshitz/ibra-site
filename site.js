@@ -126,8 +126,7 @@ window.__setMoment=function(p){
  // שלב 2 · 0.125–0.375
  var u=p*5;var q=seg(u,2.7,3.6);
  on(L.rest,'on',q<0.3);on(L.set,'on',q>=0.3&&q<0.82);on(L.earn,'on',q>=0.82);
- var up=q>=0.46;L.w.textContent=up?'62.5':'60';on(L.w,'lit',up);on(L.pw,'hit',q>=0.42&&q<0.5);
- var rep=q>=0.62;L.r.textContent=rep?'9':'8';on(L.r,'lit',rep);on(L.pr,'hit',q>=0.58&&q<0.66);
+  var rep=q>=0.62;L.r.textContent=rep?'10':'9';on(L.r,'lit',rep);on(L.pr,'hit',q>=0.58&&q<0.66);
  on(L.cta,'hit',q>=0.74&&q<0.82);
  // שלב 3 · 0.375–0.625
  if(V){var v=seg(u,1.7,2.6);
