@@ -819,3 +819,4 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hw .next{display:flex;justify-content:space-between;margin-top:3cqw;padding:4cqw 5cqw;border:1px solid var(--line);border-radius:5cqw;font-size:4.3cqw}
 .hw .next span{color:var(--muted);font-weight:700}.hw .next b{font-weight:800}
 #how .stepper .pin{aspect-ratio:600/1304}
+.gearcard .rng.ask{color:var(--muted);font-weight:700}
