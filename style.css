@@ -132,8 +132,6 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 #price .incl{margin-top:20px;display:grid;gap:10px;color:var(--ink2);font-size:16px;padding:0;list-style:none}
 #price .incl li::before{content:"·";color:var(--lime);font-weight:900;margin-inline-end:8px}
 #price .more{margin-top:8px}
-.site .close .lede{margin:16px auto 0;text-align:center}
-.site .close .quiet{margin-top:20px}
 .note{color:var(--muted);margin-top:16px;max-width:52ch}
 
 .faq{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px 48px}
