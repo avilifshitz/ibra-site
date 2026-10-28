@@ -123,6 +123,12 @@ html.js .seeshot .shot{transform:translateY(calc((0.5 - var(--p,0.5)) * 36px))}
 .band em{font-style:inherit;color:var(--lime)}
 #word .lede{max-width:40ch}
 #word .sub.wide{max-width:60ch;margin-top:32px}
+#price .plans{display:grid;gap:12px}
+#price .free{display:flex;flex-direction:column;gap:4px;padding:16px 20px;border:1px dashed var(--line);border-radius:20px;color:var(--ink2)}
+#price .free b{color:var(--ink);font-weight:800;font-size:17px}
+#price .incl{margin-top:16px;display:grid;gap:8px;color:var(--muted);font-size:15px;padding:0;list-style:none}
+#price .incl li::before{content:"·";color:var(--lime);font-weight:900;margin-inline-end:8px}
+#price .more{margin-top:8px}
 .word-card .tier{flex-direction:column;align-items:stretch}
 .word-card .tier small{font-size:12px;font-weight:700;letter-spacing:.06em;margin:0 0 8px}
 .word-card .tier b{font-size:19px;line-height:1.35;display:block;font-weight:800}
