@@ -1002,3 +1002,10 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .vs .note{margin-top:10px;color:var(--muted);font-size:13px}
 .vs .lg{display:flex;gap:16px;margin-top:10px;color:var(--muted);font-size:13px}
 @media (min-width:761px){.ct th:first-child{width:34%}.ct td{font-size:22px}.ct th{font-size:15px}}
+
+/* עמודי הטקסט: הסגירה של דף הבית — דלתא, IBRA, הסלוגן (אבי, 29.10) */
+.text .close{text-align:center;padding:48px 0 40px;margin-top:40px;min-height:0;display:block}
+.text .close .splash{width:88px;height:88px}
+.text .close .wordmark{font-size:32px;margin-top:10px}
+.text .close h2{font-size:32px;margin:16px 0 0}
+.text .close .badge{display:inline-block;margin-top:24px}.text .close .badge img{height:56px}
