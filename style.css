@@ -882,7 +882,7 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 @media (min-width:761px){
   .site .wrap>nav{height:76px}
   .site .brand{font-size:26px}
-  .site .brand::before{content:"";display:inline-block;vertical-align:-2px;margin-inline-end:10px;width:26px;height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 100'%3E%3Cpath d='M23.6,10 L56.5,10 L56.5,92 Z M96.4,10 L63.5,10 L63.5,92 Z' fill='%23E8FF3C'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 8px rgba(232,255,60,.35))}
+  .site .brand::before{content:"";display:inline-block;vertical-align:-2px;margin-inline-end:10px;width:27px;height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='14 26 92 74'%3E%3Cpath d='M14,26 L56.5,26 L56.5,100 L51,100 Z M63.5,26 L106,26 L69,100 L63.5,100 Z' fill='%23E8FF3C'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 8px rgba(232,255,60,.35))}
   .site .wrap>nav ul{gap:30px;font-size:15px;font-weight:700;color:#C9C9CF}
   .site .wrap>nav ul a{position:relative;padding:10px 0}
   .site .wrap>nav ul a.on{color:#fff}
