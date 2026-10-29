@@ -974,3 +974,31 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 /* 'הדרגות' בטלפון: מסך הטלפון הוא הבוחר, בלי הרשימה שחוזרת עליו (אבי, 28.10, מוקאפ site-rank-mobile ג׳) */
 #rank .sub.m{display:none}
 @media (max-width:760px){#rank .ladder,#rank .sub.d{display:none}#rank .sub.m{display:block}}
+
+/* השוואה — פסק דין וטבלת יכולות (29.10) */
+.vs .vd{margin-top:28px;padding:22px 20px;border:1px solid var(--lime);border-radius:22px;background:var(--card)}
+.vs .vd h2{font-size:24px;margin:0 0 12px}
+.vs .vd ul{list-style:none;margin:0;padding:0}
+.vs .vd li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line);color:var(--ink);font-size:17px;font-weight:700;line-height:1.4}
+.vs .vd li:first-child{border-top:0}
+.vs .vd li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:13px;background:var(--lime);color:#0A0A0C;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.vs .vd p{margin:12px 0 0;color:var(--muted);font-size:15px}
+.vs .cap{margin-top:40px}
+.vs .cap h2{margin:0}
+.vs .ct{width:100%;border-collapse:collapse;margin-top:16px;table-layout:fixed}
+.vs .ct th{font-size:13px;font-weight:800;color:var(--muted);padding:0 2px 10px;text-align:center;vertical-align:bottom;line-height:1.2}
+.vs .ct th:first-child{width:36%;text-align:start}
+.vs .ct th.us{width:58px;color:var(--lime);background:rgba(232,255,60,.07);border-radius:10px 10px 0 0}
+.vs .ct td{border-top:1px solid var(--line);padding:12px 2px;text-align:center;font-size:18px;color:#fff}
+.vs .ct td:first-child{text-align:start;font-size:15px;font-weight:700;color:var(--ink);line-height:1.35}
+.vs .ct td.us{background:rgba(232,255,60,.07)}
+.vs .ct .f{color:#fff}.ct .h{color:#9A9AA2}.ct .n{color:#3A3A40}
+.vs .ct td.us .f{color:var(--lime)}
+.vs .ct tr.pr td{font-size:11px;color:var(--muted);font-weight:700;line-height:1.3}
+.vs .ct tr.pr td:first-child{font-size:15px;color:var(--ink)}
+.vs .ct tr.sc td{font-size:22px;font-weight:900;color:#6E6E76;padding:14px 2px}.ct tr.sc td:first-child{font-size:15px;color:var(--ink)}.ct tr.sc td.us{color:var(--lime);font-size:30px}
+.vs .ct tr.pr td{font-size:14px!important;font-weight:800!important;color:#9A9AA2!important}.ct tr.pr td.us{color:var(--lime)!important}
+.vs .ct tr.pr td{white-space:nowrap}@media (max-width:760px){.vs .ct th{font-size:11px;letter-spacing:-.03em}.vs .ct tr.pr td{font-size:11px!important;letter-spacing:-.02em}.vs .ct td:first-child{font-size:14px;white-space:normal}}
+.vs .note{margin-top:10px;color:var(--muted);font-size:13px}
+.vs .lg{display:flex;gap:16px;margin-top:10px;color:var(--muted);font-size:13px}
+@media (min-width:761px){.ct th:first-child{width:34%}.ct td{font-size:22px}.ct th{font-size:15px}}
