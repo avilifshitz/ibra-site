@@ -715,6 +715,23 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .hiw .gs p{margin-top:8px;grid-column:2}
 .hiw .gs p.big{margin-top:16px}
 .hiw .gs img.scr{grid-column:1/-1;width:180px;height:auto;margin:16px auto 0;border-radius:20px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.hiw .saw{grid-column:1/-1;width:220px;margin:16px auto 0;background:var(--card,#141416);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.hiw .saw p{margin:0;grid-column:auto;max-width:none}
+.hiw .saw .eb{font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
+.hiw .saw .tile{position:relative;margin-top:12px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.hiw .saw .tile img{display:block;width:100%;height:auto}
+.hiw .saw .tile.sm{width:110px}
+.hiw .saw .dt{position:absolute;bottom:6px;left:8px;font-size:11px;font-weight:800;color:var(--ink2)}
+.hiw .saw .mk{position:absolute;top:22%;left:8px;font-size:12px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px}
+.hiw .saw .mk i{display:block;width:14px;height:1.5px;background:#fff;order:-1}
+.hiw .saw .plan bdi{white-space:nowrap}
+.hiw .saw .pose{font-size:12px;color:var(--muted);margin-top:12px}
+.hiw .saw .gap{font-size:19px;font-weight:900;color:var(--ink);margin-top:2px}
+.hiw .saw .what{font-size:14px;color:var(--ink2);margin-top:6px;line-height:1.45}
+.hiw .saw .plan{margin-top:10px;border-right:2px solid var(--line);padding-right:10px;font-size:13px;color:var(--ink2);line-height:1.45}
+.hiw .saw .plan b{display:block;font-size:11px;color:var(--muted);letter-spacing:.06em}
+.hiw .saw hr{border:0;border-top:1px solid var(--line);margin:14px 0 0}
+@media (min-width:720px){.hiw .gs:has(.saw){grid-template-columns:52px 1fr 220px;column-gap:24px}.hiw .gs:has(.saw) .saw{grid-column:3;grid-row:1/span 6;margin:0}}
 @media (min-width:720px){.hiw .gs:has(img.scr){grid-template-columns:52px 1fr 180px;column-gap:24px}.hiw .gs:has(img.scr) img.scr{grid-column:3;grid-row:1/span 6;margin:0}}
 
 @media (max-width:720px){.seeshot.duo{grid-template-columns:1fr;justify-items:center;gap:24px}.seeshot.duo .shot{max-width:260px}}
