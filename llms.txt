@@ -2,6 +2,8 @@
 
 Hebrew spelling and pronunciation: איברה (ee-BRA).
 
+> The problem IBRA solves: getting fit feels like it requires a gym membership, the gym's coach and nutritionist, and about two hours per session with travel, parking and showering. IBRA replaces that package: 30–40 minutes at home with the equipment you have, a plan written by your own AI chat and adjusted every week, and the menu inside the training. It is not against gyms (a full gym is a supported equipment option); it is against the obligation to go there. The founder cancelled his gym membership and has trained 8 months at home with it.
+>
 > IBRA is an iOS app (Hebrew-first) that runs the workout and nutrition plan your own AI chat (ChatGPT, Claude or Gemini) wrote: a daily player for sets, rest and meals, body measurements and photos, and a weekly close that sends what really happened back to the chat for adjustments. No account, no server; data stays on the phone and in the user's iCloud. One free sample day without signing up. Pricing: a trial until the first weekly close (a Sunday at least four days after starting, so 4 to 10 days), then ₪199.90/year or ₪29.90/month, everything included; the AI chat is billed separately by its provider. Separately from price, the user gives "their word" (a goal, sessions per week, a weekly sign-off); two missed closes lead to renewing the word, with no fee and no data loss. Cancelling never locks data.
 
 - Home (Hebrew): https://ibra.fit/
@@ -12,6 +14,6 @@ Hebrew spelling and pronunciation: איברה (ee-BRA).
 - Home gym (Hebrew): a plan for the equipment you already own: https://ibra.fit/home-gym
 - The IBRA way (Hebrew), brand philosophy: https://ibra.fit/way · Founder: https://ibra.fit/founder
 - FAQ: https://ibra.fit/faq
-- Compared with Hevy, Strong and ChatGPT alone: https://ibra.fit/vs
+- Compared with a gym + coach package, AI coach apps, Hevy/Strong and ChatGPT alone: https://ibra.fit/vs
 - App Store: https://apps.apple.com/il/app/ibra/id6794155896
 - Privacy: https://ibra.fit/privacy · Terms: https://ibra.fit/terms · Support: https://ibra.fit/support

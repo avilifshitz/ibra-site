@@ -1026,3 +1026,18 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 .text .close .wordmark{font-size:32px;margin-top:10px}
 .text .close h2{font-size:32px;margin:16px 0 0}
 .text .close .badge{display:inline-block;margin-top:24px}.text .close .badge img{height:56px}
+
+/* 30.10 — הבעיה ומה מחליף מה */
+#why .chain{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0}
+#why .chain li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:700;font-size:17px}
+#why .chain li+li::before{content:"←";color:var(--muted);margin-left:10px}
+#why .lede{margin-top:20px}
+table.swap{width:100%;border-collapse:collapse;margin-top:28px;font-size:17px}
+table.swap th{font-size:13px;color:var(--muted);font-weight:800;text-align:right;padding:0 0 10px}
+table.swap td{padding:14px 8px 14px 0;border-top:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+table.swap td:first-child{color:var(--muted);width:18%}
+table.swap .us{color:#fff;font-weight:800}
+table.swap tr.pr td.us{color:var(--lime);font-size:24px;font-weight:900}
+table.swap small{display:block;font-size:13px;color:var(--muted);margin-top:3px}
+@media (max-width:720px){table.swap{font-size:15px}#why .chain li{font-size:15px;padding:8px 14px}}
+bdi[dir="ltr"]{white-space:nowrap}
