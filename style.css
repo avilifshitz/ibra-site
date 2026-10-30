@@ -1041,3 +1041,31 @@ table.swap tr.pr td.us{color:var(--lime);font-size:24px;font-weight:900}
 table.swap small{display:block;font-size:13px;color:var(--muted);margin-top:3px}
 @media (max-width:720px){table.swap{font-size:15px}#why .chain li{font-size:15px;padding:8px 14px}}
 bdi[dir="ltr"]{white-space:nowrap}
+
+#why .clocks{display:flex;gap:12px;margin-top:22px;max-width:520px}
+#why .clocks>div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+#why .clocks b{display:block;font-size:44px;font-weight:900;font-style:italic;line-height:1}
+#why .clocks span{display:block;color:var(--muted);font-size:14px;font-weight:700;margin-top:8px}
+#why .clocks .them b{color:#5A5A62}
+#why .clocks .us{border-color:var(--lime)}
+#why .clocks .us b{color:var(--lime)}
+#day1 .dayone{margin-top:22px;max-width:520px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 18px}
+#day1 .dayone>div{display:flex;justify-content:space-between;padding:13px 0;border-top:1px solid var(--line);font-weight:700}
+#day1 .dayone>div:first-child{border-top:0}
+#day1 .dayone>div span:last-child{color:var(--muted);font-weight:600}
+#day1 .dayone .now span:first-child{color:var(--lime)}
+@media (max-width:720px){#why .clocks b{font-size:34px}}
+
+#sees .sees{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
+#sees .sc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:16px}
+#sees .k{font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
+#sees .m{flex:1;display:flex;flex-direction:column;gap:8px;justify-content:center;min-height:96px}
+#sees .m small{color:var(--muted);font-size:14px}
+#sees .m strong{font-size:24px;font-weight:900;color:var(--ink)}
+#sees .m strong.lime{color:var(--lime)}
+#sees .rows>div{display:flex;justify-content:space-between;gap:8px;font-size:15px;border-bottom:1px solid var(--line);padding-bottom:8px}
+#sees .rows>div:last-child{border:0;padding:0}
+#sees .rows b{font-weight:800;white-space:nowrap}
+#sees .vs{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:900px){#sees .sees{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){#sees .sees{grid-template-columns:1fr}}

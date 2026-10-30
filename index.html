@@ -23,7 +23,7 @@
 <meta property="og:locale" content="he_IL">
 <meta name="theme-color" content="#0A0A0C">
 <link rel="preload" href="/assets/heebo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=2610301000">
+<link rel="stylesheet" href="/style.css?v=2610301500">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"MobileApplication","@id":"https://ibra.fit/#app","name":"IBRA","alternateName":["איברה","IBRA — גבר. מלשון גִּבּוֹר."],"dateModified":"2026-10-28","url":"https://ibra.fit/","operatingSystem":"iOS 17 ומעלה","applicationCategory":"HealthApplication","inLanguage":"he","description":"אפליקציה שמריצה את תוכנית האימונים והתזונה שה-AI שלך (ChatGPT, Claude או Gemini) כתב: אימון יומי, ארוחות, מדידות, וסגירת-שבוע שאתה משתף עם הצ׳אט שבחרת. בלי חשבון ובלי שרת.","author":{"@id":"https://ibra.fit/#org"},"offers":[{"@type":"Offer","name":"שנתי","price":"199.90","priceCurrency":"ILS","description":"מנוי שנתי. ניסיון עד סגירת השבוע הראשונה. צ׳אט ה-AI שהמשתמש בוחר נפרד."},{"@type":"Offer","name":"חודשי","price":"29.90","priceCurrency":"ILS","description":"מנוי חודשי. ניסיון עד סגירת השבוע הראשונה. צ׳אט ה-AI שהמשתמש בוחר נפרד."}]},
@@ -64,11 +64,12 @@
   <ol class="chain" aria-label="מה לוקח אימון בחדר כושר">
     <li>נוסעים</li><li>מחפשים חנייה</li><li>מחכים למכשיר</li><li>מתקלחים</li><li>חוזרים</li>
   </ol>
+  <div class="clocks"><div class="them"><b>2:00</b><span>חדר כושר, עם הדרך</span></div><div class="us"><b><bdi dir="ltr">0:37</bdi></b><span>אימון ממוצע ב-IBRA, בבית</span></div></div>
   <p class="lede">ומעל זה: <b>מנוי ומאמן אישי.</b> חדר כושר זה בסדר. <b>החובה להגיע אליו, לא.</b></p>
 </section>
 
 <section id="swap">
-  <h2>כל מה שחדר הכושר מוכר לך.<br><em>בבית.</em></h2>
+  <h2>חדר כושר.<br><em>בלי חדר כושר.</em></h2>
   <table class="swap">
     <thead><tr><th></th><th>חדר כושר</th><th class="us">IBRA</th></tr></thead>
     <tbody>
@@ -76,7 +77,6 @@
       <tr><td>המקום</td><td>נוסעים לשם</td><td class="us">הבית, עם הציוד שיש לך</td></tr>
       <tr><td>המאמן</td><td>מאמן אישי, בתשלום</td><td class="us">ה-AI שלך בונה, ומתאים כל שבוע</td></tr>
       <tr><td>התזונה</td><td>תפריט מהמאמן</td><td class="us">תפריט וארוחות בתוך האימון</td></tr>
-      <tr class="pr"><td>בחודש</td><td><bdi dir="ltr">350–450</bdi> ₪<small><span style="white-space:nowrap">מנוי <bdi dir="ltr">99–199</bdi>&nbsp;₪</span><br><span style="white-space:nowrap">מאמן 250&nbsp;₪</span></small></td><td class="us">16.66 ₪</td></tr>
     </tbody>
   </table>
 </section>
@@ -177,9 +177,20 @@
   </div>
 </section>
 
+<section id="day1">
+  <h2>ביום הראשון<br><em>כבר מתאמנים.</em></h2>
+  <p class="lede">הצ׳אט כותב את התוכנית בכ-10 דקות. בזמן הזה אתה לא מחכה. <b>אתה מודד את נקודת הפתיחה שלך.</b></p>
+  <div class="dayone">
+    <div class="now"><span>מבחן הכושר</span><span>עכשיו</span></div>
+    <div><span>פלאנק</span><span>אחר כך</span></div>
+    <div><span>יציבה</span><span>אחר כך</span></div>
+    <div><span>התוכנית מהצ׳אט</span><span>מחכה לך</span></div>
+  </div>
+</section>
+
 <section id="train">
   <div><h2>פותחים את IBRA.<br><em>יודעים מה לעשות.</em></h2>
-  <p class="lede">התוכנית כבר מסודרת לאימון: התרגילים, הסטים, המשקלים, המנוחות. אתה מבצע ומתעד, וממשיך לסט הבא.</p></div>
+  <p class="lede">התוכנית כבר מסודרת לאימון: התרגילים, הסטים, המשקלים, המנוחות. אתה מבצע ומתעד. ובכל סט האפליקציה יודעת מה עשית בפעם הקודמת, ומבקשת עוד חזרה אחת.</p></div>
   <div class="stepper" data-stepper="train" style="--n:3">
     <div class="pin" aria-hidden="true"><div class="track"><div class="hs" id="todayshot">
 <div class="scr dim on"><div class="sbar"><span>9:41</span><i></i></div><div class="ttop"><span class="av">א</span><span class="teye">שבוע 1 · אִישׁ חַיִל ←</span></div>
@@ -206,6 +217,24 @@
 </section>
 
 
+
+<section id="sees">
+  <h2>המאמן רואה אותך שעה בשבוע.<br><em>IBRA רואה כל סט.</em></h2>
+  <div class="sees">
+    <div class="sc"><span class="k">רואה</span>
+      <div class="m rows"><div><span>סט 3 · <bdi dir="ltr">60 × 8</bdi></span><b>✓</b></div><div><span>ארוחת צהריים</span><b>✓</b></div><div><span>שינה</span><b><bdi dir="ltr">7:12</bdi></b></div></div>
+      <span class="vs">מאמן: שעה בשבוע</span></div>
+    <div class="sc"><span class="k">זוכר</span>
+      <div class="m"><small>בפעם הקודמת: <bdi dir="ltr">60 × 7</bdi></small><strong>60 ק״ג × 8</strong></div>
+      <span class="vs">מאמן: מה שסיפרת לו</span></div>
+    <div class="sc"><span class="k">מתקן</span>
+      <div class="m rows"><div><span>סקוואט</span><b><bdi dir="ltr">4×6</bdi> ← <bdi dir="ltr">5×5</bdi></b></div><div><span>פחמימה בימי רגליים</span><b>+30 ג׳</b></div></div>
+      <span class="vs">מאמן: כשנפגשים</span></div>
+    <div class="sc"><span class="k">דוחף</span>
+      <div class="m"><strong class="lime">עוד חזרה אחת.</strong><small>8 בכל הסטים, ובפעם הבאה 62.5 ק״ג</small></div>
+      <span class="vs">מאמן: כשהוא לידך</span></div>
+  </div>
+</section>
 
 <section id="close">
 
@@ -251,9 +280,8 @@
 <section id="proof">
   <div class="see">
     <div>
-      <h2>ביטלתי את המנוי.<br><em>ואני בשיא הכושר שלי.</em></h2>
-      <p class="lede">8 חודשים בלי חדר כושר. <bdi dir="ltr">30–40</bdi> דקות בבית. אחוז השומן ירד, הכוח עלה. ובכל סגירה רואים כמה <span style="white-space:nowrap">ה-V</span> התחדד, ומתי תגיע ליעד.</p>
-      <p class="fine">אבי, מי שבנה את IBRA.</p>
+      <h2>לאן ומתי.<br><em>מחושב, לא מנוחש.</em></h2>
+      <p class="lede">בכל סגירת שבוע אתה רואה כמה <span style="white-space:nowrap">ה-V</span> התחדד, מה התחנה הבאה, ומתי תגיע ליעד. <b>והמאמן מתקן את הדרך לפי מה שעשית באמת.</b></p>
     </div>
     <div class="vj-ph" aria-label="דוגמה: מסך היעד באפליקציה — הכתפיים רחבות מהמותן ב-40%, היעד 45%">
     <div class="vj-vj"><div class="vj-in">
