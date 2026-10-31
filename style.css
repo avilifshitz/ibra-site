@@ -1118,3 +1118,6 @@ bdi[dir="ltr"]{white-space:nowrap}
 .mo.cam .tag{position:absolute;top:10px;right:28px;font-size:10px;font-weight:700;background:rgba(0,0,0,.6);padding:2px 6px;border-radius:6px;color:var(--ink)}
 .mo.cam .n3{position:absolute;bottom:10px;left:28px;font-size:10px;color:var(--muted)}
 .mo.week{gap:0}.mo.week svg{width:17px;height:17px}.mo.week circle{stroke-width:5}
+
+#rank .see.road{margin-top:72px}
+.road-h{font-size:clamp(30px,3.4vw,44px);font-weight:900;font-style:italic;line-height:1.1;margin:0}.road-h em{font-style:inherit;color:var(--lime)}
