@@ -239,17 +239,7 @@
       </div>
       <figcaption>דוגמה. המספרים האמיתיים נכתבים באפליקציה.</figcaption>
     </figure>
-    <figure class="seeshot road-shot"><div class="vj-ph" data-road aria-label="דוגמה: מסך היעד באפליקציה — הכתפיים רחבות מהמותן ב-40%, היעד 45%"><div class="vj-sheet" aria-hidden="true"><div class="vj-grab"></div>
-<div class="vj-sh-h"><b>כל הדרך</b><span>4 שלבים · עד אִישׁ חַיִל</span></div>
-<ol class="vj-steps">
-<li class="now"><i></i><div><small>חיטוב · עכשיו</small><b>72 ק״ג · 12%</b><span>עד דצמ׳ 26 · לפי המאמן</span></div></li>
-<li><i></i><div><small>מסה</small><b>79 ק״ג · 16%</b><span>עד יולי 27 · הערכה</span></div></li>
-<li><i></i><div><small>חיטוב</small><b>76 ק״ג · 12%</b><span>עד אוק׳ 27 · הערכה</span></div></li>
-<li class="ms"><i></i><div><b>בֶּן חַיִל</b><span>סביב אוק׳ 27</span></div></li>
-<li><i></i><div><small>מסה</small><b>80 ק״ג · 13%</b><span>סביב 2028 · הערכה</span></div></li>
-<li class="goal"><i></i><div><small>היעד</small><b>אִישׁ חַיִל</b><span>סביב 2028</span></div></li>
-</ol>
-<p class="vj-sh-f">השלבים הרחוקים הם הערכה. כל סגירה מדייקת אותם.</p></div>
+    <figure class="seeshot road-shot"><div class="vj-ph" aria-label="דוגמה: מסך היעד באפליקציה — הכתפיים רחבות מהמותן ב-40%, היעד 45%">
     <div class="vj-vj"><div class="vj-in">
       <div class="vj-sb"><span>9:41</span><i></i></div>
       <div class="vj-ey">היעד · אִישׁ חַיִל</div>
@@ -280,7 +270,7 @@
         </svg>
         <div class="vj-est">מכאן הערכה</div>
         <div class="vj-next"><div><small>התחנה הבאה · Cut</small><b>72 ק״ג · 12%</b><span>עד דצמ׳ 26</span></div><div><small>אחרי זה, עוד שלבים</small><b>80 ק״ג · 13%</b></div></div>
-        <div class="vj-all" role="button" tabindex="0"><span>כל הדרך · 4 שלבים</span><i>‹</i></div>
+        <div class="vj-all"><span>כל הדרך · 4 שלבים</span><i>‹</i></div>
       </div>
       <div class="vj-mh"><b>מה נמדד</b><span>הכל מעודכן</span></div>
       <div class="vj-list">
@@ -288,7 +278,7 @@
         <div><div><small>הכושר</small><b>קומה 7</b><span class="lime">שיא חדש</span></div><i>‹</i></div>
       </div>
     </div></div>
-  </div><figcaption>הקש על "כל הדרך". דוגמה.</figcaption></figure></div>
+  </div><figcaption>דוגמה. המספרים האמיתיים נכתבים באפליקציה.</figcaption></figure></div>
   </div>
   
 </section>
@@ -326,10 +316,5 @@
 </footer>
 </div>
 <script src="/site.js?v=2610312000" defer></script>
-<script>(function(){var p=document.querySelector('[data-road]');if(!p)return;var b=p.querySelector('.vj-all'),t=null,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function set(o){p.classList.toggle('open',o);b.classList.toggle('hit',o)}
-function cycle(){set(true);t=setTimeout(function(){set(false);t=setTimeout(cycle,3500)},6500)}
-b.addEventListener('click',function(){clearTimeout(t);set(!p.classList.contains('open'))});
-p.addEventListener('click',function(e){if(p.classList.contains('open')&&!b.contains(e.target)){clearTimeout(t);set(false)}});
-if(!rm&&'IntersectionObserver' in window)new IntersectionObserver(function(es){clearTimeout(t);if(es[0].isIntersecting)t=setTimeout(cycle,1800);else set(false)},{threshold:.5}).observe(p)})();</script></body>
+</body>
 </html>
