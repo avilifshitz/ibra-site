@@ -1069,3 +1069,9 @@ bdi[dir="ltr"]{white-space:nowrap}
 #sees .vs{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
 @media (max-width:900px){#sees .sees{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){#sees .sees{grid-template-columns:1fr}}
+
+.pledge{color:var(--ink2);font-size:20px;font-weight:700;margin:12px auto 24px;max-width:32ch;text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;font-size:14px;font-weight:700;color:var(--ink2)}
+
+@media (max-width:760px){.site h1 em{white-space:normal}}
