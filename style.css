@@ -1169,3 +1169,5 @@ bdi[dir="ltr"]{white-space:nowrap}
 .src{font-size:12px;color:var(--muted);margin-top:8px}
 .incl li:before{content:"";background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230A0A0C' stroke-width='3' stroke-linecap='square'/%3E%3C/svg%3E") center/14px no-repeat}
 .vsone b{font-size:24px;white-space:nowrap}
+
+@media (max-width:760px){#rank .ladder,#rank .sub.d{display:flex}#rank .sub.d{display:block}#rank .sub.m{display:none}}
