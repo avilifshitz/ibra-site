@@ -1170,3 +1170,13 @@ bdi[dir="ltr"]{white-space:nowrap}
 .vsone b{font-size:24px;white-space:nowrap}
 
 @media (max-width:760px){#rank .ladder,#rank .sub.d{display:flex}#rank .sub.d{display:block}#rank .sub.m{display:none}}
+
+/* יציבה: הזווית, מה עושים, השינוי */
+#posture .narrow{max-width:640px;margin-inline:auto}
+.mo.cam.pos{align-items:center}.mo.cam.pos svg{height:116px}
+.mo.cam.pos .v{stroke:rgba(255,255,255,.5);stroke-width:3;stroke-dasharray:6 8}
+.mo.cam.pos .a{stroke:var(--lime);stroke-width:7;stroke-linecap:round}
+.mo.cam.pos .s{fill:#fff;stroke:none}.mo.cam.pos .e{fill:var(--lime);stroke:none}
+.mo.cam.pos .deg{position:absolute;bottom:10px;left:10px;font-size:15px;font-weight:900;font-style:italic;color:var(--lime);background:#000;padding:2px 7px;border-radius:7px}
+.mo.gain{text-align:center;padding:12px 8px;border-radius:12px;background:#0E0F12;border:1px solid var(--line)}
+.mo.gain small{display:block;color:var(--ink2);font-size:11px}.mo.gain b{display:block;font-size:22px;font-weight:900;font-style:italic;color:var(--lime);margin-top:4px}
