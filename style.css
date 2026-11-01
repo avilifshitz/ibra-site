@@ -645,8 +645,8 @@ html:not(.js) .scene .txts>*{position:static;opacity:1;transform:none;margin-top
 /* איך זה עובד — כרטיסיות: מתקדם לבד, הקשה לוקחת שליטה */
 .stepper{margin-top:16px;display:grid;grid-template-columns:1fr;gap:16px;justify-items:center}
 .stepper .pin{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--bg);box-shadow:0 30px 60px rgba(0,0,0,.5);width:min(260px,66%);aspect-ratio:600/1000;container-type:inline-size}
-.stepper .track{display:flex;height:100%;width:600%;transform:translateX(calc(var(--k,0) * 16.6667%));transition:transform .55s cubic-bezier(.4,0,.2,1)}
-.stepper .track>*{width:16.6667%!important;height:100%;flex:none}
+.stepper .track{display:flex;height:100%;width:calc(var(--n,6) * 100%);transform:translateX(calc(var(--k,0) * 100% / var(--n,6)));transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.stepper .track>*{width:calc(100% / var(--n,6))!important;height:100%;flex:none}
 .stepper .track img{max-width:none;object-fit:cover;object-position:top;display:block;border:0;border-radius:0;box-shadow:none}
 .stepper .track>.hs{position:relative;overflow:hidden;background:var(--bg);direction:rtl;font-family:Heebo,system-ui,sans-serif;color:#fff}
 /* כרטיסיות (טלפון) */
@@ -1152,8 +1152,7 @@ bdi[dir="ltr"]{white-space:nowrap}
 .roadrec .f.a{transform:none}
 .roadrec .f.on{opacity:1;transform:none}
 .roadrec .f.up{opacity:0;transform:translateY(-24%)}
-.roadrec .f.c{transform:translateY(100%);opacity:1}.roadrec .f.c.sheet.on{transform:none}
-.roadrec .f.d{transform:none}
+.roadrec .f.d{transform:translateY(100%);opacity:1}.roadrec .f.d.sheet.on{transform:none}
 .roadrec .tap{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:rgba(255,255,255,.35);opacity:0;pointer-events:none;z-index:5}
 .roadrec .tap.go{animation:rtap .7s ease-out}
 @keyframes rtap{0%{opacity:.9;transform:scale(.4)}100%{opacity:0;transform:scale(1.4)}}
