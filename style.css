@@ -1158,3 +1158,14 @@ bdi[dir="ltr"]{white-space:nowrap}
 .roadrec .tap.go{animation:rtap .7s ease-out}
 @keyframes rtap{0%{opacity:.9;transform:scale(.4)}100%{opacity:0;transform:scale(1.4)}}
 @media (max-width:420px){.roadrec{width:260px}}
+
+.incl{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.incl li{position:relative;padding-inline-start:30px;font-size:17px;font-weight:700;color:var(--ink)}
+.incl li:before{content:"✓";position:absolute;inset-inline-start:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--lime);color:#0A0A0C;font-size:12px;font-weight:900;display:grid;place-items:center}
+.vsone{display:flex;gap:10px;margin-top:22px;max-width:480px}
+.vsone>div{flex:1;border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:var(--card)}
+.vsone small{display:block;font-size:13px;color:var(--muted)}.vsone b{display:block;font-size:28px;font-weight:900;font-style:italic;color:var(--ink2);margin-top:4px}
+.vsone .us{border-color:var(--lime)}.vsone .us b{color:var(--lime)}
+.src{font-size:12px;color:var(--muted);margin-top:8px}
+.incl li:before{content:"";background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230A0A0C' stroke-width='3' stroke-linecap='square'/%3E%3C/svg%3E") center/14px no-repeat}
+.vsone b{font-size:24px;white-space:nowrap}
