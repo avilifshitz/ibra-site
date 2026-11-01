@@ -1145,3 +1145,16 @@ bdi[dir="ltr"]{white-space:nowrap}
 @media (min-width:1000px){#rank .see{grid-template-columns:minmax(0,1fr) auto}}
 
 @media (min-width:1000px){.shots2 .rk-ph,.shots2 .vj-ph{width:240px}.shots2{gap:20px;flex-wrap:nowrap}}
+
+.rec-fig{margin:0}.rec-fig figcaption{text-align:center;color:var(--muted);font-size:13px;margin-top:12px}
+.roadrec{position:relative;width:300px;aspect-ratio:600/1300;margin-inline:auto;border:1px solid var(--line);border-radius:40px;overflow:hidden;background:#0A0A0C;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.roadrec .f{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transform:translateY(24%);transition:opacity .55s ease,transform .7s cubic-bezier(.32,.72,0,1);border:0;border-radius:0;box-shadow:none;max-width:none}
+.roadrec .f.a{transform:none}
+.roadrec .f.on{opacity:1;transform:none}
+.roadrec .f.up{opacity:0;transform:translateY(-24%)}
+.roadrec .f.c{transform:translateY(100%);opacity:1}.roadrec .f.c.sheet.on{transform:none}
+.roadrec .f.d{transform:none}
+.roadrec .tap{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:rgba(255,255,255,.35);opacity:0;pointer-events:none;z-index:5}
+.roadrec .tap.go{animation:rtap .7s ease-out}
+@keyframes rtap{0%{opacity:.9;transform:scale(.4)}100%{opacity:0;transform:scale(1.4)}}
+@media (max-width:420px){.roadrec{width:260px}}
